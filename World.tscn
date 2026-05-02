@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://236573el1itl"]
+
+[ext_resource type="PackedScene" uid="uid://dhxpuh4p3gg5h" path="res://hallway_pack_glb.tscn" id="1_c6gwx"]
+
+[node name="Node3D" type="Node3D" unique_id=1650164013]
+
+[node name="HallwayPACK_GLB" parent="." unique_id=884959273 instance=ExtResource("1_c6gwx")]
