@@ -428,17 +428,33 @@ angle = 3.1723104
 
 [sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_js7pq"]
 
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_eu7l1"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_p1v5b"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_wygdx"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_bah7m"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_fv4w7"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_fvag4"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_kva58"]
+
 [node name="World" type="Node3D" unique_id=1650164013]
 
 [node name="HallwayPACK_GLB" parent="." unique_id=884959273 instance=ExtResource("1_c6gwx")]
 
-[node name="giant-spider" type="Node3D" parent="." unique_id=1202998488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 6.9846087, 59)
+[node name="centipede" type="Node3D" parent="." unique_id=1095718270]
 
-[node name="Armature_006" type="Node3D" parent="giant-spider" unique_id=284328936]
+[node name="giant-spider" type="Node3D" parent="centipede" unique_id=1202998488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.330585, 6.9846087, 59)
+
+[node name="Armature_006" type="Node3D" parent="centipede/giant-spider" unique_id=284328936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5023032, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="giant-spider/Armature_006" unique_id=1051396408]
+[node name="Skeleton3D" type="Skeleton3D" parent="centipede/giant-spider/Armature_006" unique_id=1051396408]
 bones/0/name = "Body_2"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -559,130 +575,130 @@ bones/16/position = Vector3(-5.080519e-08, 8.388112, 3.450623e-09)
 bones/16/rotation = Quaternion(0.010599336, -9.154579e-09, 1.7268592e-09, 0.9999438)
 bones/16/scale = Vector3(1, 0.99999994, 1)
 
-[node name="leg1_4_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=835238474]
-transform = Transform3D(0.97614324, -0.12462265, -0.17780195, 0.039557368, -0.7031059, 0.709984, -0.21349367, -0.7000797, -0.6814023, -3.7504325, -4.901678, -15.421783)
+[node name="leg1_4_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=835238474]
+transform = Transform3D(0.9962119, -0.027394919, -0.082531445, 0.023766797, -0.8271713, 0.5614472, -0.083648436, -0.561282, -0.82338667, -1.8654122, -4.9222383, -14.246168)
 bone_name = "leg1_4.R"
 bone_idx = 4
 
-[node name="leg1_3_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1182440747]
-transform = Transform3D(0.97614324, -0.1285205, -0.1750052, 0.039557368, -0.68724823, 0.72534484, -0.21349367, -0.7149634, -0.6657688, -2.7161105, 0.6292378, -9.667819)
+[node name="leg1_3_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1182440747]
+transform = Transform3D(0.9962119, -0.029211642, -0.08190605, 0.023766797, -0.81456506, 0.5795853, -0.083648436, -0.57933646, -0.81078506, -1.6303194, 1.633312, -9.583717)
 bone_name = "leg1_3.R"
 bone_idx = 3
 
-[node name="LegBottom" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_3_R" unique_id=1469944287]
+[node name="LegBottom" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg1_3_R" unique_id=1469944287]
 transform = Transform3D(0.19056113, 2.3494455e-19, 6.086013e-19, 3.6216656e-19, -0.1859628, -0.04161011, 5.4261363e-19, 0.041610107, -0.18596281, 0, 0.054299325, -0.010153502)
 mesh = SubResource("ArrayMesh_h4x1v")
 
-[node name="leg1_2_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1778811744]
-transform = Transform3D(0.97614324, -0.1968102, -0.09170647, 0.039557368, -0.25409606, 0.9663697, -0.21349367, -0.946943, -0.24024892, -1.7271256, 1.9060881, -4.909365)
+[node name="leg1_2_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1778811744]
+transform = Transform3D(0.9962119, -0.077989265, -0.038465504, 0.023766797, -0.18130925, 0.983139, -0.083648436, -0.9803289, -0.17876884, -1.238418, 2.5444036, -4.657496)
 bone_name = "leg1_2.R"
 bone_idx = 2
 
-[node name="LegMid" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_2_R" unique_id=1018510647]
+[node name="LegMid" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg1_2_R" unique_id=1018510647]
 transform = Transform3D(1, -4.5488337e-18, -5.6887754e-18, -4.276676e-18, 0.26553583, -0.96410084, 5.896109e-18, 0.9641009, 0.2655358, 1.1920929e-07, 0.24655554, 0.015491415)
 mesh = SubResource("ArrayMesh_s1y8x")
 
-[node name="leg1_1_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=459858168]
-transform = Transform3D(0.97614324, -0.21268773, 0.04368381, 0.039557368, 0.37202492, 0.9273796, -0.21349367, -0.9035274, 0.371563, -0.9245778, 0.5023032, -1.5000287)
+[node name="leg1_1_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=459858168]
+transform = Transform3D(0.9962119, -0.08317255, 0.02538204, 0.023766797, 0.54118854, 0.8405655, -0.083648436, -0.8367781, 0.5411152, -0.9245778, 0.5023032, -1.5000287)
 bone_name = "leg1_1.R"
 bone_idx = 1
 
-[node name="LegTop" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_1_R" unique_id=1976168608]
+[node name="LegTop" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg1_1_R" unique_id=1976168608]
 transform = Transform3D(1, -9.1615455e-20, -6.3779575e-18, -6.3779596e-18, -0.028723706, -0.999587, -9.1621006e-20, 0.999587, -0.028723706, -1.1920929e-07, 0.021312105, -0.0045620254)
 mesh = SubResource("ArrayMesh_epffs")
 
-[node name="leg2_3_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=485266238]
-transform = Transform3D(1, 0, 0, 0, 0.02119749, 0.9997751, 0, -0.9997752, 0.02119749, 1.1985257, 0.4632101, -9.957361)
+[node name="leg2_3_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=485266238]
+transform = Transform3D(0.9921413, 0.11069333, 0.058331303, 0.055866048, -0.80904454, 0.58508587, 0.11195776, -0.5772293, -0.80887055, 1.0598762, 1.322079, -9.43622)
 bone_name = "leg2_3.R"
 bone_idx = 7
 
-[node name="LegBottom_017" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_3_R" unique_id=66932952]
-transform = Transform3D(0.19056113, -1.0409198e-19, 5.34199e-19, 2.213397e-20, -0.18540636, -0.044023283, 5.437955e-19, 0.044023287, -0.18540634, -0.0034245253, 0.39012423, -0.1756786)
+[node name="LegBottom_017" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg2_3_R" unique_id=66932952]
+transform = Transform3D(0.19056113, 0, -9.313226e-09, 3.7252903e-09, -0.18540637, -0.044023283, 2.7939677e-09, 0.04402329, -0.18540634, 0.025484085, 0.3993225, 0.25059128)
 mesh = SubResource("ArrayMesh_stha2")
 
-[node name="leg2_2_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=965794807]
-transform = Transform3D(1, 0, 0, 0, 0.0069810487, 0.9999755, 0, -0.99997556, 0.006981047, 1.1985257, 0.4292404, -5.0914917)
+[node name="leg2_2_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=965794807]
+transform = Transform3D(0.9997116, 0.023763962, 0.003472739, 0.00089998916, -0.18156669, 0.98337805, 0.023999495, -0.9830914, -0.18153554, 0.9442411, 2.2055802, -4.6525087)
 bone_name = "leg2_2.R"
 bone_idx = 6
 
-[node name="LegMid_002" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_2_R" unique_id=1381895634]
+[node name="LegMid_002" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg2_2_R" unique_id=1381895634]
 transform = Transform3D(1, 0, 0, 0, 0.26555586, -0.9640954, 0, 0.9640955, 0.26555583, -0.0034240484, 0.08773489, -0.017001368)
 mesh = SubResource("ArrayMesh_8edhi")
 
-[node name="leg2_1_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1726565308]
-transform = Transform3D(1, 0, 0, 0, -0.020339249, 0.9997931, 0, -0.9997931, -0.020339249, 1.1985257, 0.5023032, -1.5000287)
+[node name="leg2_1_R" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1726565308]
+transform = Transform3D(0.99731714, -0.070787854, 0.018643312, 0.017199676, 0.47415903, 0.88027114, -0.07115241, -0.8775888, 0.4741045, 1.1985257, 0.5023032, -1.5000287)
 bone_name = "leg2_1.R"
 bone_idx = 5
 
-[node name="LegTop_018" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_1_R" unique_id=129586260]
+[node name="LegTop_018" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg2_1_R" unique_id=129586260]
 transform = Transform3D(1, 0, 0, 0, -0.020339252, -0.9997933, 0, 0.9997933, -0.020339252, -0.0034241676, -0.15878868, -0.003230351)
 mesh = SubResource("ArrayMesh_28o4g")
 
-[node name="leg2_3_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=74589380]
-transform = Transform3D(1, 8.527012e-08, -4.2297115e-06, -4.2305683e-06, 0.02119749, -0.9997751, 4.408161e-09, 0.9997752, 0.02119749, 1.2841359, 0.46321008, 9.767725)
+[node name="leg2_3_L" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=74589380]
+transform = Transform3D(0.9700599, -0.22874357, 0.08160953, -0.07050969, -0.58680934, -0.8066491, 0.23240505, 0.7767437, -0.5853689, 1.7281088, 1.5972049, 9.671213)
 bone_name = "leg2_3.L"
 bone_idx = 11
 
-[node name="LegBottom_035" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_3_L" unique_id=176188902]
+[node name="LegBottom_035" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg2_3_L" unique_id=176188902]
 transform = Transform3D(-0.19056113, -1.8272826e-07, 7.565526e-07, 1.3121125e-08, -0.1859628, -0.041610163, 7.7819595e-07, -0.041610163, 0.1859628, -0.006657978, 0.5349259, 0.013130458)
 mesh = SubResource("ArrayMesh_bjik5")
 
-[node name="leg2_2_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1807688192]
-transform = Transform3D(1, 7.349532e-08, -1.2472414e-05, -1.2472621e-05, 0.0069810487, -0.9999755, 1.3576823e-08, 0.99997556, 0.006981047, 1.2841356, 0.4292404, 4.9018555)
+[node name="leg2_2_L" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1807688192]
+transform = Transform3D(0.99957675, 0.028840035, 0.0038031898, 0.001307134, 0.0860777, -0.99628747, -0.029060349, 0.9958708, 0.08600358, 1.5877734, 1.1783519, 4.8253183)
 bone_name = "leg2_2.L"
 bone_idx = 10
 
-[node name="LegMid_003" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_2_L" unique_id=294560604]
+[node name="LegMid_003" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg2_2_L" unique_id=294560604]
 transform = Transform3D(-1, -1.1932697e-05, -3.6142965e-06, 3.159862e-07, 0.26553598, -0.9641005, 1.2464054e-05, -0.96410066, -0.26553595, -0.00665837, 0.22793593, -0.014510594)
 mesh = SubResource("ArrayMesh_xunwb")
 
-[node name="leg2_1_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=399051965]
-transform = Transform3D(1, 9.9556466e-08, 4.3049663e-06, 4.3061013e-06, -0.020339249, -0.9997931, -1.1976226e-08, 0.9997931, -0.020339249, 1.2841352, 0.5023032, 1.3103924)
+[node name="leg2_1_L" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=399051965]
+transform = Transform3D(0.99638134, 0.08452696, 0.008911471, -0.007181864, 0.18819873, -0.98210466, -0.084691465, 0.9784868, 0.18812476, 1.2841352, 0.5023032, 1.3103924)
 bone_name = "leg2_1.L"
 bone_idx = 9
 
-[node name="LegTop_019" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_1_L" unique_id=1821660873]
+[node name="LegTop_019" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg2_1_L" unique_id=1821660873]
 transform = Transform3D(-1, 4.296784e-06, -6.519169e-07, 5.2822827e-07, -0.028723715, -0.99958736, -4.313737e-06, -0.99958736, 0.028723715, -0.0066582174, -0.019408038, 0.0017050513)
 mesh = SubResource("ArrayMesh_kf8uy")
 
-[node name="leg1_3_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1556882605]
-transform = Transform3D(0.89755017, -0.16229324, 0.40995684, 0.13662322, -0.7816567, -0.608561, 0.419211, 0.60222363, -0.67940307, -4.325451, 1.9063628, 8.244255)
+[node name="leg1_3_L" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1556882605]
+transform = Transform3D(0.97131807, -0.20189823, 0.12561247, -0.0035640867, -0.54056436, -0.8412949, 0.23775764, 0.81671727, -0.5257795, -2.8728428, 1.0860281, 9.488277)
 bone_name = "leg1_3.L"
 bone_idx = 15
 
-[node name="LegBottom_001" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_3_L" unique_id=1935367893]
+[node name="LegBottom_001" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg1_3_L" unique_id=1935367893]
 transform = Transform3D(-0.19056113, -1.7681936e-07, 7.490495e-07, 8.993211e-09, -0.1859628, -0.04161015, 7.6958366e-07, -0.04161015, 0.1859628, -0.02011989, 0.5349257, 0.01313054)
 mesh = SubResource("ArrayMesh_akc7n")
 
-[node name="leg1_2_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=12222203]
-transform = Transform3D(0.89755166, -0.40211117, 0.18085247, 0.13661516, -0.13636088, -0.981194, 0.41921037, 0.90537953, -0.067456484, -2.3687828, 2.5698931, 3.8386898)
+[node name="leg1_2_L" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=12222203]
+transform = Transform3D(0.97131777, -0.2354033, -0.033573724, -0.0035722468, 0.12673156, -0.99193054, 0.23775859, 0.9635997, 0.12225569, -1.7273734, 0.46935388, 4.7994137)
 bone_name = "leg1_2.L"
 bone_idx = 14
 
-[node name="LegMid_001" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_2_L" unique_id=925440703]
+[node name="LegMid_001" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg1_2_L" unique_id=925440703]
 transform = Transform3D(-1, -1.1871208e-05, -3.5851108e-06, 3.041755e-07, 0.26553598, -0.9641004, 1.2397023e-05, -0.9641006, -0.26553592, -0.020120028, 0.22793575, -0.014510435)
 mesh = SubResource("ArrayMesh_oc3om")
 
-[node name="leg1_1_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1689382591]
-transform = Transform3D(0.8975542, -0.41633746, -0.14511901, 0.13662846, 0.5755766, -0.80625314, 0.41920054, 0.7038285, 0.57349473, -0.8732129, 0.5023032, 1.3103924)
+[node name="leg1_1_L" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1689382591]
+transform = Transform3D(0.9713178, -0.2377816, -0.0012725367, -0.003555499, -0.009172439, -0.99995154, 0.23775843, 0.97127527, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
 bone_name = "leg1_1.L"
 bone_idx = 13
 
-[node name="LegTop_017" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_1_L" unique_id=1501449108]
+[node name="LegTop_017" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/leg1_1_L" unique_id=1501449108]
 transform = Transform3D(-1, 4.3343216e-06, -6.059954e-07, 4.812475e-07, -0.028723715, -0.99958736, -4.3499404e-06, -0.99958736, 0.028723715, -0.020119725, -0.019407881, 0.0017049778)
 mesh = SubResource("ArrayMesh_k8er0")
 
-[node name="Body_2" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=977509320]
+[node name="Body_2" type="BoneAttachment3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=977509320]
 bone_name = "Body_2"
 bone_idx = 0
 
-[node name="Body" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/Body_2" unique_id=807810873]
+[node name="Body" type="MeshInstance3D" parent="centipede/giant-spider/Armature_006/Skeleton3D/Body_2" unique_id=807810873]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5023032, 0)
 mesh = SubResource("ArrayMesh_8k8vi")
 
-[node name="L1_R_CCDIK3D" type="CCDIK3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=360014210]
+[node name="L1_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=360014210]
 setting_count = 1
-settings/0/target_node = NodePath("../../../../leg1_R_target")
+settings/0/target_node = NodePath("../../../leg1_R_target")
 settings/0/root_bone_name = "leg1_1.R"
 settings/0/root_bone = 1
 settings/0/end_bone_name = "leg1_4.R"
@@ -701,14 +717,12 @@ settings/0/joints/2/rotation_axis = 0
 settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_2dftf")
 settings/0/joints/2/limitation/right_axis = 0
 settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
-settings/0/joints/3/rotation_axis = 0
-settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_2dftf")
-settings/0/joints/3/limitation/right_axis = 0
-settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
 
-[node name="L1_L_CCDIK3D" type="CCDIK3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1493750685]
+[node name="L1_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1493750685]
 setting_count = 1
-settings/0/target_node = NodePath("../../../../leg1_L_target")
+settings/0/target_node = NodePath("../../../leg1_L_target")
 settings/0/root_bone_name = "leg1_1.L"
 settings/0/root_bone = 13
 settings/0/end_bone_name = "leg1_4.L"
@@ -732,8 +746,1507 @@ settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_js7pq")
 settings/0/joints/3/limitation/right_axis = 0
 settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
 
-[node name="leg1_R_target" type="Node3D" parent="." unique_id=1257822377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.24899, 1.5686641, 43.566605)
+[node name="L2_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=631745056]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_R_target")
+settings/0/root_bone_name = "leg2_1.R"
+settings/0/root_bone = 5
+settings/0/end_bone_name = "leg2_4.R"
+settings/0/end_bone = 8
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_eu7l1")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_p1v5b")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_wygdx")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
 
-[node name="leg1_L_target" type="Node3D" parent="." unique_id=1713328844]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.428036, 3.0224419, 69.51652)
+[node name="L2_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider/Armature_006/Skeleton3D" unique_id=1743163233]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_L_target")
+settings/0/root_bone_name = "leg2_1.L"
+settings/0/root_bone = 9
+settings/0/end_bone_name = "leg2_4.L"
+settings/0/end_bone = 12
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bah7m")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_fv4w7")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_fvag4")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_kva58")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="leg1_R_target" type="Node3D" parent="centipede/giant-spider" unique_id=1257822377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.866169, -5.4159446, -14.239948)
+
+[node name="leg1_L_target" type="Node3D" parent="centipede/giant-spider" unique_id=1713328844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5719643, -3.9621668, 16.35617)
+
+[node name="leg2_R_target" type="Node3D" parent="centipede/giant-spider" unique_id=472759943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.255554)
+
+[node name="leg2_L_target" type="Node3D" parent="centipede/giant-spider" unique_id=45335488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17780304, -3.795454, 16.101364)
+
+[node name="giant-spider2" type="Node3D" parent="centipede" unique_id=1627752558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.07165, 6.9846087, 59)
+
+[node name="Armature_006" type="Node3D" parent="centipede/giant-spider2" unique_id=529305903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5023032, 0)
+
+[node name="Skeleton3D" type="Skeleton3D" parent="centipede/giant-spider2/Armature_006" unique_id=555474114]
+bones/0/name = "Body_2"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "leg1_1.R"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, -0.019362926, 0.9998126, 0, -0.9998126, -0.019362926, -0.9245778, 0.5023032, -1.5000287)
+bones/1/enabled = true
+bones/1/position = Vector3(-0.9245778, 0.5023032, -1.5000287)
+bones/1/rotation = Quaternion(-0.71391976, 0, 0, 0.7002275)
+bones/1/scale = Vector3(1, 1.0000001, 1.0000001)
+bones/2/name = "leg1_2.R"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 0.9996587, -0.026121102, 0, 0.0261211, 0.9996587, -5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/enabled = true
+bones/2/position = Vector3(-5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/rotation = Quaternion(0.013061668, 0, 0, 0.9999147)
+bones/2/scale = Vector3(1, 0.9999999, 0.9999999)
+bones/3/name = "leg1_3.R"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 0, 0, 0, 0.9998826, -0.015334643, 0, 0.015334645, 0.99988246, 5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/enabled = true
+bones/3/position = Vector3(5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/rotation = Quaternion(0.0076675476, 0, 0, 0.9999706)
+bones/3/scale = Vector3(1, 1.0000001, 1)
+bones/4/name = "leg1_4.R"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, 0, 0, 0, 0.9997559, 0.022093529, 0, -0.02209353, 0.99975586, 0, 8.047915, -4.4703484e-08)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 8.047915, -4.4703484e-08)
+bones/4/rotation = Quaternion(-0.01104744, 0, 0, 0.99993896)
+bones/4/scale = Vector3(1, 1, 0.99999994)
+bones/5/name = "leg2_1.R"
+bones/5/parent = 0
+bones/5/rest = Transform3D(1, 0, 0, 0, -0.02033913, 0.9997931, 0, -0.9997931, -0.02033913, 1.1985257, 0.5023032, -1.5000287)
+bones/5/enabled = true
+bones/5/position = Vector3(1.1985257, 0.5023032, -1.5000287)
+bones/5/rotation = Quaternion(-0.7142616, 0, 0, 0.6998789)
+bones/5/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/6/name = "leg2_2.R"
+bones/6/parent = 5
+bones/6/rest = Transform3D(1, 0, 0, 0, 0.9996268, -0.027318353, 0, 0.027318355, 0.99962676, 0, 3.5922062, -1.8626451e-09)
+bones/6/enabled = true
+bones/6/position = Vector3(0, 3.5922062, -1.8626451e-09)
+bones/6/rotation = Quaternion(0.013660452, 0, 0, 0.9999067)
+bones/6/scale = Vector3(1, 1, 0.99999994)
+bones/7/name = "leg2_3.R"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 0, 0, 0, 0.9998989, -0.014217496, 0, 0.014217496, 0.9998989, 0, 4.865988, -3.7252903e-09)
+bones/7/enabled = true
+bones/7/position = Vector3(0, 4.865988, -3.7252903e-09)
+bones/7/rotation = Quaternion(0.007108928, 0, 0, 0.9999747)
+bones/7/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/8/name = "leg2_4.R"
+bones/8/parent = 7
+bones/8/rest = Transform3D(1, 0, 0, 0, 0.9997753, 0.02119748, 0, -0.02119748, 0.9997753, -1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/enabled = true
+bones/8/position = Vector3(-1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/rotation = Quaternion(-0.010599336, 0, 0, 0.9999438)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/name = "leg2_1.L"
+bones/9/parent = 0
+bones/9/rest = Transform3D(1, 9.955609e-08, 4.304966e-06, 4.306101e-06, -0.02033913, -0.9997931, -1.1976226e-08, 0.9997931, -0.02033913, 1.2841352, 0.5023032, 1.3103924)
+bones/9/enabled = true
+bones/9/position = Vector3(1.2841352, 0.5023032, 1.3103924)
+bones/9/rotation = Quaternion(0.7142616, 1.5420322e-06, 1.5025975e-06, 0.6998789)
+bones/9/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/10/name = "leg2_2.L"
+bones/10/parent = 9
+bones/10/rest = Transform3D(1, 9.158061e-08, -1.6778491e-05, 3.6681433e-07, 0.9996268, 0.027318353, 1.6774731e-05, -0.027318355, 0.99962676, -1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/enabled = true
+bones/10/position = Vector3(-1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/rotation = Quaternion(-0.013660452, -8.389089e-06, 6.8814856e-08, 0.9999067)
+bones/10/scale = Vector3(1, 1, 0.99999994)
+bones/11/name = "leg2_3.L"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, -1.6554426e-07, 8.240397e-06, 4.836973e-08, 0.9998989, 0.014217496, -8.241917e-06, -0.014217496, 0.9998989, 2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/enabled = true
+bones/11/position = Vector3(2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/rotation = Quaternion(-0.007108928, 4.1206827e-06, 5.347985e-08, 0.9999747)
+bones/11/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/12/name = "leg2_4.L"
+bones/12/parent = 11
+bones/12/rest = Transform3D(1, 4.4081965e-09, 2.6455288e-08, -3.846421e-09, 0.9997753, -0.021197481, -2.6542788e-08, 0.021197481, 0.9997753, 8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/enabled = true
+bones/12/position = Vector3(8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/rotation = Quaternion(0.010599337, 1.3250264e-08, -2.0637707e-09, 0.9999438)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/name = "leg1_1.L"
+bones/13/parent = 0
+bones/13/rest = Transform3D(1, 8.296372e-08, 4.342462e-06, 4.3432515e-06, -0.02033913, -0.9997931, 5.375341e-09, 0.9997931, -0.02033913, -0.8732129, 0.5023032, 1.3103924)
+bones/13/enabled = true
+bones/13/position = Vector3(-0.8732129, 0.5023032, 1.3103924)
+bones/13/rotation = Quaternion(0.7142616, 1.5492279e-06, 1.5217947e-06, 0.6998789)
+bones/13/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/14/name = "leg1_2.L"
+bones/14/parent = 13
+bones/14/rest = Transform3D(1, 1.2144079e-07, -1.6748487e-05, 3.3614566e-07, 0.9996268, 0.027318353, 1.6745555e-05, -0.027318355, 0.99962676, 6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/enabled = true
+bones/14/position = Vector3(6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/rotation = Quaternion(-0.013660452, -8.374292e-06, 5.3681227e-08, 0.9999067)
+bones/14/scale = Vector3(1, 1, 0.99999994)
+bones/15/name = "leg1_3.L"
+bones/15/parent = 14
+bones/15/rest = Transform3D(1, -1.6973335e-07, 8.218081e-06, 5.2875656e-08, 0.9998989, 0.014217496, -8.219665e-06, -0.014217496, 0.9998989, 1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/enabled = true
+bones/15/position = Vector3(1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/rotation = Quaternion(-0.007108928, 4.1095404e-06, 5.5653665e-08, 0.9999747)
+bones/15/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/16/name = "leg1_4.L"
+bones/16/parent = 15
+bones/16/rest = Transform3D(1, -3.6475887e-09, -1.827152e-08, 3.2594594e-09, 0.99977523, -0.02119748, 1.8344736e-08, 0.021197477, 0.9997753, -5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/enabled = true
+bones/16/position = Vector3(-5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/rotation = Quaternion(0.010599336, -9.154579e-09, 1.7268592e-09, 0.9999438)
+bones/16/scale = Vector3(1, 0.99999994, 1)
+
+[node name="leg1_4_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=236724548]
+transform = Transform3D(0.9962119, -0.027394919, -0.082531445, 0.023766797, -0.8271713, 0.5614472, -0.083648436, -0.561282, -0.82338667, -1.8654122, -4.9222383, -14.246168)
+bone_name = "leg1_4.R"
+bone_idx = 4
+
+[node name="leg1_3_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=985601959]
+transform = Transform3D(0.9962119, -0.029211642, -0.08190605, 0.023766797, -0.81456506, 0.5795853, -0.083648436, -0.57933646, -0.81078506, -1.6303194, 1.633312, -9.583717)
+bone_name = "leg1_3.R"
+bone_idx = 3
+
+[node name="LegBottom" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg1_3_R" unique_id=394138249]
+transform = Transform3D(0.19056113, 2.3494455e-19, 6.086013e-19, 3.6216656e-19, -0.1859628, -0.04161011, 5.4261363e-19, 0.041610107, -0.18596281, 0, 0.054299325, -0.010153502)
+mesh = SubResource("ArrayMesh_h4x1v")
+
+[node name="leg1_2_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=782257708]
+transform = Transform3D(0.9962119, -0.077989265, -0.038465504, 0.023766797, -0.18130925, 0.983139, -0.083648436, -0.9803289, -0.17876884, -1.238418, 2.5444036, -4.657496)
+bone_name = "leg1_2.R"
+bone_idx = 2
+
+[node name="LegMid" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg1_2_R" unique_id=1313860847]
+transform = Transform3D(1, -4.5488337e-18, -5.6887754e-18, -4.276676e-18, 0.26553583, -0.96410084, 5.896109e-18, 0.9641009, 0.2655358, 1.1920929e-07, 0.24655554, 0.015491415)
+mesh = SubResource("ArrayMesh_s1y8x")
+
+[node name="leg1_1_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=840255232]
+transform = Transform3D(0.9962119, -0.08317255, 0.02538204, 0.023766797, 0.54118854, 0.8405655, -0.083648436, -0.8367781, 0.5411152, -0.9245778, 0.5023032, -1.5000287)
+bone_name = "leg1_1.R"
+bone_idx = 1
+
+[node name="LegTop" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg1_1_R" unique_id=1888490647]
+transform = Transform3D(1, -9.1615455e-20, -6.3779575e-18, -6.3779596e-18, -0.028723706, -0.999587, -9.1621006e-20, 0.999587, -0.028723706, -1.1920929e-07, 0.021312105, -0.0045620254)
+mesh = SubResource("ArrayMesh_epffs")
+
+[node name="leg2_3_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=2210509]
+transform = Transform3D(0.9921413, 0.11069333, 0.058331303, 0.055866048, -0.80904454, 0.58508587, 0.11195776, -0.5772293, -0.80887055, 1.0598762, 1.322079, -9.43622)
+bone_name = "leg2_3.R"
+bone_idx = 7
+
+[node name="LegBottom_017" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg2_3_R" unique_id=478446937]
+transform = Transform3D(0.19056113, 0, -9.313226e-09, 3.7252903e-09, -0.18540637, -0.044023283, 2.7939677e-09, 0.04402329, -0.18540634, 0.025484085, 0.3993225, 0.25059128)
+mesh = SubResource("ArrayMesh_stha2")
+
+[node name="leg2_2_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=1065639813]
+transform = Transform3D(0.9997116, 0.023763962, 0.003472739, 0.00089998916, -0.18156669, 0.98337805, 0.023999495, -0.9830914, -0.18153554, 0.9442411, 2.2055802, -4.6525087)
+bone_name = "leg2_2.R"
+bone_idx = 6
+
+[node name="LegMid_002" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg2_2_R" unique_id=1193290544]
+transform = Transform3D(1, 0, 0, 0, 0.26555586, -0.9640954, 0, 0.9640955, 0.26555583, -0.0034240484, 0.08773489, -0.017001368)
+mesh = SubResource("ArrayMesh_8edhi")
+
+[node name="leg2_1_R" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=537623697]
+transform = Transform3D(0.99731714, -0.070787854, 0.018643312, 0.017199676, 0.47415903, 0.88027114, -0.07115241, -0.8775888, 0.4741045, 1.1985257, 0.5023032, -1.5000287)
+bone_name = "leg2_1.R"
+bone_idx = 5
+
+[node name="LegTop_018" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg2_1_R" unique_id=1216164796]
+transform = Transform3D(1, 0, 0, 0, -0.020339252, -0.9997933, 0, 0.9997933, -0.020339252, -0.0034241676, -0.15878868, -0.003230351)
+mesh = SubResource("ArrayMesh_28o4g")
+
+[node name="leg2_3_L" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=191105370]
+transform = Transform3D(0.9700599, -0.22874357, 0.08160953, -0.07050969, -0.58680934, -0.8066491, 0.23240505, 0.7767437, -0.5853689, 1.7281088, 1.5972049, 9.671213)
+bone_name = "leg2_3.L"
+bone_idx = 11
+
+[node name="LegBottom_035" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg2_3_L" unique_id=288126550]
+transform = Transform3D(-0.19056113, -1.8272826e-07, 7.565526e-07, 1.3121125e-08, -0.1859628, -0.041610163, 7.7819595e-07, -0.041610163, 0.1859628, -0.006657978, 0.5349259, 0.013130458)
+mesh = SubResource("ArrayMesh_bjik5")
+
+[node name="leg2_2_L" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=261829770]
+transform = Transform3D(0.99957675, 0.028840035, 0.0038031898, 0.001307134, 0.0860777, -0.99628747, -0.029060349, 0.9958708, 0.08600358, 1.5877734, 1.1783519, 4.8253183)
+bone_name = "leg2_2.L"
+bone_idx = 10
+
+[node name="LegMid_003" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg2_2_L" unique_id=1993886157]
+transform = Transform3D(-1, -1.1932697e-05, -3.6142965e-06, 3.159862e-07, 0.26553598, -0.9641005, 1.2464054e-05, -0.96410066, -0.26553595, -0.00665837, 0.22793593, -0.014510594)
+mesh = SubResource("ArrayMesh_xunwb")
+
+[node name="leg2_1_L" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=93289661]
+transform = Transform3D(0.99638134, 0.08452696, 0.008911471, -0.007181864, 0.18819873, -0.98210466, -0.084691465, 0.9784868, 0.18812476, 1.2841352, 0.5023032, 1.3103924)
+bone_name = "leg2_1.L"
+bone_idx = 9
+
+[node name="LegTop_019" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg2_1_L" unique_id=2124586881]
+transform = Transform3D(-1, 4.296784e-06, -6.519169e-07, 5.2822827e-07, -0.028723715, -0.99958736, -4.313737e-06, -0.99958736, 0.028723715, -0.0066582174, -0.019408038, 0.0017050513)
+mesh = SubResource("ArrayMesh_kf8uy")
+
+[node name="leg1_3_L" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=231442441]
+transform = Transform3D(0.97131807, -0.20189823, 0.12561247, -0.0035640867, -0.54056436, -0.8412949, 0.23775764, 0.81671727, -0.5257795, -2.8728428, 1.0860281, 9.488277)
+bone_name = "leg1_3.L"
+bone_idx = 15
+
+[node name="LegBottom_001" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg1_3_L" unique_id=567698193]
+transform = Transform3D(-0.19056113, -1.7681936e-07, 7.490495e-07, 8.993211e-09, -0.1859628, -0.04161015, 7.6958366e-07, -0.04161015, 0.1859628, -0.02011989, 0.5349257, 0.01313054)
+mesh = SubResource("ArrayMesh_akc7n")
+
+[node name="leg1_2_L" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=876833650]
+transform = Transform3D(0.97131777, -0.2354033, -0.033573724, -0.0035722468, 0.12673156, -0.99193054, 0.23775859, 0.9635997, 0.12225569, -1.7273734, 0.46935388, 4.7994137)
+bone_name = "leg1_2.L"
+bone_idx = 14
+
+[node name="LegMid_001" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg1_2_L" unique_id=732155409]
+transform = Transform3D(-1, -1.1871208e-05, -3.5851108e-06, 3.041755e-07, 0.26553598, -0.9641004, 1.2397023e-05, -0.9641006, -0.26553592, -0.020120028, 0.22793575, -0.014510435)
+mesh = SubResource("ArrayMesh_oc3om")
+
+[node name="leg1_1_L" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=1418744517]
+transform = Transform3D(0.9713178, -0.2377816, -0.0012725367, -0.003555499, -0.009172439, -0.99995154, 0.23775843, 0.97127527, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
+bone_name = "leg1_1.L"
+bone_idx = 13
+
+[node name="LegTop_017" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/leg1_1_L" unique_id=862204360]
+transform = Transform3D(-1, 4.3343216e-06, -6.059954e-07, 4.812475e-07, -0.028723715, -0.99958736, -4.3499404e-06, -0.99958736, 0.028723715, -0.020119725, -0.019407881, 0.0017049778)
+mesh = SubResource("ArrayMesh_k8er0")
+
+[node name="Body_2" type="BoneAttachment3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=1340543746]
+bone_name = "Body_2"
+bone_idx = 0
+
+[node name="Body" type="MeshInstance3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D/Body_2" unique_id=794500051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5023032, 0)
+mesh = SubResource("ArrayMesh_8k8vi")
+
+[node name="L1_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=144511127]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_R_target")
+settings/0/root_bone_name = "leg1_1.R"
+settings/0/root_bone = 1
+settings/0/end_bone_name = "leg1_4.R"
+settings/0/end_bone = 4
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_c6gwx")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L1_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=1669092589]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_L_target")
+settings/0/root_bone_name = "leg1_1.L"
+settings/0/root_bone = 13
+settings/0/end_bone_name = "leg1_4.L"
+settings/0/end_bone = 16
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bcbcq")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 0
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="L2_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=720047864]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_R_target")
+settings/0/root_bone_name = "leg2_1.R"
+settings/0/root_bone = 5
+settings/0/end_bone_name = "leg2_4.R"
+settings/0/end_bone = 8
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_eu7l1")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_p1v5b")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_wygdx")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L2_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider2/Armature_006/Skeleton3D" unique_id=2147023217]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_L_target")
+settings/0/root_bone_name = "leg2_1.L"
+settings/0/root_bone = 9
+settings/0/end_bone_name = "leg2_4.L"
+settings/0/end_bone = 12
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bah7m")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_fv4w7")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_fvag4")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_kva58")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="leg1_R_target" type="Node3D" parent="centipede/giant-spider2" unique_id=2088331387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.866169, -5.4159446, -14.239948)
+
+[node name="leg1_L_target" type="Node3D" parent="centipede/giant-spider2" unique_id=956967616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5719643, -3.9621668, 16.35617)
+
+[node name="leg2_R_target" type="Node3D" parent="centipede/giant-spider2" unique_id=1932460676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.255554)
+
+[node name="leg2_L_target" type="Node3D" parent="centipede/giant-spider2" unique_id=383618228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17780304, -3.795454, 16.101364)
+
+[node name="giant-spider3" type="Node3D" parent="centipede" unique_id=1129821692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.722275, 6.9846087, 59)
+
+[node name="Armature_006" type="Node3D" parent="centipede/giant-spider3" unique_id=707810083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5023032, 0)
+
+[node name="Skeleton3D" type="Skeleton3D" parent="centipede/giant-spider3/Armature_006" unique_id=810388553]
+bones/0/name = "Body_2"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "leg1_1.R"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, -0.019362926, 0.9998126, 0, -0.9998126, -0.019362926, -0.9245778, 0.5023032, -1.5000287)
+bones/1/enabled = true
+bones/1/position = Vector3(-0.9245778, 0.5023032, -1.5000287)
+bones/1/rotation = Quaternion(-0.71391976, 0, 0, 0.7002275)
+bones/1/scale = Vector3(1, 1.0000001, 1.0000001)
+bones/2/name = "leg1_2.R"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 0.9996587, -0.026121102, 0, 0.0261211, 0.9996587, -5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/enabled = true
+bones/2/position = Vector3(-5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/rotation = Quaternion(0.013061668, 0, 0, 0.9999147)
+bones/2/scale = Vector3(1, 0.9999999, 0.9999999)
+bones/3/name = "leg1_3.R"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 0, 0, 0, 0.9998826, -0.015334643, 0, 0.015334645, 0.99988246, 5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/enabled = true
+bones/3/position = Vector3(5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/rotation = Quaternion(0.0076675476, 0, 0, 0.9999706)
+bones/3/scale = Vector3(1, 1.0000001, 1)
+bones/4/name = "leg1_4.R"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, 0, 0, 0, 0.9997559, 0.022093529, 0, -0.02209353, 0.99975586, 0, 8.047915, -4.4703484e-08)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 8.047915, -4.4703484e-08)
+bones/4/rotation = Quaternion(-0.01104744, 0, 0, 0.99993896)
+bones/4/scale = Vector3(1, 1, 0.99999994)
+bones/5/name = "leg2_1.R"
+bones/5/parent = 0
+bones/5/rest = Transform3D(1, 0, 0, 0, -0.02033913, 0.9997931, 0, -0.9997931, -0.02033913, 1.1985257, 0.5023032, -1.5000287)
+bones/5/enabled = true
+bones/5/position = Vector3(1.1985257, 0.5023032, -1.5000287)
+bones/5/rotation = Quaternion(-0.7142616, 0, 0, 0.6998789)
+bones/5/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/6/name = "leg2_2.R"
+bones/6/parent = 5
+bones/6/rest = Transform3D(1, 0, 0, 0, 0.9996268, -0.027318353, 0, 0.027318355, 0.99962676, 0, 3.5922062, -1.8626451e-09)
+bones/6/enabled = true
+bones/6/position = Vector3(0, 3.5922062, -1.8626451e-09)
+bones/6/rotation = Quaternion(0.013660452, 0, 0, 0.9999067)
+bones/6/scale = Vector3(1, 1, 0.99999994)
+bones/7/name = "leg2_3.R"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 0, 0, 0, 0.9998989, -0.014217496, 0, 0.014217496, 0.9998989, 0, 4.865988, -3.7252903e-09)
+bones/7/enabled = true
+bones/7/position = Vector3(0, 4.865988, -3.7252903e-09)
+bones/7/rotation = Quaternion(0.007108928, 0, 0, 0.9999747)
+bones/7/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/8/name = "leg2_4.R"
+bones/8/parent = 7
+bones/8/rest = Transform3D(1, 0, 0, 0, 0.9997753, 0.02119748, 0, -0.02119748, 0.9997753, -1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/enabled = true
+bones/8/position = Vector3(-1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/rotation = Quaternion(-0.010599336, 0, 0, 0.9999438)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/name = "leg2_1.L"
+bones/9/parent = 0
+bones/9/rest = Transform3D(1, 9.955609e-08, 4.304966e-06, 4.306101e-06, -0.02033913, -0.9997931, -1.1976226e-08, 0.9997931, -0.02033913, 1.2841352, 0.5023032, 1.3103924)
+bones/9/enabled = true
+bones/9/position = Vector3(1.2841352, 0.5023032, 1.3103924)
+bones/9/rotation = Quaternion(0.7142616, 1.5420322e-06, 1.5025975e-06, 0.6998789)
+bones/9/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/10/name = "leg2_2.L"
+bones/10/parent = 9
+bones/10/rest = Transform3D(1, 9.158061e-08, -1.6778491e-05, 3.6681433e-07, 0.9996268, 0.027318353, 1.6774731e-05, -0.027318355, 0.99962676, -1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/enabled = true
+bones/10/position = Vector3(-1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/rotation = Quaternion(-0.013660452, -8.389089e-06, 6.8814856e-08, 0.9999067)
+bones/10/scale = Vector3(1, 1, 0.99999994)
+bones/11/name = "leg2_3.L"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, -1.6554426e-07, 8.240397e-06, 4.836973e-08, 0.9998989, 0.014217496, -8.241917e-06, -0.014217496, 0.9998989, 2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/enabled = true
+bones/11/position = Vector3(2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/rotation = Quaternion(-0.007108928, 4.1206827e-06, 5.347985e-08, 0.9999747)
+bones/11/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/12/name = "leg2_4.L"
+bones/12/parent = 11
+bones/12/rest = Transform3D(1, 4.4081965e-09, 2.6455288e-08, -3.846421e-09, 0.9997753, -0.021197481, -2.6542788e-08, 0.021197481, 0.9997753, 8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/enabled = true
+bones/12/position = Vector3(8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/rotation = Quaternion(0.010599337, 1.3250264e-08, -2.0637707e-09, 0.9999438)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/name = "leg1_1.L"
+bones/13/parent = 0
+bones/13/rest = Transform3D(1, 8.296372e-08, 4.342462e-06, 4.3432515e-06, -0.02033913, -0.9997931, 5.375341e-09, 0.9997931, -0.02033913, -0.8732129, 0.5023032, 1.3103924)
+bones/13/enabled = true
+bones/13/position = Vector3(-0.8732129, 0.5023032, 1.3103924)
+bones/13/rotation = Quaternion(0.7142616, 1.5492279e-06, 1.5217947e-06, 0.6998789)
+bones/13/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/14/name = "leg1_2.L"
+bones/14/parent = 13
+bones/14/rest = Transform3D(1, 1.2144079e-07, -1.6748487e-05, 3.3614566e-07, 0.9996268, 0.027318353, 1.6745555e-05, -0.027318355, 0.99962676, 6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/enabled = true
+bones/14/position = Vector3(6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/rotation = Quaternion(-0.013660452, -8.374292e-06, 5.3681227e-08, 0.9999067)
+bones/14/scale = Vector3(1, 1, 0.99999994)
+bones/15/name = "leg1_3.L"
+bones/15/parent = 14
+bones/15/rest = Transform3D(1, -1.6973335e-07, 8.218081e-06, 5.2875656e-08, 0.9998989, 0.014217496, -8.219665e-06, -0.014217496, 0.9998989, 1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/enabled = true
+bones/15/position = Vector3(1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/rotation = Quaternion(-0.007108928, 4.1095404e-06, 5.5653665e-08, 0.9999747)
+bones/15/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/16/name = "leg1_4.L"
+bones/16/parent = 15
+bones/16/rest = Transform3D(1, -3.6475887e-09, -1.827152e-08, 3.2594594e-09, 0.99977523, -0.02119748, 1.8344736e-08, 0.021197477, 0.9997753, -5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/enabled = true
+bones/16/position = Vector3(-5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/rotation = Quaternion(0.010599336, -9.154579e-09, 1.7268592e-09, 0.9999438)
+bones/16/scale = Vector3(1, 0.99999994, 1)
+
+[node name="leg1_4_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1403385266]
+transform = Transform3D(0.9962119, -0.027394919, -0.082531445, 0.023766797, -0.8271713, 0.5614472, -0.083648436, -0.561282, -0.82338667, -1.8654122, -4.9222383, -14.246168)
+bone_name = "leg1_4.R"
+bone_idx = 4
+
+[node name="leg1_3_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1432669277]
+transform = Transform3D(0.9962119, -0.029211642, -0.08190605, 0.023766797, -0.81456506, 0.5795853, -0.083648436, -0.57933646, -0.81078506, -1.6303194, 1.633312, -9.583717)
+bone_name = "leg1_3.R"
+bone_idx = 3
+
+[node name="LegBottom" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg1_3_R" unique_id=1509255667]
+transform = Transform3D(0.19056113, 2.3494455e-19, 6.086013e-19, 3.6216656e-19, -0.1859628, -0.04161011, 5.4261363e-19, 0.041610107, -0.18596281, 0, 0.054299325, -0.010153502)
+mesh = SubResource("ArrayMesh_h4x1v")
+
+[node name="leg1_2_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1660276776]
+transform = Transform3D(0.9962119, -0.077989265, -0.038465504, 0.023766797, -0.18130925, 0.983139, -0.083648436, -0.9803289, -0.17876884, -1.238418, 2.5444036, -4.657496)
+bone_name = "leg1_2.R"
+bone_idx = 2
+
+[node name="LegMid" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg1_2_R" unique_id=973674432]
+transform = Transform3D(1, -4.5488337e-18, -5.6887754e-18, -4.276676e-18, 0.26553583, -0.96410084, 5.896109e-18, 0.9641009, 0.2655358, 1.1920929e-07, 0.24655554, 0.015491415)
+mesh = SubResource("ArrayMesh_s1y8x")
+
+[node name="leg1_1_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=2102549622]
+transform = Transform3D(0.9962119, -0.08317255, 0.02538204, 0.023766797, 0.54118854, 0.8405655, -0.083648436, -0.8367781, 0.5411152, -0.9245778, 0.5023032, -1.5000287)
+bone_name = "leg1_1.R"
+bone_idx = 1
+
+[node name="LegTop" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg1_1_R" unique_id=1008673063]
+transform = Transform3D(1, -9.1615455e-20, -6.3779575e-18, -6.3779596e-18, -0.028723706, -0.999587, -9.1621006e-20, 0.999587, -0.028723706, -1.1920929e-07, 0.021312105, -0.0045620254)
+mesh = SubResource("ArrayMesh_epffs")
+
+[node name="leg2_3_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=163757476]
+transform = Transform3D(0.9921413, 0.11069333, 0.058331303, 0.055866048, -0.80904454, 0.58508587, 0.11195776, -0.5772293, -0.80887055, 1.0598762, 1.322079, -9.43622)
+bone_name = "leg2_3.R"
+bone_idx = 7
+
+[node name="LegBottom_017" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg2_3_R" unique_id=564268140]
+transform = Transform3D(0.19056113, 0, -9.313226e-09, 3.7252903e-09, -0.18540637, -0.044023283, 2.7939677e-09, 0.04402329, -0.18540634, 0.025484085, 0.3993225, 0.25059128)
+mesh = SubResource("ArrayMesh_stha2")
+
+[node name="leg2_2_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=990157126]
+transform = Transform3D(0.9997116, 0.023763962, 0.003472739, 0.00089998916, -0.18156669, 0.98337805, 0.023999495, -0.9830914, -0.18153554, 0.9442411, 2.2055802, -4.6525087)
+bone_name = "leg2_2.R"
+bone_idx = 6
+
+[node name="LegMid_002" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg2_2_R" unique_id=682996593]
+transform = Transform3D(1, 0, 0, 0, 0.26555586, -0.9640954, 0, 0.9640955, 0.26555583, -0.0034240484, 0.08773489, -0.017001368)
+mesh = SubResource("ArrayMesh_8edhi")
+
+[node name="leg2_1_R" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1476848475]
+transform = Transform3D(0.99731714, -0.070787854, 0.018643312, 0.017199676, 0.47415903, 0.88027114, -0.07115241, -0.8775888, 0.4741045, 1.1985257, 0.5023032, -1.5000287)
+bone_name = "leg2_1.R"
+bone_idx = 5
+
+[node name="LegTop_018" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg2_1_R" unique_id=1189735332]
+transform = Transform3D(1, 0, 0, 0, -0.020339252, -0.9997933, 0, 0.9997933, -0.020339252, -0.0034241676, -0.15878868, -0.003230351)
+mesh = SubResource("ArrayMesh_28o4g")
+
+[node name="leg2_3_L" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1280433642]
+transform = Transform3D(0.9700599, -0.22874357, 0.08160953, -0.07050969, -0.58680934, -0.8066491, 0.23240505, 0.7767437, -0.5853689, 1.7281088, 1.5972049, 9.671213)
+bone_name = "leg2_3.L"
+bone_idx = 11
+
+[node name="LegBottom_035" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg2_3_L" unique_id=1462564172]
+transform = Transform3D(-0.19056113, -1.8272826e-07, 7.565526e-07, 1.3121125e-08, -0.1859628, -0.041610163, 7.7819595e-07, -0.041610163, 0.1859628, -0.006657978, 0.5349259, 0.013130458)
+mesh = SubResource("ArrayMesh_bjik5")
+
+[node name="leg2_2_L" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1756551260]
+transform = Transform3D(0.99957675, 0.028840035, 0.0038031898, 0.001307134, 0.0860777, -0.99628747, -0.029060349, 0.9958708, 0.08600358, 1.5877734, 1.1783519, 4.8253183)
+bone_name = "leg2_2.L"
+bone_idx = 10
+
+[node name="LegMid_003" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg2_2_L" unique_id=1355913391]
+transform = Transform3D(-1, -1.1932697e-05, -3.6142965e-06, 3.159862e-07, 0.26553598, -0.9641005, 1.2464054e-05, -0.96410066, -0.26553595, -0.00665837, 0.22793593, -0.014510594)
+mesh = SubResource("ArrayMesh_xunwb")
+
+[node name="leg2_1_L" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=216659803]
+transform = Transform3D(0.99638134, 0.08452696, 0.008911471, -0.007181864, 0.18819873, -0.98210466, -0.084691465, 0.9784868, 0.18812476, 1.2841352, 0.5023032, 1.3103924)
+bone_name = "leg2_1.L"
+bone_idx = 9
+
+[node name="LegTop_019" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg2_1_L" unique_id=1855506806]
+transform = Transform3D(-1, 4.296784e-06, -6.519169e-07, 5.2822827e-07, -0.028723715, -0.99958736, -4.313737e-06, -0.99958736, 0.028723715, -0.0066582174, -0.019408038, 0.0017050513)
+mesh = SubResource("ArrayMesh_kf8uy")
+
+[node name="leg1_3_L" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1984788695]
+transform = Transform3D(0.97131807, -0.20189823, 0.12561247, -0.0035640867, -0.54056436, -0.8412949, 0.23775764, 0.81671727, -0.5257795, -2.8728428, 1.0860281, 9.488277)
+bone_name = "leg1_3.L"
+bone_idx = 15
+
+[node name="LegBottom_001" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg1_3_L" unique_id=2043703283]
+transform = Transform3D(-0.19056113, -1.7681936e-07, 7.490495e-07, 8.993211e-09, -0.1859628, -0.04161015, 7.6958366e-07, -0.04161015, 0.1859628, -0.02011989, 0.5349257, 0.01313054)
+mesh = SubResource("ArrayMesh_akc7n")
+
+[node name="leg1_2_L" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=2043392668]
+transform = Transform3D(0.97131777, -0.2354033, -0.033573724, -0.0035722468, 0.12673156, -0.99193054, 0.23775859, 0.9635997, 0.12225569, -1.7273734, 0.46935388, 4.7994137)
+bone_name = "leg1_2.L"
+bone_idx = 14
+
+[node name="LegMid_001" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg1_2_L" unique_id=1233453551]
+transform = Transform3D(-1, -1.1871208e-05, -3.5851108e-06, 3.041755e-07, 0.26553598, -0.9641004, 1.2397023e-05, -0.9641006, -0.26553592, -0.020120028, 0.22793575, -0.014510435)
+mesh = SubResource("ArrayMesh_oc3om")
+
+[node name="leg1_1_L" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1922846706]
+transform = Transform3D(0.9713178, -0.2377816, -0.0012725367, -0.003555499, -0.009172439, -0.99995154, 0.23775843, 0.97127527, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
+bone_name = "leg1_1.L"
+bone_idx = 13
+
+[node name="LegTop_017" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/leg1_1_L" unique_id=1887230030]
+transform = Transform3D(-1, 4.3343216e-06, -6.059954e-07, 4.812475e-07, -0.028723715, -0.99958736, -4.3499404e-06, -0.99958736, 0.028723715, -0.020119725, -0.019407881, 0.0017049778)
+mesh = SubResource("ArrayMesh_k8er0")
+
+[node name="Body_2" type="BoneAttachment3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1581651650]
+bone_name = "Body_2"
+bone_idx = 0
+
+[node name="Body" type="MeshInstance3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D/Body_2" unique_id=1439969299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5023032, 0)
+mesh = SubResource("ArrayMesh_8k8vi")
+
+[node name="L1_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=581786984]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_R_target")
+settings/0/root_bone_name = "leg1_1.R"
+settings/0/root_bone = 1
+settings/0/end_bone_name = "leg1_4.R"
+settings/0/end_bone = 4
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_c6gwx")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L1_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1028522063]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_L_target")
+settings/0/root_bone_name = "leg1_1.L"
+settings/0/root_bone = 13
+settings/0/end_bone_name = "leg1_4.L"
+settings/0/end_bone = 16
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bcbcq")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 0
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="L2_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=473060608]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_R_target")
+settings/0/root_bone_name = "leg2_1.R"
+settings/0/root_bone = 5
+settings/0/end_bone_name = "leg2_4.R"
+settings/0/end_bone = 8
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_eu7l1")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_p1v5b")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_wygdx")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L2_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider3/Armature_006/Skeleton3D" unique_id=1925764312]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_L_target")
+settings/0/root_bone_name = "leg2_1.L"
+settings/0/root_bone = 9
+settings/0/end_bone_name = "leg2_4.L"
+settings/0/end_bone = 12
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bah7m")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_fv4w7")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_fvag4")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_kva58")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="leg1_R_target" type="Node3D" parent="centipede/giant-spider3" unique_id=2130219378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.866169, -5.4159446, -14.239948)
+
+[node name="leg1_L_target" type="Node3D" parent="centipede/giant-spider3" unique_id=350644569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5719643, -3.9621668, 16.35617)
+
+[node name="leg2_R_target" type="Node3D" parent="centipede/giant-spider3" unique_id=626973047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.255554)
+
+[node name="leg2_L_target" type="Node3D" parent="centipede/giant-spider3" unique_id=1542905943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17780304, -3.795454, 16.101364)
+
+[node name="giant-spider4" type="Node3D" parent="centipede" unique_id=897568295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.418015, 6.9846087, 59)
+
+[node name="Armature_006" type="Node3D" parent="centipede/giant-spider4" unique_id=1878631807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5023032, 0)
+
+[node name="Skeleton3D" type="Skeleton3D" parent="centipede/giant-spider4/Armature_006" unique_id=1624804201]
+bones/0/name = "Body_2"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "leg1_1.R"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, -0.019362926, 0.9998126, 0, -0.9998126, -0.019362926, -0.9245778, 0.5023032, -1.5000287)
+bones/1/enabled = true
+bones/1/position = Vector3(-0.9245778, 0.5023032, -1.5000287)
+bones/1/rotation = Quaternion(-0.71391976, 0, 0, 0.7002275)
+bones/1/scale = Vector3(1, 1.0000001, 1.0000001)
+bones/2/name = "leg1_2.R"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 0.9996587, -0.026121102, 0, 0.0261211, 0.9996587, -5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/enabled = true
+bones/2/position = Vector3(-5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/rotation = Quaternion(0.013061668, 0, 0, 0.9999147)
+bones/2/scale = Vector3(1, 0.9999999, 0.9999999)
+bones/3/name = "leg1_3.R"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 0, 0, 0, 0.9998826, -0.015334643, 0, 0.015334645, 0.99988246, 5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/enabled = true
+bones/3/position = Vector3(5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/rotation = Quaternion(0.0076675476, 0, 0, 0.9999706)
+bones/3/scale = Vector3(1, 1.0000001, 1)
+bones/4/name = "leg1_4.R"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, 0, 0, 0, 0.9997559, 0.022093529, 0, -0.02209353, 0.99975586, 0, 8.047915, -4.4703484e-08)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 8.047915, -4.4703484e-08)
+bones/4/rotation = Quaternion(-0.01104744, 0, 0, 0.99993896)
+bones/4/scale = Vector3(1, 1, 0.99999994)
+bones/5/name = "leg2_1.R"
+bones/5/parent = 0
+bones/5/rest = Transform3D(1, 0, 0, 0, -0.02033913, 0.9997931, 0, -0.9997931, -0.02033913, 1.1985257, 0.5023032, -1.5000287)
+bones/5/enabled = true
+bones/5/position = Vector3(1.1985257, 0.5023032, -1.5000287)
+bones/5/rotation = Quaternion(-0.7142616, 0, 0, 0.6998789)
+bones/5/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/6/name = "leg2_2.R"
+bones/6/parent = 5
+bones/6/rest = Transform3D(1, 0, 0, 0, 0.9996268, -0.027318353, 0, 0.027318355, 0.99962676, 0, 3.5922062, -1.8626451e-09)
+bones/6/enabled = true
+bones/6/position = Vector3(0, 3.5922062, -1.8626451e-09)
+bones/6/rotation = Quaternion(0.013660452, 0, 0, 0.9999067)
+bones/6/scale = Vector3(1, 1, 0.99999994)
+bones/7/name = "leg2_3.R"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 0, 0, 0, 0.9998989, -0.014217496, 0, 0.014217496, 0.9998989, 0, 4.865988, -3.7252903e-09)
+bones/7/enabled = true
+bones/7/position = Vector3(0, 4.865988, -3.7252903e-09)
+bones/7/rotation = Quaternion(0.007108928, 0, 0, 0.9999747)
+bones/7/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/8/name = "leg2_4.R"
+bones/8/parent = 7
+bones/8/rest = Transform3D(1, 0, 0, 0, 0.9997753, 0.02119748, 0, -0.02119748, 0.9997753, -1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/enabled = true
+bones/8/position = Vector3(-1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/rotation = Quaternion(-0.010599336, 0, 0, 0.9999438)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/name = "leg2_1.L"
+bones/9/parent = 0
+bones/9/rest = Transform3D(1, 9.955609e-08, 4.304966e-06, 4.306101e-06, -0.02033913, -0.9997931, -1.1976226e-08, 0.9997931, -0.02033913, 1.2841352, 0.5023032, 1.3103924)
+bones/9/enabled = true
+bones/9/position = Vector3(1.2841352, 0.5023032, 1.3103924)
+bones/9/rotation = Quaternion(0.7142616, 1.5420322e-06, 1.5025975e-06, 0.6998789)
+bones/9/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/10/name = "leg2_2.L"
+bones/10/parent = 9
+bones/10/rest = Transform3D(1, 9.158061e-08, -1.6778491e-05, 3.6681433e-07, 0.9996268, 0.027318353, 1.6774731e-05, -0.027318355, 0.99962676, -1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/enabled = true
+bones/10/position = Vector3(-1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/rotation = Quaternion(-0.013660452, -8.389089e-06, 6.8814856e-08, 0.9999067)
+bones/10/scale = Vector3(1, 1, 0.99999994)
+bones/11/name = "leg2_3.L"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, -1.6554426e-07, 8.240397e-06, 4.836973e-08, 0.9998989, 0.014217496, -8.241917e-06, -0.014217496, 0.9998989, 2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/enabled = true
+bones/11/position = Vector3(2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/rotation = Quaternion(-0.007108928, 4.1206827e-06, 5.347985e-08, 0.9999747)
+bones/11/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/12/name = "leg2_4.L"
+bones/12/parent = 11
+bones/12/rest = Transform3D(1, 4.4081965e-09, 2.6455288e-08, -3.846421e-09, 0.9997753, -0.021197481, -2.6542788e-08, 0.021197481, 0.9997753, 8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/enabled = true
+bones/12/position = Vector3(8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/rotation = Quaternion(0.010599337, 1.3250264e-08, -2.0637707e-09, 0.9999438)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/name = "leg1_1.L"
+bones/13/parent = 0
+bones/13/rest = Transform3D(1, 8.296372e-08, 4.342462e-06, 4.3432515e-06, -0.02033913, -0.9997931, 5.375341e-09, 0.9997931, -0.02033913, -0.8732129, 0.5023032, 1.3103924)
+bones/13/enabled = true
+bones/13/position = Vector3(-0.8732129, 0.5023032, 1.3103924)
+bones/13/rotation = Quaternion(0.7142616, 1.5492279e-06, 1.5217947e-06, 0.6998789)
+bones/13/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/14/name = "leg1_2.L"
+bones/14/parent = 13
+bones/14/rest = Transform3D(1, 1.2144079e-07, -1.6748487e-05, 3.3614566e-07, 0.9996268, 0.027318353, 1.6745555e-05, -0.027318355, 0.99962676, 6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/enabled = true
+bones/14/position = Vector3(6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/rotation = Quaternion(-0.013660452, -8.374292e-06, 5.3681227e-08, 0.9999067)
+bones/14/scale = Vector3(1, 1, 0.99999994)
+bones/15/name = "leg1_3.L"
+bones/15/parent = 14
+bones/15/rest = Transform3D(1, -1.6973335e-07, 8.218081e-06, 5.2875656e-08, 0.9998989, 0.014217496, -8.219665e-06, -0.014217496, 0.9998989, 1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/enabled = true
+bones/15/position = Vector3(1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/rotation = Quaternion(-0.007108928, 4.1095404e-06, 5.5653665e-08, 0.9999747)
+bones/15/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/16/name = "leg1_4.L"
+bones/16/parent = 15
+bones/16/rest = Transform3D(1, -3.6475887e-09, -1.827152e-08, 3.2594594e-09, 0.99977523, -0.02119748, 1.8344736e-08, 0.021197477, 0.9997753, -5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/enabled = true
+bones/16/position = Vector3(-5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/rotation = Quaternion(0.010599336, -9.154579e-09, 1.7268592e-09, 0.9999438)
+bones/16/scale = Vector3(1, 0.99999994, 1)
+
+[node name="leg1_4_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=589137077]
+transform = Transform3D(0.9962119, -0.027394919, -0.082531445, 0.023766797, -0.8271713, 0.5614472, -0.083648436, -0.561282, -0.82338667, -1.8654122, -4.9222383, -14.246168)
+bone_name = "leg1_4.R"
+bone_idx = 4
+
+[node name="leg1_3_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1839900093]
+transform = Transform3D(0.9962119, -0.029211642, -0.08190605, 0.023766797, -0.81456506, 0.5795853, -0.083648436, -0.57933646, -0.81078506, -1.6303194, 1.633312, -9.583717)
+bone_name = "leg1_3.R"
+bone_idx = 3
+
+[node name="LegBottom" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg1_3_R" unique_id=1831363140]
+transform = Transform3D(0.19056113, 2.3494455e-19, 6.086013e-19, 3.6216656e-19, -0.1859628, -0.04161011, 5.4261363e-19, 0.041610107, -0.18596281, 0, 0.054299325, -0.010153502)
+mesh = SubResource("ArrayMesh_h4x1v")
+
+[node name="leg1_2_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=839880313]
+transform = Transform3D(0.9962119, -0.077989265, -0.038465504, 0.023766797, -0.18130925, 0.983139, -0.083648436, -0.9803289, -0.17876884, -1.238418, 2.5444036, -4.657496)
+bone_name = "leg1_2.R"
+bone_idx = 2
+
+[node name="LegMid" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg1_2_R" unique_id=1765470443]
+transform = Transform3D(1, -4.5488337e-18, -5.6887754e-18, -4.276676e-18, 0.26553583, -0.96410084, 5.896109e-18, 0.9641009, 0.2655358, 1.1920929e-07, 0.24655554, 0.015491415)
+mesh = SubResource("ArrayMesh_s1y8x")
+
+[node name="leg1_1_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1944793740]
+transform = Transform3D(0.9962119, -0.08317255, 0.02538204, 0.023766797, 0.54118854, 0.8405655, -0.083648436, -0.8367781, 0.5411152, -0.9245778, 0.5023032, -1.5000287)
+bone_name = "leg1_1.R"
+bone_idx = 1
+
+[node name="LegTop" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg1_1_R" unique_id=1564481511]
+transform = Transform3D(1, -9.1615455e-20, -6.3779575e-18, -6.3779596e-18, -0.028723706, -0.999587, -9.1621006e-20, 0.999587, -0.028723706, -1.1920929e-07, 0.021312105, -0.0045620254)
+mesh = SubResource("ArrayMesh_epffs")
+
+[node name="leg2_3_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1176889730]
+transform = Transform3D(0.9921413, 0.11069333, 0.058331303, 0.055866048, -0.80904454, 0.58508587, 0.11195776, -0.5772293, -0.80887055, 1.0598762, 1.322079, -9.43622)
+bone_name = "leg2_3.R"
+bone_idx = 7
+
+[node name="LegBottom_017" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg2_3_R" unique_id=443220650]
+transform = Transform3D(0.19056113, 0, -9.313226e-09, 3.7252903e-09, -0.18540637, -0.044023283, 2.7939677e-09, 0.04402329, -0.18540634, 0.025484085, 0.3993225, 0.25059128)
+mesh = SubResource("ArrayMesh_stha2")
+
+[node name="leg2_2_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=621388691]
+transform = Transform3D(0.9997116, 0.023763962, 0.003472739, 0.00089998916, -0.18156669, 0.98337805, 0.023999495, -0.9830914, -0.18153554, 0.9442411, 2.2055802, -4.6525087)
+bone_name = "leg2_2.R"
+bone_idx = 6
+
+[node name="LegMid_002" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg2_2_R" unique_id=2093174562]
+transform = Transform3D(1, 0, 0, 0, 0.26555586, -0.9640954, 0, 0.9640955, 0.26555583, -0.0034240484, 0.08773489, -0.017001368)
+mesh = SubResource("ArrayMesh_8edhi")
+
+[node name="leg2_1_R" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=737221455]
+transform = Transform3D(0.99731714, -0.070787854, 0.018643312, 0.017199676, 0.47415903, 0.88027114, -0.07115241, -0.8775888, 0.4741045, 1.1985257, 0.5023032, -1.5000287)
+bone_name = "leg2_1.R"
+bone_idx = 5
+
+[node name="LegTop_018" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg2_1_R" unique_id=1287106496]
+transform = Transform3D(1, 0, 0, 0, -0.020339252, -0.9997933, 0, 0.9997933, -0.020339252, -0.0034241676, -0.15878868, -0.003230351)
+mesh = SubResource("ArrayMesh_28o4g")
+
+[node name="leg2_3_L" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1752277799]
+transform = Transform3D(0.9700599, -0.22874357, 0.08160953, -0.07050969, -0.58680934, -0.8066491, 0.23240505, 0.7767437, -0.5853689, 1.7281088, 1.5972049, 9.671213)
+bone_name = "leg2_3.L"
+bone_idx = 11
+
+[node name="LegBottom_035" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg2_3_L" unique_id=1042627471]
+transform = Transform3D(-0.19056113, -1.8272826e-07, 7.565526e-07, 1.3121125e-08, -0.1859628, -0.041610163, 7.7819595e-07, -0.041610163, 0.1859628, -0.006657978, 0.5349259, 0.013130458)
+mesh = SubResource("ArrayMesh_bjik5")
+
+[node name="leg2_2_L" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=124514064]
+transform = Transform3D(0.99957675, 0.028840035, 0.0038031898, 0.001307134, 0.0860777, -0.99628747, -0.029060349, 0.9958708, 0.08600358, 1.5877734, 1.1783519, 4.8253183)
+bone_name = "leg2_2.L"
+bone_idx = 10
+
+[node name="LegMid_003" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg2_2_L" unique_id=1741193885]
+transform = Transform3D(-1, -1.1932697e-05, -3.6142965e-06, 3.159862e-07, 0.26553598, -0.9641005, 1.2464054e-05, -0.96410066, -0.26553595, -0.00665837, 0.22793593, -0.014510594)
+mesh = SubResource("ArrayMesh_xunwb")
+
+[node name="leg2_1_L" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1809117467]
+transform = Transform3D(0.99638134, 0.08452696, 0.008911471, -0.007181864, 0.18819873, -0.98210466, -0.084691465, 0.9784868, 0.18812476, 1.2841352, 0.5023032, 1.3103924)
+bone_name = "leg2_1.L"
+bone_idx = 9
+
+[node name="LegTop_019" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg2_1_L" unique_id=1817527344]
+transform = Transform3D(-1, 4.296784e-06, -6.519169e-07, 5.2822827e-07, -0.028723715, -0.99958736, -4.313737e-06, -0.99958736, 0.028723715, -0.0066582174, -0.019408038, 0.0017050513)
+mesh = SubResource("ArrayMesh_kf8uy")
+
+[node name="leg1_3_L" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1818652575]
+transform = Transform3D(0.97131807, -0.20189823, 0.12561247, -0.0035640867, -0.54056436, -0.8412949, 0.23775764, 0.81671727, -0.5257795, -2.8728428, 1.0860281, 9.488277)
+bone_name = "leg1_3.L"
+bone_idx = 15
+
+[node name="LegBottom_001" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg1_3_L" unique_id=522804267]
+transform = Transform3D(-0.19056113, -1.7681936e-07, 7.490495e-07, 8.993211e-09, -0.1859628, -0.04161015, 7.6958366e-07, -0.04161015, 0.1859628, -0.02011989, 0.5349257, 0.01313054)
+mesh = SubResource("ArrayMesh_akc7n")
+
+[node name="leg1_2_L" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1167201830]
+transform = Transform3D(0.97131777, -0.2354033, -0.033573724, -0.0035722468, 0.12673156, -0.99193054, 0.23775859, 0.9635997, 0.12225569, -1.7273734, 0.46935388, 4.7994137)
+bone_name = "leg1_2.L"
+bone_idx = 14
+
+[node name="LegMid_001" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg1_2_L" unique_id=2125669825]
+transform = Transform3D(-1, -1.1871208e-05, -3.5851108e-06, 3.041755e-07, 0.26553598, -0.9641004, 1.2397023e-05, -0.9641006, -0.26553592, -0.020120028, 0.22793575, -0.014510435)
+mesh = SubResource("ArrayMesh_oc3om")
+
+[node name="leg1_1_L" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=393352032]
+transform = Transform3D(0.9713178, -0.2377816, -0.0012725367, -0.003555499, -0.009172439, -0.99995154, 0.23775843, 0.97127527, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
+bone_name = "leg1_1.L"
+bone_idx = 13
+
+[node name="LegTop_017" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/leg1_1_L" unique_id=2036872087]
+transform = Transform3D(-1, 4.3343216e-06, -6.059954e-07, 4.812475e-07, -0.028723715, -0.99958736, -4.3499404e-06, -0.99958736, 0.028723715, -0.020119725, -0.019407881, 0.0017049778)
+mesh = SubResource("ArrayMesh_k8er0")
+
+[node name="Body_2" type="BoneAttachment3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1487894823]
+bone_name = "Body_2"
+bone_idx = 0
+
+[node name="Body" type="MeshInstance3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D/Body_2" unique_id=809674412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5023032, 0)
+mesh = SubResource("ArrayMesh_8k8vi")
+
+[node name="L1_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1002177903]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_R_target")
+settings/0/root_bone_name = "leg1_1.R"
+settings/0/root_bone = 1
+settings/0/end_bone_name = "leg1_4.R"
+settings/0/end_bone = 4
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_c6gwx")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L1_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=488229875]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_L_target")
+settings/0/root_bone_name = "leg1_1.L"
+settings/0/root_bone = 13
+settings/0/end_bone_name = "leg1_4.L"
+settings/0/end_bone = 16
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bcbcq")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 0
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="L2_R_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=1027132640]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_R_target")
+settings/0/root_bone_name = "leg2_1.R"
+settings/0/root_bone = 5
+settings/0/end_bone_name = "leg2_4.R"
+settings/0/end_bone = 8
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_eu7l1")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_p1v5b")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_wygdx")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L2_L_CCDIK3D" type="CCDIK3D" parent="centipede/giant-spider4/Armature_006/Skeleton3D" unique_id=368174593]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_L_target")
+settings/0/root_bone_name = "leg2_1.L"
+settings/0/root_bone = 9
+settings/0/end_bone_name = "leg2_4.L"
+settings/0/end_bone = 12
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bah7m")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_fv4w7")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_fvag4")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_kva58")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="leg1_R_target" type="Node3D" parent="centipede/giant-spider4" unique_id=1962419408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.866169, -5.4159446, -14.239948)
+
+[node name="leg1_L_target" type="Node3D" parent="centipede/giant-spider4" unique_id=874856990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5719643, -3.9621668, 16.35617)
+
+[node name="leg2_R_target" type="Node3D" parent="centipede/giant-spider4" unique_id=831025378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.255554)
+
+[node name="leg2_L_target" type="Node3D" parent="centipede/giant-spider4" unique_id=663013438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17780304, -3.795454, 16.101364)
+
+[node name="central_target" type="Node3D" parent="centipede" unique_id=179896519]
+
+[node name="giant-spider" type="Node3D" parent="." unique_id=2007849912]
+transform = Transform3D(0.82874924, -0.009127946, 0.55954576, 0.007565093, 0.99995834, 0.005107716, -0.55956906, 0, 0.82878375, 95.839264, 6.9846087, 37.884033)
+rotation_edit_mode = 1
+
+[node name="Armature_006" type="Node3D" parent="giant-spider" unique_id=247942409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5023032, 0)
+
+[node name="Skeleton3D" type="Skeleton3D" parent="giant-spider/Armature_006" unique_id=866024212]
+bones/0/name = "Body_2"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "leg1_1.R"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, -0.019362926, 0.9998126, 0, -0.9998126, -0.019362926, -0.9245778, 0.5023032, -1.5000287)
+bones/1/enabled = true
+bones/1/position = Vector3(-0.9245778, 0.5023032, -1.5000287)
+bones/1/rotation = Quaternion(-0.71391976, 0, 0, 0.7002275)
+bones/1/scale = Vector3(1, 1.0000001, 1.0000001)
+bones/2/name = "leg1_2.R"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 0.9996587, -0.026121102, 0, 0.0261211, 0.9996587, -5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/enabled = true
+bones/2/position = Vector3(-5.9604645e-08, 3.7733624, -5.5879354e-09)
+bones/2/rotation = Quaternion(0.013061668, 0, 0, 0.9999147)
+bones/2/scale = Vector3(1, 0.9999999, 0.9999999)
+bones/3/name = "leg1_3.R"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 0, 0, 0, 0.9998826, -0.015334643, 0, 0.015334645, 0.99988246, 5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/enabled = true
+bones/3/position = Vector3(5.9604645e-08, 5.025069, 1.4901161e-08)
+bones/3/rotation = Quaternion(0.0076675476, 0, 0, 0.9999706)
+bones/3/scale = Vector3(1, 1.0000001, 1)
+bones/4/name = "leg1_4.R"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, 0, 0, 0, 0.9997559, 0.022093529, 0, -0.02209353, 0.99975586, 0, 8.047915, -4.4703484e-08)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 8.047915, -4.4703484e-08)
+bones/4/rotation = Quaternion(-0.01104744, 0, 0, 0.99993896)
+bones/4/scale = Vector3(1, 1, 0.99999994)
+bones/5/name = "leg2_1.R"
+bones/5/parent = 0
+bones/5/rest = Transform3D(1, 0, 0, 0, -0.02033913, 0.9997931, 0, -0.9997931, -0.02033913, 1.1985257, 0.5023032, -1.5000287)
+bones/5/enabled = true
+bones/5/position = Vector3(1.1985257, 0.5023032, -1.5000287)
+bones/5/rotation = Quaternion(-0.7142616, 0, 0, 0.6998789)
+bones/5/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/6/name = "leg2_2.R"
+bones/6/parent = 5
+bones/6/rest = Transform3D(1, 0, 0, 0, 0.9996268, -0.027318353, 0, 0.027318355, 0.99962676, 0, 3.5922062, -1.8626451e-09)
+bones/6/enabled = true
+bones/6/position = Vector3(0, 3.5922062, -1.8626451e-09)
+bones/6/rotation = Quaternion(0.013660452, 0, 0, 0.9999067)
+bones/6/scale = Vector3(1, 1, 0.99999994)
+bones/7/name = "leg2_3.R"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 0, 0, 0, 0.9998989, -0.014217496, 0, 0.014217496, 0.9998989, 0, 4.865988, -3.7252903e-09)
+bones/7/enabled = true
+bones/7/position = Vector3(0, 4.865988, -3.7252903e-09)
+bones/7/rotation = Quaternion(0.007108928, 0, 0, 0.9999747)
+bones/7/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/8/name = "leg2_4.R"
+bones/8/parent = 7
+bones/8/rest = Transform3D(1, 0, 0, 0, 0.9997753, 0.02119748, 0, -0.02119748, 0.9997753, -1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/enabled = true
+bones/8/position = Vector3(-1.1920929e-07, 8.388113, -1.4901161e-08)
+bones/8/rotation = Quaternion(-0.010599336, 0, 0, 0.9999438)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/name = "leg2_1.L"
+bones/9/parent = 0
+bones/9/rest = Transform3D(1, 9.955609e-08, 4.304966e-06, 4.306101e-06, -0.02033913, -0.9997931, -1.1976226e-08, 0.9997931, -0.02033913, 1.2841352, 0.5023032, 1.3103924)
+bones/9/enabled = true
+bones/9/position = Vector3(1.2841352, 0.5023032, 1.3103924)
+bones/9/rotation = Quaternion(0.7142616, 1.5420322e-06, 1.5025975e-06, 0.6998789)
+bones/9/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/10/name = "leg2_2.L"
+bones/10/parent = 9
+bones/10/rest = Transform3D(1, 9.158061e-08, -1.6778491e-05, 3.6681433e-07, 0.9996268, 0.027318353, 1.6774731e-05, -0.027318355, 0.99962676, -1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/enabled = true
+bones/10/position = Vector3(-1.5693562e-08, 3.5922062, 1.6930244e-09)
+bones/10/rotation = Quaternion(-0.013660452, -8.389089e-06, 6.8814856e-08, 0.9999067)
+bones/10/scale = Vector3(1, 1, 0.99999994)
+bones/11/name = "leg2_3.L"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, -1.6554426e-07, 8.240397e-06, 4.836973e-08, 0.9998989, 0.014217496, -8.241917e-06, -0.014217496, 0.9998989, 2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/enabled = true
+bones/11/position = Vector3(2.4161551e-08, 4.865988, 1.36533345e-08)
+bones/11/rotation = Quaternion(-0.007108928, 4.1206827e-06, 5.347985e-08, 0.9999747)
+bones/11/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/12/name = "leg2_4.L"
+bones/12/parent = 11
+bones/12/rest = Transform3D(1, 4.4081965e-09, 2.6455288e-08, -3.846421e-09, 0.9997753, -0.021197481, -2.6542788e-08, 0.021197481, 0.9997753, 8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/enabled = true
+bones/12/position = Vector3(8.9235e-08, 8.388112, -7.501512e-09)
+bones/12/rotation = Quaternion(0.010599337, 1.3250264e-08, -2.0637707e-09, 0.9999438)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/name = "leg1_1.L"
+bones/13/parent = 0
+bones/13/rest = Transform3D(1, 8.296372e-08, 4.342462e-06, 4.3432515e-06, -0.02033913, -0.9997931, 5.375341e-09, 0.9997931, -0.02033913, -0.8732129, 0.5023032, 1.3103924)
+bones/13/enabled = true
+bones/13/position = Vector3(-0.8732129, 0.5023032, 1.3103924)
+bones/13/rotation = Quaternion(0.7142616, 1.5492279e-06, 1.5217947e-06, 0.6998789)
+bones/13/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/14/name = "leg1_2.L"
+bones/14/parent = 13
+bones/14/rest = Transform3D(1, 1.2144079e-07, -1.6748487e-05, 3.3614566e-07, 0.9996268, 0.027318353, 1.6745555e-05, -0.027318355, 0.99962676, 6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/enabled = true
+bones/14/position = Vector3(6.664903e-08, 3.5922065, 2.3148914e-09)
+bones/14/rotation = Quaternion(-0.013660452, -8.374292e-06, 5.3681227e-08, 0.9999067)
+bones/14/scale = Vector3(1, 1, 0.99999994)
+bones/15/name = "leg1_3.L"
+bones/15/parent = 14
+bones/15/rest = Transform3D(1, -1.6973335e-07, 8.218081e-06, 5.2875656e-08, 0.9998989, 0.014217496, -8.219665e-06, -0.014217496, 0.9998989, 1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/enabled = true
+bones/15/position = Vector3(1.6538085e-08, 4.865988, 1.0558324e-08)
+bones/15/rotation = Quaternion(-0.007108928, 4.1095404e-06, 5.5653665e-08, 0.9999747)
+bones/15/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/16/name = "leg1_4.L"
+bones/16/parent = 15
+bones/16/rest = Transform3D(1, -3.6475887e-09, -1.827152e-08, 3.2594594e-09, 0.99977523, -0.02119748, 1.8344736e-08, 0.021197477, 0.9997753, -5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/enabled = true
+bones/16/position = Vector3(-5.080519e-08, 8.388112, 3.450623e-09)
+bones/16/rotation = Quaternion(0.010599336, -9.154579e-09, 1.7268592e-09, 0.9999438)
+bones/16/scale = Vector3(1, 0.99999994, 1)
+
+[node name="leg1_4_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1024127436]
+transform = Transform3D(0.9962119, -0.027394919, -0.082531445, 0.023766797, -0.8271713, 0.5614472, -0.083648436, -0.561282, -0.82338667, -1.8654122, -4.9222383, -14.246168)
+bone_name = "leg1_4.R"
+bone_idx = 4
+
+[node name="leg1_3_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=2014889500]
+transform = Transform3D(0.9962119, -0.029211642, -0.08190605, 0.023766797, -0.81456506, 0.5795853, -0.083648436, -0.57933646, -0.81078506, -1.6303194, 1.633312, -9.583717)
+bone_name = "leg1_3.R"
+bone_idx = 3
+
+[node name="LegBottom" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_3_R" unique_id=634811592]
+transform = Transform3D(0.19056113, 2.3494455e-19, 6.086013e-19, 3.6216656e-19, -0.1859628, -0.04161011, 5.4261363e-19, 0.041610107, -0.18596281, 0, 0.054299325, -0.010153502)
+mesh = SubResource("ArrayMesh_h4x1v")
+
+[node name="leg1_2_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=609923717]
+transform = Transform3D(0.9962119, -0.077989265, -0.038465504, 0.023766797, -0.18130925, 0.983139, -0.083648436, -0.9803289, -0.17876884, -1.238418, 2.5444036, -4.657496)
+bone_name = "leg1_2.R"
+bone_idx = 2
+
+[node name="LegMid" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_2_R" unique_id=2031836667]
+transform = Transform3D(1, -4.5488337e-18, -5.6887754e-18, -4.276676e-18, 0.26553583, -0.96410084, 5.896109e-18, 0.9641009, 0.2655358, 1.1920929e-07, 0.24655554, 0.015491415)
+mesh = SubResource("ArrayMesh_s1y8x")
+
+[node name="leg1_1_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=818694547]
+transform = Transform3D(0.9962119, -0.08317255, 0.02538204, 0.023766797, 0.54118854, 0.8405655, -0.083648436, -0.8367781, 0.5411152, -0.9245778, 0.5023032, -1.5000287)
+bone_name = "leg1_1.R"
+bone_idx = 1
+
+[node name="LegTop" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_1_R" unique_id=1239295822]
+transform = Transform3D(1, -9.1615455e-20, -6.3779575e-18, -6.3779596e-18, -0.028723706, -0.999587, -9.1621006e-20, 0.999587, -0.028723706, -1.1920929e-07, 0.021312105, -0.0045620254)
+mesh = SubResource("ArrayMesh_epffs")
+
+[node name="leg2_3_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=647609889]
+transform = Transform3D(0.9921414, 0.11069242, 0.058330934, 0.055865534, -0.8090446, 0.5850858, 0.111956924, -0.5772294, -0.80887055, 1.0598762, 1.322079, -9.43622)
+bone_name = "leg2_3.R"
+bone_idx = 7
+
+[node name="LegBottom_017" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_3_R" unique_id=342629948]
+transform = Transform3D(0.19056113, 0, -9.313226e-09, 3.7252903e-09, -0.18540637, -0.044023283, 2.7939677e-09, 0.04402329, -0.18540634, 0.025484085, 0.3993225, 0.25059128)
+mesh = SubResource("ArrayMesh_stha2")
+
+[node name="leg2_2_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1136169639]
+transform = Transform3D(0.9997116, 0.023763962, 0.003472739, 0.00089998916, -0.18156669, 0.98337805, 0.023999495, -0.9830914, -0.18153554, 0.9442411, 2.2055802, -4.6525087)
+bone_name = "leg2_2.R"
+bone_idx = 6
+
+[node name="LegMid_002" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_2_R" unique_id=1932431027]
+transform = Transform3D(1, 0, 0, 0, 0.26555586, -0.9640954, 0, 0.9640955, 0.26555583, -0.0034240484, 0.08773489, -0.017001368)
+mesh = SubResource("ArrayMesh_8edhi")
+
+[node name="leg2_1_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1645596967]
+transform = Transform3D(0.99731714, -0.070787854, 0.018643312, 0.017199676, 0.47415903, 0.88027114, -0.07115241, -0.8775888, 0.4741045, 1.1985257, 0.5023032, -1.5000287)
+bone_name = "leg2_1.R"
+bone_idx = 5
+
+[node name="LegTop_018" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_1_R" unique_id=22832863]
+transform = Transform3D(1, 0, 0, 0, -0.020339252, -0.9997933, 0, 0.9997933, -0.020339252, -0.0034241676, -0.15878868, -0.003230351)
+mesh = SubResource("ArrayMesh_28o4g")
+
+[node name="leg2_3_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1243794410]
+transform = Transform3D(0.76635796, 0.6420189, 0.022515621, 0.2540498, -0.27068737, -0.92854005, -0.59004575, 0.7173144, -0.3705482, -0.40709504, -1.3811158, 9.012117)
+bone_name = "leg2_3.L"
+bone_idx = 11
+
+[node name="LegBottom_035" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_3_L" unique_id=1296905919]
+transform = Transform3D(-0.19056113, -1.8272826e-07, 7.565526e-07, 1.3121125e-08, -0.1859628, -0.041610163, 7.7819595e-07, -0.041610163, 0.1859628, -0.006657978, 0.5349259, 0.013130458)
+mesh = SubResource("ArrayMesh_bjik5")
+
+[node name="leg2_2_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1797333452]
+transform = Transform3D(0.99743384, 0.03326685, 0.063394666, 0.070183985, -0.2795346, -0.9575669, -0.014134121, 0.9595591, -0.28115207, -0.56897116, -0.020903826, 4.342915)
+bone_name = "leg2_2.L"
+bone_idx = 10
+
+[node name="LegMid_003" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_2_L" unique_id=1078446142]
+transform = Transform3D(-1, -1.1932697e-05, -3.6142965e-06, 3.159862e-07, 0.26553598, -0.9641005, 1.2464054e-05, -0.96410066, -0.26553595, -0.00665837, 0.22793593, -0.014510594)
+mesh = SubResource("ArrayMesh_xunwb")
+
+[node name="leg2_1_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=437032701]
+transform = Transform3D(0.85591596, -0.5158686, 0.035880204, -0.04635732, -0.14565061, -0.98824936, 0.5150329, 0.84419507, -0.14857899, 1.2841352, 0.5023032, 1.3103924)
+bone_name = "leg2_1.L"
+bone_idx = 9
+
+[node name="LegTop_019" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg2_1_L" unique_id=1372480132]
+transform = Transform3D(-1, 4.296784e-06, -6.519169e-07, 5.2822827e-07, -0.028723715, -0.99958736, -4.313737e-06, -0.99958736, 0.028723715, -0.0066582174, -0.019408038, 0.0017050513)
+mesh = SubResource("ArrayMesh_kf8uy")
+
+[node name="leg1_3_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=562741248]
+transform = Transform3D(0.97131807, -0.20189823, 0.12561247, -0.0035640867, -0.54056436, -0.8412949, 0.23775764, 0.81671727, -0.5257795, -2.8728428, 1.0860281, 9.488277)
+bone_name = "leg1_3.L"
+bone_idx = 15
+
+[node name="LegBottom_001" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_3_L" unique_id=1755033603]
+transform = Transform3D(-0.19056113, -1.7681936e-07, 7.490495e-07, 8.993211e-09, -0.1859628, -0.04161015, 7.6958366e-07, -0.04161015, 0.1859628, -0.02011989, 0.5349257, 0.01313054)
+mesh = SubResource("ArrayMesh_akc7n")
+
+[node name="leg1_2_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=552943687]
+transform = Transform3D(0.97131777, -0.2354033, -0.033573724, -0.0035722468, 0.12673156, -0.99193054, 0.23775859, 0.9635997, 0.12225569, -1.7273734, 0.46935388, 4.7994137)
+bone_name = "leg1_2.L"
+bone_idx = 14
+
+[node name="LegMid_001" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_2_L" unique_id=1669716913]
+transform = Transform3D(-1, -1.1871208e-05, -3.5851108e-06, 3.041755e-07, 0.26553598, -0.9641004, 1.2397023e-05, -0.9641006, -0.26553592, -0.020120028, 0.22793575, -0.014510435)
+mesh = SubResource("ArrayMesh_oc3om")
+
+[node name="leg1_1_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=141822728]
+transform = Transform3D(0.9713178, -0.2377816, -0.0012725367, -0.003555499, -0.009172439, -0.99995154, 0.23775843, 0.97127527, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
+bone_name = "leg1_1.L"
+bone_idx = 13
+
+[node name="LegTop_017" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/leg1_1_L" unique_id=1893304920]
+transform = Transform3D(-1, 4.3343216e-06, -6.059954e-07, 4.812475e-07, -0.028723715, -0.99958736, -4.3499404e-06, -0.99958736, 0.028723715, -0.020119725, -0.019407881, 0.0017049778)
+mesh = SubResource("ArrayMesh_k8er0")
+
+[node name="Body_2" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1728036570]
+bone_name = "Body_2"
+bone_idx = 0
+
+[node name="Body" type="MeshInstance3D" parent="giant-spider/Armature_006/Skeleton3D/Body_2" unique_id=408047390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5023032, 0)
+mesh = SubResource("ArrayMesh_8k8vi")
+
+[node name="L1_R_CCDIK3D" type="CCDIK3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1355924606]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_R_target")
+settings/0/root_bone_name = "leg1_1.R"
+settings/0/root_bone = 1
+settings/0/end_bone_name = "leg1_4.R"
+settings/0/end_bone = 4
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_c6gwx")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_2dftf")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L1_L_CCDIK3D" type="CCDIK3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=221023506]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg1_L_target")
+settings/0/root_bone_name = "leg1_1.L"
+settings/0/root_bone = 13
+settings/0/end_bone_name = "leg1_4.L"
+settings/0/end_bone = 16
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bcbcq")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 0
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 0
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 0
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_js7pq")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="L2_R_CCDIK3D" type="CCDIK3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=51706093]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_R_target")
+settings/0/root_bone_name = "leg2_1.R"
+settings/0/root_bone = 5
+settings/0/end_bone_name = "leg2_4.R"
+settings/0/end_bone = 8
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_eu7l1")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_p1v5b")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_wygdx")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = null
+
+[node name="L2_L_CCDIK3D" type="CCDIK3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=2081698975]
+setting_count = 1
+settings/0/target_node = NodePath("../../../leg2_L_target")
+settings/0/root_bone_name = "leg2_1.L"
+settings/0/root_bone = 9
+settings/0/end_bone_name = "leg2_4.L"
+settings/0/end_bone = 12
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_bah7m")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_fv4w7")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_fvag4")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_kva58")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="leg1_R_target" type="Node3D" parent="giant-spider" unique_id=215658463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.866169, -5.4159446, -14.239948)
+
+[node name="leg1_L_target" type="Node3D" parent="giant-spider" unique_id=1272667650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5719643, -3.9621668, 16.35617)
+
+[node name="leg2_R_target" type="Node3D" parent="giant-spider" unique_id=188243754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.255554)
+
+[node name="leg2_L_target" type="Node3D" parent="giant-spider" unique_id=1251179148]
+transform = Transform3D(1, 0, 2.9802322e-08, -1.8626451e-09, 1, 9.313226e-10, 0, 0, 1.0000002, 4.9901505, -4.1584167, 15.040268)
