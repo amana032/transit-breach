@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drihugtb57y14"
-path.s3tc="res://.godot/imported/Computer Texture.png-9ce13b72899b3be4a73aa1b3650b49e6.s3tc.ctex"
+path.s3tc="res://.godot/imported/Computer Texture.png-bbbec22b3a295baed5e04c4590efbc70.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/shipModules/Spaceship_Extra_Modules/textures/Computer Texture.png"
-dest_files=["res://.godot/imported/Computer Texture.png-9ce13b72899b3be4a73aa1b3650b49e6.s3tc.ctex"]
+source_file="res://assets/shipModules/Spaceship_Extra_Modules/Textures/Computer Texture.png"
+dest_files=["res://.godot/imported/Computer Texture.png-bbbec22b3a295baed5e04c4590efbc70.s3tc.ctex"]
 
 [params]
 
