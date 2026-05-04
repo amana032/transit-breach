@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://dlf34lch4iia3"]
+
+[ext_resource type="PackedScene" uid="uid://c6kvalebsrohl" path="res://prototype2.glb" id="1_tb51d"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_tb51d"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_a3t4k"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_6bg8c"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_g6h8a"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_01b43"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_daol2"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_15bg1"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_06j25"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_jtrig"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_k5usb"]
+
+[node name="prototype2" unique_id=1419996372 instance=ExtResource("1_tb51d")]
+
+[node name="BoneAttachment3D2" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="0" unique_id=241294427]
+transform = Transform3D(1, -8.0767694e-07, 0.00014284828, -1.414455e-05, 0.9945101, 0.10464104, -0.00014214858, -0.10464104, 0.9945101, 2.9616603e-08, 0.994899, -0.10087631)
+bone_name = "body_1"
+bone_idx = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D2" index="0" unique_id=1151868641]
+skeleton = NodePath("../..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D2/MeshInstance3D" index="0" unique_id=363515168]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D3" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="1" unique_id=1344852149]
+transform = Transform3D(1, -2.5573408e-06, -0.0002499575, 3.0881172e-05, 0.99355173, 0.11338054, 0.0002480558, -0.113380544, 0.9935517, -6.311436e-07, 1.8066785, -0.18629068)
+bone_name = "body_2"
+bone_idx = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D3" index="0" unique_id=429377308]
+skeleton = NodePath("../..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D3/MeshInstance3D" index="0" unique_id=140101831]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D4" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="2" unique_id=1361940923]
+transform = Transform3D(1, 9.15712e-07, -0.00024868725, -2.0380976e-06, 0.99998975, -0.004513316, 0.00024868065, 0.004513301, 0.9999898, -2.7842295e-06, 2.6421862, -0.28163576)
+bone_name = "body_3"
+bone_idx = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D4" index="0" unique_id=1752100910]
+skeleton = NodePath("../..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D4/MeshInstance3D" index="0" unique_id=419693322]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D5" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="3" unique_id=249240952]
+transform = Transform3D(1, 1.2448847e-06, -0.00024860777, -2.7763597e-06, 0.99998087, -0.0061603356, 0.00024859546, 0.006160321, 0.99998087, -2.0323014e-06, 3.46641, -0.27791572)
+bone_name = "body_4"
+bone_idx = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D5" index="0" unique_id=1549520912]
+skeleton = NodePath("../..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D5/MeshInstance3D" index="0" unique_id=1807548968]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D6" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="4" unique_id=820859542]
+transform = Transform3D(0.9999041, 0.013798998, -0.0011508362, -0.013831381, 0.9992616, -0.035840735, 0.0006554206, 0.035853207, 0.9993566, -1.0195735e-06, 4.2750874, -0.27293393)
+bone_name = "body_5"
+bone_idx = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D6" index="0" unique_id=6414204]
+skeleton = NodePath("../..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D6/MeshInstance3D" index="0" unique_id=1345435055]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="CCDIK3D" type="CCDIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="5" unique_id=1053413001]
+angular_delta_limit = 0.8726646259971648
+setting_count = 2
+settings/0/target_node = NodePath("../../../Node3D")
+settings/1/target_node = NodePath("../../../Node3D2")
+settings/0/root_bone_name = "body"
+settings/0/root_bone = 0
+settings/0/end_bone_name = "body_3"
+settings/0/end_bone = 3
+settings/0/extend_end_bone = false
+settings/0/joint_count = 4
+settings/1/root_bone_name = "body_3"
+settings/1/root_bone = 3
+settings/1/end_bone_name = "body_5"
+settings/1/end_bone = 5
+settings/1/extend_end_bone = false
+settings/1/joint_count = 3
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_tb51d")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_a3t4k")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_6bg8c")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/3/rotation_axis = 3
+settings/0/joints/3/limitation = SubResource("JointLimitationCone3D_g6h8a")
+settings/0/joints/3/limitation/right_axis = 0
+settings/0/joints/3/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/1/joints/0/rotation_axis = 3
+settings/1/joints/0/limitation = SubResource("JointLimitationCone3D_01b43")
+settings/1/joints/0/limitation/right_axis = 0
+settings/1/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/1/joints/1/rotation_axis = 3
+settings/1/joints/1/limitation = SubResource("JointLimitationCone3D_daol2")
+settings/1/joints/1/limitation/right_axis = 0
+settings/1/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/1/joints/2/rotation_axis = 3
+settings/1/joints/2/limitation = SubResource("JointLimitationCone3D_15bg1")
+settings/1/joints/2/limitation/right_axis = 0
+settings/1/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="BoneAttachment3D1" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="6" unique_id=430493083]
+transform = Transform3D(1, 2.9289707e-08, 1.5007003e-09, -2.9291686e-08, 0.994899, 0.100876324, 1.4615927e-09, -0.100876324, 0.994899, 1.3306106e-10, 1.1810259e-08, 3.5922287e-09)
+bone_name = "body"
+bone_idx = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D1" index="0" unique_id=1105720137]
+skeleton = NodePath("..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D1/MeshInstance3D" index="0" unique_id=1078759055]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D7" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="7" unique_id=1228295010]
+transform = Transform3D(0.99997824, -3.0312076e-05, 0.0065940116, -0.0065015643, 0.16239, 0.9867051, -0.0011007102, -0.98672664, 0.16238624, 2.9616603e-08, 0.994899, -0.10087631)
+bone_name = "arm_R11"
+bone_idx = 29
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D7" index="0" unique_id=1507900787]
+skeleton = NodePath("..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D7/MeshInstance3D" index="0" unique_id=1324208815]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D8" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="8" unique_id=2067856653]
+transform = Transform3D(0.99997824, 8.076862e-06, 0.006593908, -0.0065068784, 0.16314822, 0.9865799, -0.0010678159, -0.9866015, 0.16314471, -1.8418496e-05, 1.0937266, -0.7013808)
+bone_name = "arm_R12"
+bone_idx = 30
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D8" index="0" unique_id=1331355781]
+skeleton = NodePath("..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D8/MeshInstance3D" index="0" unique_id=222394271]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="BoneAttachment3D9" type="BoneAttachment3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="9" unique_id=580569010]
+transform = Transform3D(0.99994504, -0.008104234, 0.006648568, -0.0051138345, 0.17651631, 0.9842841, -0.009150453, -0.98426414, 0.17646515, -1.3574551e-05, 1.1915499, -1.2929442)
+bone_name = "arm_R13"
+bone_idx = 31
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D9" index="0" unique_id=924728238]
+skeleton = NodePath("..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Armature/Skeleton3D/BoneAttachment3D9/MeshInstance3D" index="0" unique_id=1496681986]
+transform = Transform3D(0.17, 0, 0, 0, 1, 0, 0, 0, 0.175, 0, 0.37, 0)
+
+[node name="CCDIK3D2" type="CCDIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1297150554) index="10" unique_id=818574894]
+setting_count = 1
+settings/0/target_node = NodePath("../../../Node3D3")
+settings/0/root_bone_name = "arm_R11"
+settings/0/root_bone = 29
+settings/0/end_bone_name = "arm_R13"
+settings/0/end_bone = 31
+settings/0/extend_end_bone = false
+settings/0/joint_count = 3
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_06j25")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_jtrig")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_k5usb")
+settings/0/joints/2/limitation/right_axis = 0
+settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+
+[node name="Node3D" type="Node3D" parent="." index="1" unique_id=1874904653]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -1, 0, -0.56995374, -0.011721659, -2.304162)
+
+[node name="Node3D2" type="Node3D" parent="." index="2" unique_id=1497101600]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -1, 0, -0.5234969, -0.011721659, -4.958264)
+
+[node name="Node3D3" type="Node3D" parent="." index="3" unique_id=1784403370]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -1, 0, -3.1100414, -0.011721659, -0.8496742)
