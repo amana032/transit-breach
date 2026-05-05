@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://sqwtpxift0sy"]
+
+[ext_resource type="PackedScene" uid="uid://3jtjt1bebae0" path="res://assets/Flashlight and Batteries/Assets/Flashlight1_SM.fbx" id="1_ambti"]
+[ext_resource type="Texture2D" uid="uid://dwruqk8vhgp8w" path="res://assets/Flashlight and Batteries/Textures/FlashlightAndBatteries_T.png" id="2_mxblm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s416n"]
+albedo_texture = ExtResource("2_mxblm")
+
+[node name="Flashlight1_SM" unique_id=1326606300 instance=ExtResource("1_ambti")]
+
+[node name="Flashlight1_SM" parent="." index="0" unique_id=1490573853]
+material_override = SubResource("StandardMaterial3D_s416n")

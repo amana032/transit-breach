@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dbk3r2u8ihwh4"]
+
+[ext_resource type="Script" uid="uid://dk6jie6gcukyg" path="res://scripts/ladder_collider.gd" id="1_h3c85"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bvth"]
+size = Vector3(0.53222656, 1, 0.040039063)
+
+[node name="LadderCollider" type="Node3D" unique_id=659552584]
+script = ExtResource("1_h3c85")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2121171551]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1790159165]
+shape = SubResource("BoxShape3D_1bvth")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
