@@ -1,6 +1,27 @@
 [gd_scene format=4 uid="uid://236573el1itl"]
 
-[ext_resource type="PackedScene" uid="uid://dhxpuh4p3gg5h" path="res://hallway_pack_glb.tscn" id="1_c6gwx"]
+[ext_resource type="PackedScene" uid="uid://b8o2dybg4vly2" path="res://scenes/Map.tscn" id="1_c6gwx"]
+[ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="2_2dftf"]
+[ext_resource type="AudioStream" uid="uid://d1pjc8yhq3g2q" path="res://assets/sounds/spoopy ambiance.ogg" id="3_bcbcq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bcbcq"]
+sky_top_color = Color(0.12116062, 0.09183601, 0.10420226, 1)
+sky_horizon_color = Color(0.100923516, 0.10392108, 0.10992322, 1)
+ground_bottom_color = Color(0.046011984, 0.022543525, 0.034796212, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_js7pq"]
+sky_material = SubResource("ProceduralSkyMaterial_bcbcq")
+
+[sub_resource type="Environment" id="Environment_eu7l1"]
+background_mode = 2
+sky = SubResource("Sky_js7pq")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.11318297, 0.1270827, 0.14871103, 1)
+fog_light_energy = 0.1
+fog_density = 0.1373
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knoqa"]
 
@@ -444,7 +465,13 @@ angle = 3.1723104
 
 [node name="World" type="Node3D" unique_id=1650164013]
 
-[node name="HallwayPACK_GLB" parent="." unique_id=884959273 instance=ExtResource("1_c6gwx")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1736619219]
+environment = SubResource("Environment_eu7l1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1295780303]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
 
 [node name="centipede" type="Node3D" parent="." unique_id=1095718270]
 
@@ -2019,12 +2046,12 @@ bones/16/rotation = Quaternion(0.010599336, -9.154579e-09, 1.7268592e-09, 0.9999
 bones/16/scale = Vector3(1, 0.99999994, 1)
 
 [node name="leg1_4_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1024127436]
-transform = Transform3D(0.9962119, -0.027394919, -0.082531445, 0.023766797, -0.8271713, 0.5614472, -0.083648436, -0.561282, -0.82338667, -1.8654122, -4.9222383, -14.246168)
+transform = Transform3D(0.9962121, -0.02742371, -0.082518436, 0.02376847, -0.82695115, 0.5617715, -0.08364455, -0.5616049, -0.8231667, -1.865437, -4.924533, -14.247816)
 bone_name = "leg1_4.R"
 bone_idx = 4
 
 [node name="leg1_3_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=2014889500]
-transform = Transform3D(0.9962119, -0.029211642, -0.08190605, 0.023766797, -0.81456506, 0.5795853, -0.083648436, -0.57933646, -0.81078506, -1.6303194, 1.633312, -9.583717)
+transform = Transform3D(0.9962121, -0.02924014, -0.08189241, 0.02376847, -0.8143378, 0.5799047, -0.08364455, -0.5796545, -0.810558, -1.6301149, 1.6291893, -9.582806)
 bone_name = "leg1_3.R"
 bone_idx = 3
 
@@ -2033,7 +2060,7 @@ transform = Transform3D(0.19056113, 2.3494455e-19, 6.086013e-19, 3.6216656e-19, 
 mesh = SubResource("ArrayMesh_h4x1v")
 
 [node name="leg1_2_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=609923717]
-transform = Transform3D(0.9962119, -0.077989265, -0.038465504, 0.023766797, -0.18130925, 0.983139, -0.083648436, -0.9803289, -0.17876884, -1.238418, 2.5444036, -4.657496)
+transform = Transform3D(0.9962121, -0.0779515, -0.038534597, 0.02376847, -0.18216845, 0.98298013, -0.08364455, -0.9801726, -0.1796256, -1.2384033, 2.5445983, -4.657371)
 bone_name = "leg1_2.R"
 bone_idx = 2
 
@@ -2042,7 +2069,7 @@ transform = Transform3D(1, -4.5488337e-18, -5.6887754e-18, -4.276676e-18, 0.2655
 mesh = SubResource("ArrayMesh_s1y8x")
 
 [node name="leg1_1_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=818694547]
-transform = Transform3D(0.9962119, -0.08317255, 0.02538204, 0.023766797, 0.54118854, 0.8405655, -0.083648436, -0.8367781, 0.5411152, -0.9245778, 0.5023032, -1.5000287)
+transform = Transform3D(0.9962121, -0.08316864, 0.025383638, 0.02376847, 0.54124016, 0.84053224, -0.08364455, -0.8367451, 0.5411668, -0.9245778, 0.5023032, -1.5000287)
 bone_name = "leg1_1.R"
 bone_idx = 1
 
@@ -2051,7 +2078,7 @@ transform = Transform3D(1, -9.1615455e-20, -6.3779575e-18, -6.3779596e-18, -0.02
 mesh = SubResource("ArrayMesh_epffs")
 
 [node name="leg2_3_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=647609889]
-transform = Transform3D(0.9921414, 0.11069242, 0.058330934, 0.055865534, -0.8090446, 0.5850858, 0.111956924, -0.5772294, -0.80887055, 1.0598762, 1.322079, -9.43622)
+transform = Transform3D(0.99214906, 0.11065071, 0.058280703, 0.055813525, -0.80880123, 0.58542734, 0.111915454, -0.5775783, -0.8086271, 1.0610297, 1.3141983, -9.442047)
 bone_name = "leg2_3.R"
 bone_idx = 7
 
@@ -2060,7 +2087,7 @@ transform = Transform3D(0.19056113, 0, -9.313226e-09, 3.7252903e-09, -0.18540637
 mesh = SubResource("ArrayMesh_stha2")
 
 [node name="leg2_2_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1136169639]
-transform = Transform3D(0.9997116, 0.023763962, 0.003472739, 0.00089998916, -0.18156669, 0.98337805, 0.023999495, -0.9830914, -0.18153554, 0.9442411, 2.2055802, -4.6525087)
+transform = Transform3D(0.9997127, 0.023716953, 0.0034581413, 0.0008956436, -0.181149, 0.9834552, 0.023950974, -0.98316956, -0.18111825, 0.9456232, 2.195667, -4.6579556)
 bone_name = "leg2_2.R"
 bone_idx = 6
 
@@ -2069,7 +2096,7 @@ transform = Transform3D(1, 0, 0, 0, 0.26555586, -0.9640954, 0, 0.9640955, 0.2655
 mesh = SubResource("ArrayMesh_8edhi")
 
 [node name="leg2_1_R" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1645596967]
-transform = Transform3D(0.99731714, -0.070787854, 0.018643312, 0.017199676, 0.47415903, 0.88027114, -0.07115241, -0.8775888, 0.4741045, 1.1985257, 0.5023032, -1.5000287)
+transform = Transform3D(0.9973485, -0.0704031, 0.018423636, 0.016987873, 0.4713994, 0.8817561, -0.07076327, -0.87910515, 0.47134545, 1.1985257, 0.5023032, -1.5000287)
 bone_name = "leg2_1.R"
 bone_idx = 5
 
@@ -2078,7 +2105,7 @@ transform = Transform3D(1, 0, 0, 0, -0.020339252, -0.9997933, 0, 0.9997933, -0.0
 mesh = SubResource("ArrayMesh_28o4g")
 
 [node name="leg2_3_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1243794410]
-transform = Transform3D(0.76635796, 0.6420189, 0.022515621, 0.2540498, -0.27068737, -0.92854005, -0.59004575, 0.7173144, -0.3705482, -0.40709504, -1.3811158, 9.012117)
+transform = Transform3D(0.841124, 0.51014477, -0.17961808, 0.1627575, -0.55546856, -0.8154535, -0.5157716, 0.65666336, -0.5502478, 0.72742385, 0.9856745, 9.573303)
 bone_name = "leg2_3.L"
 bone_idx = 11
 
@@ -2087,7 +2114,7 @@ transform = Transform3D(-0.19056113, -1.8272826e-07, 7.565526e-07, 1.3121125e-08
 mesh = SubResource("ArrayMesh_bjik5")
 
 [node name="leg2_2_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=1797333452]
-transform = Transform3D(0.99743384, 0.03326685, 0.063394666, 0.070183985, -0.2795346, -0.9575669, -0.014134121, 0.9595591, -0.28115207, -0.56897116, -0.020903826, 4.342915)
+transform = Transform3D(0.9984744, 0.054748286, -0.00717392, -0.0040182434, -0.05753365, -0.9983354, -0.055069856, 0.9968412, -0.057225868, 0.46101934, 1.2656325, 4.722687)
 bone_name = "leg2_2.L"
 bone_idx = 10
 
@@ -2096,7 +2123,7 @@ transform = Transform3D(-1, -1.1932697e-05, -3.6142965e-06, 3.159862e-07, 0.2655
 mesh = SubResource("ArrayMesh_xunwb")
 
 [node name="leg2_1_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=437032701]
-transform = Transform3D(0.85591596, -0.5158686, 0.035880204, -0.04635732, -0.14565061, -0.98824936, 0.5150329, 0.84419507, -0.14857899, 1.2841352, 0.5023032, 1.3103924)
+transform = Transform3D(0.97301084, -0.22913937, -0.027295245, 0.02263745, 0.21249597, -0.9768997, 0.22964634, 0.94991606, 0.21194802, 1.2841352, 0.5023032, 1.3103924)
 bone_name = "leg2_1.L"
 bone_idx = 9
 
@@ -2105,7 +2132,7 @@ transform = Transform3D(-1, 4.296784e-06, -6.519169e-07, 5.2822827e-07, -0.02872
 mesh = SubResource("ArrayMesh_kf8uy")
 
 [node name="leg1_3_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=562741248]
-transform = Transform3D(0.97131807, -0.20189823, 0.12561247, -0.0035640867, -0.54056436, -0.8412949, 0.23775764, 0.81671727, -0.5257795, -2.8728428, 1.0860281, 9.488277)
+transform = Transform3D(0.97131795, -0.20189856, 0.12561277, -0.0035640793, -0.5405647, -0.84129477, 0.23775809, 0.81671697, -0.5257798, -2.8728468, 1.0860258, 9.488277)
 bone_name = "leg1_3.L"
 bone_idx = 15
 
@@ -2114,7 +2141,7 @@ transform = Transform3D(-0.19056113, -1.7681936e-07, 7.490495e-07, 8.993211e-09,
 mesh = SubResource("ArrayMesh_akc7n")
 
 [node name="leg1_2_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=552943687]
-transform = Transform3D(0.97131777, -0.2354033, -0.033573724, -0.0035722468, 0.12673156, -0.99193054, 0.23775859, 0.9635997, 0.12225569, -1.7273734, 0.46935388, 4.7994137)
+transform = Transform3D(0.97131765, -0.23540375, -0.033573687, -0.0035722393, 0.1267311, -0.99193066, 0.23775904, 0.9635997, 0.12225523, -1.727375, 0.46935388, 4.7994137)
 bone_name = "leg1_2.L"
 bone_idx = 14
 
@@ -2123,7 +2150,7 @@ transform = Transform3D(-1, -1.1871208e-05, -3.5851108e-06, 3.041755e-07, 0.2655
 mesh = SubResource("ArrayMesh_oc3om")
 
 [node name="leg1_1_L" type="BoneAttachment3D" parent="giant-spider/Armature_006/Skeleton3D" unique_id=141822728]
-transform = Transform3D(0.9713178, -0.2377816, -0.0012725367, -0.003555499, -0.009172439, -0.99995154, 0.23775843, 0.97127527, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
+transform = Transform3D(0.9713177, -0.23778205, -0.0012725516, -0.0035554916, -0.009172439, -0.9999516, 0.23775887, 0.9712752, -0.009754776, -0.8732129, 0.5023032, 1.3103924)
 bone_name = "leg1_1.L"
 bone_idx = 13
 
@@ -2250,3 +2277,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.25
 
 [node name="leg2_L_target" type="Node3D" parent="giant-spider" unique_id=1251179148]
 transform = Transform3D(1, 0, 2.9802322e-08, -1.8626451e-09, 1, 9.313226e-10, 0, 0, 1.0000002, 4.9901505, -4.1584167, 15.040268)
+
+[node name="Map" parent="." unique_id=1027256098 instance=ExtResource("1_c6gwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054056168, 0, -99.776825)
+
+[node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("2_2dftf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.226295, 1.9246229, -104.12298)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1152976101]
+stream = ExtResource("3_bcbcq")
+autoplay = true
+parameters/looping = false
