@@ -1,7 +1,9 @@
 extends Node2D
  
 var wires = {} # Dictionary that wire number to line
+var colors = ["red", "blue", "green", "pink"]
 var targets = []
+var sprites = []
 
 var current_wire: Area2D = null
 var current_line: Line2D = null
@@ -15,10 +17,17 @@ func _ready() -> void:
 	for i in range(1, 5):
 		var target = get_node("Target%d" % i)
 		targets.append(target)
+		
 
 	targets.shuffle()
 
 	for i in range(1, 5): 
+		var target = targets[i - 1]
+		var sprite = target.get_node("Sprite2D")
+		var texture = load("res://assets/Wire.Assets/Textures/%s.png" % colors[i - 1])
+		sprite.texture = texture
+
+
 		var wire = get_node("WireNode%d" % i)
 		var line = wire.get_node("Line2D")
 		line.clear_points() # emtpy wire on start
@@ -29,7 +38,7 @@ func _ready() -> void:
 		}
 
 		connected[i] = false
-
+		
 
 func start_drag(wire: Area2D) -> void:
 	var index = wires[wire]["index"] # get the wire number of the clicked wire
