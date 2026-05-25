@@ -36,6 +36,8 @@ position = Vector2(16.666748, 0)
 shape = SubResource("RectangleShape2D_ol570")
 
 [node name="Sprite2D" type="Sprite2D" parent="Target1" unique_id=1894291786]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
 
 [node name="WireNode2" type="Area2D" parent="." unique_id=1044870957]
 position = Vector2(182, 259.00003)
@@ -58,7 +60,9 @@ scale = Vector2(1.44, 1.3599994)
 position = Vector2(16.666626, 0)
 shape = SubResource("RectangleShape2D_ol570")
 
-[node name="Sprite2D" type="Sprite2D" parent="Target2" unique_id=1801354630]
+[node name="Sprite2D" type="Sprite2D" parent="Target2" unique_id=1047608250]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
 
 [node name="WireNode3" type="Area2D" parent="." unique_id=1243192472]
 position = Vector2(182, 383.00006)
@@ -81,7 +85,9 @@ scale = Vector2(1.44, 1.3599994)
 position = Vector2(16.666626, 0)
 shape = SubResource("RectangleShape2D_ol570")
 
-[node name="Sprite2D" type="Sprite2D" parent="Target3" unique_id=118986168]
+[node name="Sprite2D" type="Sprite2D" parent="Target3" unique_id=279586187]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
 
 [node name="WireNode4" type="Area2D" parent="." unique_id=1689767014]
 position = Vector2(182.00002, 508.99994)
@@ -105,7 +111,9 @@ scale = Vector2(1.44, 1.3599994)
 position = Vector2(16.666626, 0)
 shape = SubResource("RectangleShape2D_ol570")
 
-[node name="Sprite2D" type="Sprite2D" parent="Target4" unique_id=1463797184]
+[node name="Sprite2D" type="Sprite2D" parent="Target4" unique_id=615372356]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
 
 [connection signal="input_event" from="WireNode1" to="." method="_on_wire_node_1_input_event"]
 [connection signal="input_event" from="WireNode2" to="." method="_on_wire_node_2_input_event"]
