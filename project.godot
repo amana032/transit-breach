@@ -50,3 +50,4 @@ l_click={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+gl_compatibility/driver="opengl3_angle"
