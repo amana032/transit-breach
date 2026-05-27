@@ -7,6 +7,7 @@ const ladder_speed = 3.0
 @onready var camera = $Neck/Camera3D
 @onready var neck = $Neck
 @onready var footstep_sound = $AudioFootsteps
+@onready var current_text : Label
 
 var footstep_variants = [
 	load("res://assets/sounds/footsteps/foot1.wav"),
@@ -51,6 +52,10 @@ func _physics_process(delta: float) -> void:
 			%InteractText.show()
 			if Input.is_action_just_pressed("interact"):
 				target.interact()
+				%FlavorText.text = target.flavor_text
+				%FlavorText.show()
+	else:
+		%FlavorText.hide()
 	
 
 	# Handle jump.

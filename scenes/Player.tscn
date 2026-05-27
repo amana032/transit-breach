@@ -79,15 +79,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -20.0
-offset_right = 77.0
-offset_bottom = 20.0
+offset_left = -79.5
+offset_top = -25.0
+offset_right = 79.5
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
+vertical = true
 
 [node name="InteractText" type="Label" parent="CanvasLayer/BoxContainer" unique_id=1391923658]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Press \"F\" to Interact"
+
+[node name="BoxContainer2" type="BoxContainer" parent="CanvasLayer" unique_id=1732778695]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FlavorText" type="Label" parent="CanvasLayer/BoxContainer2" unique_id=1506089395]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Interacted with object."
