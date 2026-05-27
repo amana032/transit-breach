@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cr3tjwj1xitna" path="res://scripts/spot_light_3d.gd" id="2_3li8b"]
 [ext_resource type="AudioStream" uid="uid://birnidj4owemc" path="res://assets/sounds/flash-on.wav" id="4_mdl7e"]
 [ext_resource type="Shader" uid="uid://c8o5cl738umsc" path="res://scenes/overlay.gdshader" id="5_qu4a1"]
+[ext_resource type="Script" uid="uid://ul1d84uwtqvw" path="res://scenes/interact_ray.gd" id="6_70d11"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2dftf"]
 
@@ -59,6 +60,7 @@ transform = Transform3D(-1.109523, -0.02464884, 0.28173754, 0, 1.1406429, 0.0997
 stream = ExtResource("4_mdl7e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Neck/Camera3D" unique_id=99530727]
+visible = false
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_cw2d6")
 
