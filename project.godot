@@ -15,6 +15,10 @@ run/main_scene="uid://236573el1itl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="Transit Breach"
@@ -59,3 +63,4 @@ interact={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+gl_compatibility/driver="opengl3_angle"
