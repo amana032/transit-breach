@@ -79,6 +79,7 @@ func check_solution() -> bool:
 		for x in range(4):
 			pipes_grid[y][x].set_connected(Vector2i(x, y) in visited)
 
+	# check the end pipe
 	var end_pos = Vector2i(3, 3)
 	var end_tile = pipes_grid[3][3]
 	if end_pos in visited: # if the end tile is connected
@@ -97,4 +98,5 @@ func _ready():
 			tile.setup(level_1[y][x])
 			row.append(tile)
 		pipes_grid.append(row)
+
 	check_solution()
