@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dcr2rwo1dq6om"
-path="res://.godot/imported/CentipedeMonster_Vasdasdasdasd1(new).glb-26026f6694e9fc100f933c83bc802cff.scn"
+path="res://.godot/imported/CentipedeMonster.glb-4d88c7ff0b9973b9c75927413f5fff66.scn"
 
 [deps]
 
-source_file="res://CentipedeMonster_Vasdasdasdasd1(new).glb"
-dest_files=["res://.godot/imported/CentipedeMonster_Vasdasdasdasd1(new).glb-26026f6694e9fc100f933c83bc802cff.scn"]
+source_file="res://assets/Centi/CentipedeMonster.glb"
+dest_files=["res://.godot/imported/CentipedeMonster.glb-4d88c7ff0b9973b9c75927413f5fff66.scn"]
 
 [params]
 
