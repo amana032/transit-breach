@@ -7,6 +7,7 @@ const ladder_speed = 3.0
 @onready var camera = $Neck/Camera3D
 @onready var neck = $Neck
 @onready var footstep_sound = $AudioFootsteps
+@onready var current_text : Label
 
 var footstep_variants = [
 	load("res://assets/sounds/footsteps/foot1.wav"),
@@ -42,6 +43,20 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	# Interact logic
+	%InteractText.hide()
+	if %InteractCast.is_colliding():
+		var target = %InteractCast.get_collider()
+		if target != null and target.has_method("interact"):
+			%InteractText.show()
+			if Input.is_action_just_pressed("interact"):
+				target.interact()
+				%FlavorText.text = target.flavor_text
+				%FlavorText.show()
+	else:
+		%FlavorText.hide()
+	
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
