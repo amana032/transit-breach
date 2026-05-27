@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://fy24iddrw3ls"]
+
+[ext_resource type="Script" uid="uid://di152r7g6eqap" path="res://scenes/minigames/pipes.gd" id="1_t2p20"]
+[ext_resource type="Texture2D" uid="uid://csss3r7e3gk6m" path="res://assets/Pipe Assets/background.png" id="2_n7iax"]
+
+[node name="Pipes" type="Node2D" unique_id=214080734]
+script = ExtResource("1_t2p20")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1904447560]
+position = Vector2(594.5, 325.50006)
+scale = Vector2(0.5484375, 0.5490741)
+texture = ExtResource("2_n7iax")

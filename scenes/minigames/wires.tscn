@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dgynmowj7s5n2"]
+
+[ext_resource type="Script" uid="uid://krmis1fox8uy" path="res://scenes/minigames/wires.gd" id="1_k6wmh"]
+[ext_resource type="Texture2D" uid="uid://djfc6csyyyoha" path="res://assets/Wire.Assets/Textures/Background.png" id="1_ol570"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol570"]
+size = Vector2(48, 34)
+
+[node name="Wires" type="Node2D" unique_id=766046804]
+script = ExtResource("1_k6wmh")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1395072105]
+position = Vector2(542.00006, 321)
+scale = Vector2(0.77375, 0.7377778)
+texture = ExtResource("1_ol570")
+
+[node name="WireNode1" type="Area2D" parent="." unique_id=189715682]
+position = Vector2(181, 131)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WireNode1" unique_id=835395365]
+position = Vector2(-16.666664, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="WireNode1" unique_id=1718373988]
+
+[node name="Line2D" type="Line2D" parent="WireNode1" unique_id=1601071618]
+default_color = Color(0.6102107, 0, 0.07564982, 1)
+
+[node name="Target1" type="Area2D" parent="." unique_id=1110624525]
+position = Vector2(902, 132)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target1" unique_id=142853045]
+position = Vector2(16.666748, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="Target1" unique_id=1894291786]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
+
+[node name="WireNode2" type="Area2D" parent="." unique_id=1044870957]
+position = Vector2(182, 259.00003)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WireNode2" unique_id=1570325768]
+position = Vector2(-16.666664, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="WireNode2" unique_id=1700440195]
+
+[node name="Line2D" type="Line2D" parent="WireNode2" unique_id=763733208]
+default_color = Color(0, 0.23850013, 0.53, 1)
+
+[node name="Target2" type="Area2D" parent="." unique_id=1333641666]
+position = Vector2(902.00006, 259.00003)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target2" unique_id=1365550818]
+position = Vector2(16.666626, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="Target2" unique_id=1047608250]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
+
+[node name="WireNode3" type="Area2D" parent="." unique_id=1243192472]
+position = Vector2(182, 383.00006)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WireNode3" unique_id=1643154566]
+position = Vector2(-16.666664, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="WireNode3" unique_id=1045990342]
+
+[node name="Line2D" type="Line2D" parent="WireNode3" unique_id=579591744]
+default_color = Color(0.21666664, 0.52, 0, 1)
+
+[node name="Target3" type="Area2D" parent="." unique_id=738417867]
+position = Vector2(902, 384)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target3" unique_id=1107616992]
+position = Vector2(16.666626, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="Target3" unique_id=279586187]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
+
+[node name="WireNode4" type="Area2D" parent="." unique_id=1689767014]
+position = Vector2(182.00002, 508.99994)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WireNode4" unique_id=2032881728]
+position = Vector2(-16.666664, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="WireNode4" unique_id=518790083]
+
+[node name="Line2D" type="Line2D" parent="WireNode4" unique_id=1297750888]
+points = PackedVector2Array(0, -275.00006)
+default_color = Color(0.52, 0, 0.44199994, 1)
+
+[node name="Target4" type="Area2D" parent="." unique_id=1980334996]
+position = Vector2(902.00006, 508.99994)
+scale = Vector2(1.44, 1.3599994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target4" unique_id=1220449697]
+position = Vector2(16.666626, 0)
+shape = SubResource("RectangleShape2D_ol570")
+
+[node name="Sprite2D" type="Sprite2D" parent="Target4" unique_id=615372356]
+position = Vector2(83.333374, 0)
+scale = Vector2(0.3, 0.3)
+
+[connection signal="input_event" from="WireNode1" to="." method="_on_wire_node_1_input_event"]
+[connection signal="input_event" from="WireNode2" to="." method="_on_wire_node_2_input_event"]
+[connection signal="input_event" from="WireNode3" to="." method="_on_wire_node_3_input_event"]
+[connection signal="input_event" from="WireNode4" to="." method="_on_wire_node_4_input_event"]
