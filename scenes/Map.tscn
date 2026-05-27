@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://frrt4jsxqyfw" path="res://assets/PS1 Alleyway Pack - 1.1/Assets/Props/Props/Cardboard Box.fbx" id="7_7ctrk"]
 [ext_resource type="PackedScene" uid="uid://c1yae683818tv" path="res://assets/PS1 Alleyway Pack - 1.1/Assets/Props/Props/Barrel.fbx" id="8_ii6k2"]
 [ext_resource type="PackedScene" uid="uid://dbk3r2u8ihwh4" path="res://scenes/LadderCollider.tscn" id="9_ii6k2"]
-[ext_resource type="PackedScene" uid="uid://cp83xwevmor1l" path="res://scenes/props/locker.tscn" id="10_1vt7q"]
+[ext_resource type="PackedScene" path="res://scenes/props/locker.tscn" id="10_1vt7q"]
 [ext_resource type="PackedScene" uid="uid://dkkfkt0ewiher" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Cupboard_SM.fbx" id="10_sdw7q"]
 [ext_resource type="PackedScene" uid="uid://b6q5koys8a60m" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/CupboardDoor_SM.fbx" id="11_pgwcf"]
 [ext_resource type="PackedScene" uid="uid://dx1rgw6ag03vy" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Stool_SM.fbx" id="12_djx7b"]
@@ -17,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://c45frrxbois7u" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Barrel2_SM.fbx" id="14_sxh8t"]
 [ext_resource type="PackedScene" uid="uid://cvol1nljmyba" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Barrel_SM.fbx" id="15_u4fdk"]
 [ext_resource type="PackedScene" uid="uid://3pv2q0mcmfa0" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Barrer2_SM.fbx" id="16_08blb"]
-[ext_resource type="Script" uid="uid://jvm8370mryny" path="res://scenes/static_body_3d.gd" id="17_u4fdk"]
-[ext_resource type="PackedScene" uid="uid://wu28eeyq4sm3" path="res://scenes/TriggerPlane.tscn" id="18_08blb"]
+[ext_resource type="Script" path="res://scenes/static_body_3d.gd" id="17_u4fdk"]
+[ext_resource type="PackedScene" path="res://scenes/TriggerPlane.tscn" id="18_08blb"]
 [ext_resource type="AudioStream" uid="uid://by3curkf4nh15" path="res://assets/sounds/voicelines/ugh_head.mp3" id="19_r402g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4dqr"]
@@ -838,99 +838,99 @@ points = PackedVector3Array(0, 0.6546692, 1.0309932, 0.037292756, 0.6546692, 1.0
 
 [node name="Ship" type="Node3D" parent="." unique_id=625405601]
 
-[node name="HallwayPACK_GLB" parent="Ship" unique_id=884959273 instance=ExtResource("1_lajc7")]
+[node name="HallwayPACK_GLB" parent="Ship" unique_id=1407822618 instance=ExtResource("1_lajc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25.334934)
 
-[node name="Hall_NoLight" parent="Ship/HallwayPACK_GLB" index="1" unique_id=750896184]
+[node name="Hall_NoLight" parent="Ship/HallwayPACK_GLB" index="1" unique_id=1183672309]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.357213, 0, 0)
 
-[node name="Hall_Junction_X" parent="Ship/HallwayPACK_GLB" index="2" unique_id=77705426]
+[node name="Hall_Junction_X" parent="Ship/HallwayPACK_GLB" index="2" unique_id=194299730]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.93743, 0, 35.259926)
 
-[node name="Hall_Junction_T" parent="Ship/HallwayPACK_GLB" index="3" unique_id=1370758868]
+[node name="Hall_Junction_T" parent="Ship/HallwayPACK_GLB" index="3" unique_id=1453296014]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8144, 0, 24.22573)
 
-[node name="Hall_Light_Window" parent="Ship/HallwayPACK_GLB" index="4" unique_id=1410464128]
+[node name="Hall_Light_Window" parent="Ship/HallwayPACK_GLB" index="4" unique_id=2084202881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50.463367)
 
-[node name="Hall_NoLight_Window" parent="Ship/HallwayPACK_GLB" index="5" unique_id=275162585]
+[node name="Hall_NoLight_Window" parent="Ship/HallwayPACK_GLB" index="5" unique_id=541197890]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40.57873)
 
-[node name="Hall_End" parent="Ship/HallwayPACK_GLB" index="6" unique_id=93003837]
+[node name="Hall_End" parent="Ship/HallwayPACK_GLB" index="6" unique_id=328725682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.225816, 0, 10.48595)
 
-[node name="Hall_NoLight__90Turn" parent="Ship/HallwayPACK_GLB" index="7" unique_id=1353765681]
+[node name="Hall_NoLight__90Turn" parent="Ship/HallwayPACK_GLB" index="7" unique_id=441390596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.179676, 0, 11.867798)
 
-[node name="Hall_Light_90Turn" parent="Ship/HallwayPACK_GLB" index="8" unique_id=1750338304]
+[node name="Hall_Light_90Turn" parent="Ship/HallwayPACK_GLB" index="8" unique_id=1214112428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.040585, 0, 11.998138)
 
-[node name="Prop_DoorControl" parent="Ship/HallwayPACK_GLB" index="9" unique_id=1373068164]
+[node name="Prop_DoorControl" parent="Ship/HallwayPACK_GLB" index="9" unique_id=856703056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.727406, 0, 0)
 
-[node name="Room_Long_L" parent="Ship/HallwayPACK_GLB" index="10" unique_id=1374181626]
+[node name="Room_Long_L" parent="Ship/HallwayPACK_GLB" index="10" unique_id=1450719247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.616052, 0, 21.268147)
 
-[node name="Room_Long_R" parent="Ship/HallwayPACK_GLB" index="11" unique_id=182140289]
+[node name="Room_Long_R" parent="Ship/HallwayPACK_GLB" index="11" unique_id=71598042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.698911, 0, 23.395836)
 
-[node name="Room_Small" parent="Ship/HallwayPACK_GLB" index="12" unique_id=2703751]
+[node name="Room_Small" parent="Ship/HallwayPACK_GLB" index="12" unique_id=1798030167]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.690484, 0, 12.045361)
 
-[node name="Hall_Door_End" parent="Ship/HallwayPACK_GLB" index="13" unique_id=542542853]
+[node name="Hall_Door_End" parent="Ship/HallwayPACK_GLB" index="13" unique_id=1029299163]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.496204)
 
-[node name="Hall_Door_SmallOne" parent="Ship/HallwayPACK_GLB" index="14" unique_id=1353909924]
+[node name="Hall_Door_SmallOne" parent="Ship/HallwayPACK_GLB" index="14" unique_id=1004213057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.171577)
 
-[node name="Hall_Door_SmallTwo" parent="Ship/HallwayPACK_GLB" index="15" unique_id=1666239601]
+[node name="Hall_Door_SmallTwo" parent="Ship/HallwayPACK_GLB" index="15" unique_id=1701870225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.61163)
 
-[node name="Door_Small_Bottom" parent="Ship/HallwayPACK_GLB" index="16" unique_id=231528400]
+[node name="Door_Small_Bottom" parent="Ship/HallwayPACK_GLB" index="16" unique_id=213560620]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.213737, 0, 0)
 
-[node name="Door_Small_Top" parent="Ship/HallwayPACK_GLB" index="17" unique_id=1324373191]
+[node name="Door_Small_Top" parent="Ship/HallwayPACK_GLB" index="17" unique_id=2113113753]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.642166, 0, 0)
 
-[node name="Hall_Door_Window" parent="Ship/HallwayPACK_GLB" index="18" unique_id=482090717]
+[node name="Hall_Door_Window" parent="Ship/HallwayPACK_GLB" index="18" unique_id=915465222]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.251633, 0, 0)
 
-[node name="Door_Big_L" parent="Ship/HallwayPACK_GLB" index="19" unique_id=1986736313]
+[node name="Door_Big_L" parent="Ship/HallwayPACK_GLB" index="19" unique_id=1678266769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.732317, 0, 0)
 
-[node name="Door_Big_R" parent="Ship/HallwayPACK_GLB" index="20" unique_id=1518039453]
+[node name="Door_Big_R" parent="Ship/HallwayPACK_GLB" index="20" unique_id=49999185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.901459, 0, 0)
 
-[node name="Hall_Door_Large" parent="Ship/HallwayPACK_GLB" index="21" unique_id=1965826958]
+[node name="Hall_Door_Large" parent="Ship/HallwayPACK_GLB" index="21" unique_id=507192193]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.717834, 0, 0)
 
 [node name="HallwayPACK_EXTRAS_GLB" parent="Ship" unique_id=1720893820 instance=ExtResource("2_xkm8s")]
 
-[node name="Hall_Ladder_UP" parent="Ship/HallwayPACK_EXTRAS_GLB" index="0" unique_id=901896049]
+[node name="Hall_Ladder_UP" parent="Ship/HallwayPACK_EXTRAS_GLB" index="0" unique_id=2006332218]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.27301, 0, 0)
 
-[node name="Hall_Ladder_Up_End" parent="Ship/HallwayPACK_EXTRAS_GLB" index="1" unique_id=1890379532]
+[node name="Hall_Ladder_Up_End" parent="Ship/HallwayPACK_EXTRAS_GLB" index="1" unique_id=64940688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.736862, 0, 0)
 
-[node name="Room_Big_Round_TwoDoor" parent="Ship/HallwayPACK_EXTRAS_GLB" index="3" unique_id=552008107]
+[node name="Room_Big_Round_TwoDoor" parent="Ship/HallwayPACK_EXTRAS_GLB" index="3" unique_id=719564391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.27935, 0, 0)
 
-[node name="Room_Big_Round" parent="Ship/HallwayPACK_EXTRAS_GLB" index="4" unique_id=120727380]
+[node name="Room_Big_Round" parent="Ship/HallwayPACK_EXTRAS_GLB" index="4" unique_id=1333984454]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.337112, 0, 0)
 
-[node name="Room_Medium_R" parent="Ship/HallwayPACK_EXTRAS_GLB" index="5" unique_id=1034954150]
+[node name="Room_Medium_R" parent="Ship/HallwayPACK_EXTRAS_GLB" index="5" unique_id=1861882682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.06243, 0, -35.403843)
 
-[node name="Room_Medium_L" parent="Ship/HallwayPACK_EXTRAS_GLB" index="6" unique_id=175421278]
+[node name="Room_Medium_L" parent="Ship/HallwayPACK_EXTRAS_GLB" index="6" unique_id=296642470]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -34.923744, 0, -35.5398)
 
-[node name="MiddleLadder_002" parent="Ship/HallwayPACK_EXTRAS_GLB" index="7" unique_id=22137689]
+[node name="MiddleLadder_002" parent="Ship/HallwayPACK_EXTRAS_GLB" index="7" unique_id=314830556]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.871082, 0, 0)
 
-[node name="Hall_Ladder_Down" parent="Ship/HallwayPACK_EXTRAS_GLB" index="8" unique_id=1037492347]
+[node name="Hall_Ladder_Down" parent="Ship/HallwayPACK_EXTRAS_GLB" index="8" unique_id=1579290397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.717705, 0, 0)
 
-[node name="Hall_Ladder_Middle" parent="Ship/HallwayPACK_EXTRAS_GLB" index="9" unique_id=2092283517]
+[node name="Hall_Ladder_Middle" parent="Ship/HallwayPACK_EXTRAS_GLB" index="9" unique_id=1847751525]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.26552, 0, 0)
 
 [node name="Room_Big_Round" type="MeshInstance3D" parent="Ship" unique_id=1169801483]
@@ -1287,7 +1287,7 @@ transform = Transform3D(2.486351, 0, -1.6787071, 0, 3, 0, 1.6787071, 0, 2.486351
 [node name="Barrel" parent="Props" unique_id=2121810434 instance=ExtResource("8_ii6k2")]
 transform = Transform3D(2.9693956, 0, 0.4274205, 0, 3, 0, -0.4274205, 0, 2.9693956, 100.28033, 0.24820113, 2.913769)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Props/Barrel/Cylinder001" parent_id_path=PackedInt32Array(2121810434, 180047055) index="0" unique_id=2131646185]
+[node name="StaticBody3D" type="StaticBody3D" parent="Props/Barrel/Cylinder001" parent_id_path=PackedInt32Array(2121810434, 744517733) index="0" unique_id=2131646185]
 script = ExtResource("17_u4fdk")
 flavor_text = "A barrel."
 
@@ -1364,7 +1364,7 @@ transform = Transform3D(2.1487465, 0, 1.1132336, 0, 2.42, 0, -1.1132336, 0, 2.14
 [node name="Barrer2_SM" parent="." unique_id=1147381603 instance=ExtResource("16_08blb")]
 transform = Transform3D(2.49, 0, 0, 0, 2.49, 0, 0, 0, 2.49, 98.99642, -0.065021515, 59.72276)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Barrer2_SM/Box007" parent_id_path=PackedInt32Array(1147381603, 978514999) index="0" unique_id=1256365384]
+[node name="StaticBody3D" type="StaticBody3D" parent="Barrer2_SM/Box007" parent_id_path=PackedInt32Array(1147381603, 113393879) index="0" unique_id=1256365384]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barrer2_SM/Box007/StaticBody3D" unique_id=867307952]
 shape = SubResource("ConvexPolygonShape3D_r402g")
@@ -1372,7 +1372,7 @@ shape = SubResource("ConvexPolygonShape3D_r402g")
 [node name="Barrer2_SM2" parent="." unique_id=556668064 instance=ExtResource("16_08blb")]
 transform = Transform3D(2.49, 0, 0, 0, 2.49, 0, 0, 0, 2.49, 109.90162, -0.065021515, 59.72276)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Barrer2_SM2/Box007" parent_id_path=PackedInt32Array(556668064, 978514999) index="0" unique_id=1418124400]
+[node name="StaticBody3D" type="StaticBody3D" parent="Barrer2_SM2/Box007" parent_id_path=PackedInt32Array(556668064, 113393879) index="0" unique_id=1418124400]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barrer2_SM2/Box007/StaticBody3D" unique_id=950418988]
 shape = SubResource("ConvexPolygonShape3D_r402g")
@@ -1380,7 +1380,7 @@ shape = SubResource("ConvexPolygonShape3D_r402g")
 [node name="Barrel" parent="." unique_id=723326277 instance=ExtResource("8_ii6k2")]
 transform = Transform3D(2.9693956, 0, 0.4274205, 0, 3, 0, -0.4274205, 0, 2.9693956, 111.84467, 0.24820113, 61.442684)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Barrel/Cylinder001" parent_id_path=PackedInt32Array(723326277, 180047055) index="0" unique_id=1746721914]
+[node name="StaticBody3D" type="StaticBody3D" parent="Barrel/Cylinder001" parent_id_path=PackedInt32Array(723326277, 744517733) index="0" unique_id=1746721914]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel/Cylinder001/StaticBody3D" unique_id=1329858286]
 shape = SubResource("ConvexPolygonShape3D_7ctrk")

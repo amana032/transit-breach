@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://brdjiyxncacr"]
+
+[ext_resource type="MeshLibrary" uid="uid://ddpyv7oojbi5t" path="res://assets/HallwayPack.meshlib" id="1_ej7nn"]
+[ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="2_fgl0d"]
+
+[node name="WorldMap" type="Node3D" unique_id=1605443182]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=640583076]
+mesh_library = ExtResource("1_ej7nn")
+data = {
+"cells": PackedInt32Array(65535, 65526, 3, 65531, 65526, 1441793, 65527, 65526, 1441793, 3, 65526, 1441793, 7, 65526, 1441793, 65523, 65526, 655368, 11, 65526, 1441800, 65523, 65522, 1, 11, 65522, 1, 11, 65518, 1, 65523, 65518, 1, 65523, 65514, 1048579, 65527, 65514, 1441805, 65532, 65514, 1441816, 11, 65514, 1048579, 11, 65510, 1, 65523, 65510, 1, 11, 65506, 1, 65523, 65506, 1, 11, 65502, 8, 7, 65502, 1048590, 7, 65497, 28, 3, 65502, 1441793, 65535, 65502, 1441793, 65531, 65502, 1441793, 65527, 65502, 1441793, 65523, 65502, 1048584, 65535, 65530, 4, 65535, 65534, 21, 65535, 2, 655378, 65535, 6, 655373, 65535, 11, 655386, 4, 2, 1048589, 8, 2, 1441815)
+}
+
+[node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("2_fgl0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9879708, 4.1486197, 7.5544624)
