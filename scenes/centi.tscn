@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://ckpi7spt0qflb"]
+
+[ext_resource type="PackedScene" uid="uid://dcr2rwo1dq6om" path="res://assets/Centi/CentipedeMonster.glb" id="1_js6rm"]
+[ext_resource type="Script" uid="uid://dxsql6submf2e" path="res://scripts/centi.gd" id="2_a56c6"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_gixl7"]
+radius = 0.135
+height = 0.29
+
+[node name="CentipedeMonster_Vasdasdasdasd1(new)" unique_id=1953771536 instance=ExtResource("1_js6rm")]
+script = ExtResource("2_a56c6")
+
+[node name="CCDIK3D" type="CCDIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(21414274) index="1" unique_id=1215351824]
+setting_count = 11
+settings/0/target_node = NodePath("../../../Targets/l11target")
+settings/1/target_node = NodePath("../../../Targets/l10target")
+settings/2/target_node = NodePath("../../../Targets/l09target")
+settings/3/target_node = NodePath("../../../Targets/l08target")
+settings/4/target_node = NodePath("../../../Targets/l07target")
+settings/5/target_node = NodePath("../../../Targets/l06target")
+settings/6/target_node = NodePath("../../../Targets/l05target")
+settings/7/target_node = NodePath("../../../Targets/l04target")
+settings/8/target_node = NodePath("../../../Targets/l03target")
+settings/9/target_node = NodePath("../../../Targets/l02target")
+settings/10/target_node = NodePath("../../../Targets/l01target")
+settings/0/root_bone_name = "Bone_Leg_L001"
+settings/0/root_bone = 65
+settings/0/end_bone_name = "Bone_Leg_L003"
+settings/0/end_bone = 67
+settings/0/extend_end_bone = false
+settings/0/joint_count = 3
+settings/1/root_bone_name = "Bone_Leg_L004"
+settings/1/root_bone = 79
+settings/1/end_bone_name = "Bone_Leg_L006"
+settings/1/end_bone = 81
+settings/1/extend_end_bone = false
+settings/1/joint_count = 3
+settings/2/root_bone_name = "Bone_Leg_L007"
+settings/2/root_bone = 85
+settings/2/end_bone_name = "Bone_Leg_L009"
+settings/2/end_bone = 87
+settings/2/extend_end_bone = false
+settings/2/joint_count = 3
+settings/3/root_bone_name = "Bone_Leg_L010"
+settings/3/root_bone = 94
+settings/3/end_bone_name = "Bone_Leg_L011.001"
+settings/3/end_bone = 96
+settings/3/extend_end_bone = false
+settings/3/joint_count = 3
+settings/4/root_bone_name = "Bone_Leg_L012"
+settings/4/root_bone = 43
+settings/4/end_bone_name = "Bone_Leg_L013.001"
+settings/4/end_bone = 45
+settings/4/extend_end_bone = false
+settings/4/joint_count = 3
+settings/5/root_bone_name = "Bone_Leg_L014"
+settings/5/root_bone = 49
+settings/5/end_bone_name = "Bone_Leg_L015.001"
+settings/5/end_bone = 51
+settings/5/extend_end_bone = false
+settings/5/joint_count = 3
+settings/6/root_bone_name = "Bone_Leg_L016"
+settings/6/root_bone = 37
+settings/6/end_bone_name = "Bone_Leg_L017.001"
+settings/6/end_bone = 39
+settings/6/extend_end_bone = false
+settings/6/joint_count = 3
+settings/7/root_bone_name = "Bone_Leg_L018"
+settings/7/root_bone = 25
+settings/7/end_bone_name = "Bone_Leg_L019.001"
+settings/7/end_bone = 27
+settings/7/extend_end_bone = false
+settings/7/joint_count = 3
+settings/8/root_bone_name = "Bone_Leg_L020"
+settings/8/root_bone = 31
+settings/8/end_bone_name = "Bone_Leg_L021.001"
+settings/8/end_bone = 33
+settings/8/extend_end_bone = false
+settings/8/joint_count = 3
+settings/9/root_bone_name = "Bone_Leg_L022"
+settings/9/root_bone = 16
+settings/9/end_bone_name = "Bone_Leg_L023.001"
+settings/9/end_bone = 18
+settings/9/extend_end_bone = false
+settings/9/joint_count = 3
+settings/10/root_bone_name = "Bone_Leg_L024"
+settings/10/root_bone = 19
+settings/10/end_bone_name = "Bone_Leg_L025.001"
+settings/10/end_bone = 21
+settings/10/extend_end_bone = false
+settings/10/joint_count = 3
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = null
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = null
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = null
+settings/1/joints/0/rotation_axis = 3
+settings/1/joints/0/limitation = null
+settings/1/joints/1/rotation_axis = 3
+settings/1/joints/1/limitation = null
+settings/1/joints/2/rotation_axis = 3
+settings/1/joints/2/limitation = null
+settings/2/joints/0/rotation_axis = 3
+settings/2/joints/0/limitation = null
+settings/2/joints/1/rotation_axis = 3
+settings/2/joints/1/limitation = null
+settings/2/joints/2/rotation_axis = 3
+settings/2/joints/2/limitation = null
+settings/3/joints/0/rotation_axis = 3
+settings/3/joints/0/limitation = null
+settings/3/joints/1/rotation_axis = 3
+settings/3/joints/1/limitation = null
+settings/3/joints/2/rotation_axis = 3
+settings/3/joints/2/limitation = null
+settings/4/joints/0/rotation_axis = 3
+settings/4/joints/0/limitation = null
+settings/4/joints/1/rotation_axis = 3
+settings/4/joints/1/limitation = null
+settings/4/joints/2/rotation_axis = 3
+settings/4/joints/2/limitation = null
+settings/5/joints/0/rotation_axis = 3
+settings/5/joints/0/limitation = null
+settings/5/joints/1/rotation_axis = 3
+settings/5/joints/1/limitation = null
+settings/5/joints/2/rotation_axis = 3
+settings/5/joints/2/limitation = null
+settings/6/joints/0/rotation_axis = 3
+settings/6/joints/0/limitation = null
+settings/6/joints/1/rotation_axis = 3
+settings/6/joints/1/limitation = null
+settings/6/joints/2/rotation_axis = 3
+settings/6/joints/2/limitation = null
+settings/7/joints/0/rotation_axis = 3
+settings/7/joints/0/limitation = null
+settings/7/joints/1/rotation_axis = 3
+settings/7/joints/1/limitation = null
+settings/7/joints/2/rotation_axis = 3
+settings/7/joints/2/limitation = null
+settings/8/joints/0/rotation_axis = 3
+settings/8/joints/0/limitation = null
+settings/8/joints/1/rotation_axis = 3
+settings/8/joints/1/limitation = null
+settings/8/joints/2/rotation_axis = 3
+settings/8/joints/2/limitation = null
+settings/9/joints/0/rotation_axis = 3
+settings/9/joints/0/limitation = null
+settings/9/joints/1/rotation_axis = 3
+settings/9/joints/1/limitation = null
+settings/9/joints/2/rotation_axis = 3
+settings/9/joints/2/limitation = null
+settings/10/joints/0/rotation_axis = 3
+settings/10/joints/0/limitation = null
+settings/10/joints/1/rotation_axis = 3
+settings/10/joints/1/limitation = null
+settings/10/joints/2/rotation_axis = 3
+settings/10/joints/2/limitation = null
+
+[node name="Camera3D" type="Camera3D" parent="." index="2" unique_id=87950926]
+transform = Transform3D(-0.31775147, -0.5511328, 0.77154833, 3.5035058e-08, 0.8137202, 0.581257, -0.948174, 0.1846953, -0.25856072, 2.9250476, 2.16122, -2.1677613)
+
+[node name="Targets" type="Node3D" parent="." index="3" unique_id=478440798]
+
+[node name="l01target" type="Node3D" parent="Targets" index="0" unique_id=1334487296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041280746, -0.033146262, 1.9130344)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l01target" index="0" unique_id=1538334950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.06190896)
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l02target" type="Node3D" parent="Targets" index="1" unique_id=518343097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.039875984, -0.033146262, 1.3390534)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l02target" index="0" unique_id=673382317]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l03target" type="Node3D" parent="Targets" index="2" unique_id=1145725216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25605428, -0.033146262, 1.0727282)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l03target" index="0" unique_id=152731954]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l04target" type="Node3D" parent="Targets" index="3" unique_id=1084018458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20916545, -0.24381208, 1.0097221)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l04target" index="0" unique_id=557152332]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l05target" type="Node3D" parent="Targets" index="4" unique_id=1241595791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5640012, -0.167696, 0.20750076)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l05target" index="0" unique_id=838018677]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l06target" type="Node3D" parent="Targets" index="5" unique_id=2092156215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5019654, -0.033146262, -0.49540782)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l06target" index="0" unique_id=1997963974]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l07target" type="Node3D" parent="Targets" index="6" unique_id=1098787320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4362718, -0.033146262, -0.8723769)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l07target" index="0" unique_id=194906253]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l08target" type="Node3D" parent="Targets" index="7" unique_id=224449886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40595305, -0.033146262, -1.2272811)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l08target" index="0" unique_id=234679382]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l09target" type="Node3D" parent="Targets" index="8" unique_id=281973310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37366688, -0.033146262, -1.8600944)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l09target" index="0" unique_id=1315465241]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l10target" type="Node3D" parent="Targets" index="9" unique_id=731496062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6178056, -0.033146262, -2.3841588)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l10target" index="0" unique_id=734284065]
+mesh = SubResource("SphereMesh_gixl7")
+
+[node name="l11target" type="Node3D" parent="Targets" index="10" unique_id=110996002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75755644, -0.033146262, -2.681114)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Targets/l11target" index="0" unique_id=1260803420]
+mesh = SubResource("SphereMesh_gixl7")

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b08jq1hy083m0"
-path.s3tc="res://.godot/imported/CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Normal.png-55a9e17ad70725b8a27dc414439459de.s3tc.ctex"
+uid="uid://dyg1et2ixlny0"
+path.s3tc="res://.godot/imported/CentipedeMonster_Centipede_V1_Roughness.png-3ba736a04b8b7fd00033a57c3b7f5010.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7af10ab377f930fabc9b7b92885b3a54"
+"md5": "1cab65c0369063a1dfcb323445762f1c"
 }
 
 [deps]
 
-source_file="res://CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Normal.png"
-dest_files=["res://.godot/imported/CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Normal.png-55a9e17ad70725b8a27dc414439459de.s3tc.ctex"]
+source_file="res://assets/Centi/CentipedeMonster_Centipede_V1_Roughness.png"
+dest_files=["res://.godot/imported/CentipedeMonster_Centipede_V1_Roughness.png-3ba736a04b8b7fd00033a57c3b7f5010.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

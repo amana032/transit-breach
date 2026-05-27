@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbkerf7ty6iyj"
-path.s3tc="res://.godot/imported/CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Diffuse.png-a75883df20e53b5e99edabb060e0e90b.s3tc.ctex"
+uid="uid://38a7ntj17w6j"
+path.s3tc="res://.godot/imported/CentipedeMonster_Centipede_V1_Diffuse.png-99a4308f6ce72ca14ac339ec01dc7377.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Diffuse.png"
-dest_files=["res://.godot/imported/CentipedeMonster_Vasdasdasdasd1(new)_Centipede_V1_Diffuse.png-a75883df20e53b5e99edabb060e0e90b.s3tc.ctex"]
+source_file="res://assets/Centi/CentipedeMonster_Centipede_V1_Diffuse.png"
+dest_files=["res://.godot/imported/CentipedeMonster_Centipede_V1_Diffuse.png-99a4308f6ce72ca14ac339ec01dc7377.s3tc.ctex"]
 
 [params]
 
