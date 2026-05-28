@@ -162,9 +162,11 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$Neck/DeathCamera.show()
 		$Neck/Camera3D.hide()
 		$"Neck/DeathCamera/Node3D/CentipedeMonster_Vasdasdasdasd1(new)/AnimationPlayer".play("Armature|Atk2")
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(1.0).timeout
+		scream_sound.play()
+		await get_tree().create_timer(2.0).timeout
 		$Neck/DeathCamera.hide()
 		$Neck/Camera3D.show()
 		body.position = spawn_position
 
-		scream_sound.play()
+		

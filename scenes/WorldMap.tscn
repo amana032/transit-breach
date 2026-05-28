@@ -40,9 +40,6 @@ point_count = 6
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gt80j"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ioe0r"]
-size = Vector3(4.9136963, 1.612793, 5.529297)
-
 [sub_resource type="Curve3D" id="Curve3D_26yim"]
 closed = true
 bake_interval = 5.0
@@ -644,10 +641,6 @@ transform = Transform3D(-1.9781781, 0, 0.45575327, 0, 2.03, 0, -0.45575327, 0, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/Area3D" unique_id=1854428827]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 shape = SubResource("BoxShape3D_gt80j")
-
-[node name="ViewBox" type="CollisionShape3D" parent="Path3D/PathFollow3D/Area3D" unique_id=823075481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08905029, 1.3855124, -5.9662704)
-shape = SubResource("BoxShape3D_ioe0r")
 
 [node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("22_26yim")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73491955, 2.7126586, 29.504925)
