@@ -61,6 +61,9 @@ func _process(_delta: float) -> void:
 		var mouse_pos = current_line.to_local(get_global_mouse_position())
 		current_line.set_point_position(1, mouse_pos) # update end point of line to match mouse
 
+	if check_solution():
+		print("Puzzle solved!")
+
 
 func _is_point_inside_area(point: Vector2, area: Area2D) -> bool:
 	var cs = area.get_node_or_null("CollisionShape2D")
@@ -107,3 +110,10 @@ func _on_wire_node_3_input_event(_viewport, event, _shape_idx):
 func _on_wire_node_4_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		start_drag($WireNode4)
+
+func check_solution() -> bool:
+	for i in range(1, 5):
+		if not connected[i]: # check that all wires are connected
+			return false
+
+	return true
