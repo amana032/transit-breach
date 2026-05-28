@@ -1,7 +1,6 @@
 extends PathFollow3D
 
 @export var speed : float
-@onready var viewbox = $ViewBox
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cyfyd64n3x43o"]
 
+[ext_resource type="Script" uid="uid://g2xw0drxwp6n" path="res://scenes/user_interface/button.gd" id="1_kvy1d"]
+[ext_resource type="Texture2D" uid="uid://ecs3kgcvs4i4" path="res://scenes/user_interface/background.png" id="1_r2g75"]
+[ext_resource type="Texture2D" uid="uid://qjs068rwwmcf" path="res://scenes/user_interface/upscalemedia-transformed.png" id="2_kvy1d"]
+
 [node name="gameUI" type="Control" unique_id=367876784]
 layout_mode = 3
 anchors_preset = 15
@@ -51,15 +55,6 @@ theme_override_constants/separation = 79
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Button" type="Button" parent="main_menu/ColorRect/MarginContainer/screen_container/button_container" unique_id=849188965]
-layout_mode = 2
-text = "START"
-icon_alignment = 1
-
-[node name="Button2" type="Button" parent="main_menu/ColorRect/MarginContainer/screen_container/button_container" unique_id=54125711]
-layout_mode = 2
-text = "SETTINGS"
-
 [node name="pause_menu" type="MarginContainer" parent="." unique_id=1634450187]
 layout_mode = 0
 offset_right = 40.0
@@ -94,3 +89,24 @@ layout_mode = 2
 [node name="Label" type="Label" parent="in_game_ui/ReferenceRect/MarginContainer/HBoxContainer" unique_id=1144040075]
 layout_mode = 2
 text = "Life Support: x.x%"
+
+[node name="Background" type="Sprite2D" parent="in_game_ui" unique_id=1030354866]
+position = Vector2(580, 326)
+texture = ExtResource("1_r2g75")
+
+[node name="UpscalemediaTransformed" type="Sprite2D" parent="." unique_id=914572124]
+position = Vector2(587, 284)
+scale = Vector2(0.73524153, 0.6827957)
+texture = ExtResource("2_kvy1d")
+
+[node name="Button" type="Button" parent="." unique_id=849188965]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 459.0
+offset_right = 703.0
+offset_bottom = 537.0
+text = "START"
+icon_alignment = 1
+script = ExtResource("1_kvy1d")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
