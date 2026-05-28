@@ -1298,9 +1298,6 @@ flavor_text = "A barrel."
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barrel/Cylinder001/StaticBody3D" unique_id=429290779]
 shape = SubResource("ConvexPolygonShape3D_7ctrk")
 
-[node name="Locker" parent="Props/Barrel" unique_id=1215233944 instance=ExtResource("10_1vt7q")]
-transform = Transform3D(0.40086845, 0, -0.09104057, 0, 0.562, 0, 0.05770177, 0, 0.63248134, 2.064766, -0.078917265, -1.5497603)
-
 [node name="Barrel2" parent="Props" unique_id=1394034243 instance=ExtResource("8_ii6k2")]
 transform = Transform3D(2.449048, 0, -1.7326752, 0, 3, 0, 1.7326752, 0, 2.449048, 102.67032, 0.24820113, 3.8996556)
 
@@ -1340,6 +1337,9 @@ transform = Transform3D(1.9106855e-15, 1.0548507e-07, -2.3836627, 1, -1.0548507e
 
 [node name="TapeBlackAndYellow_SM2" parent="Props" unique_id=1921727663 instance=ExtResource("13_sxh8t")]
 transform = Transform3D(1.9106855e-15, 1.0548507e-07, -2.3320725, 1, -1.0548507e-07, 0, -4.371139e-08, -2.413217, -1.0193813e-07, 105.262764, 0.029901745, 37.8858)
+
+[node name="Locker" parent="Props" unique_id=1215233944 instance=ExtResource("10_1vt7q")]
+transform = Transform3D(1.215, 0, 2.9802322e-08, 0, 1.6859999, 0, -1.4901161e-08, 0, 1.9169999, 105.74903, 0.011449337, -2.570606)
 
 [node name="LadderCollider" parent="." unique_id=659552584 instance=ExtResource("9_ii6k2")]
 transform = Transform3D(-1.189121e-07, 0, -0.99999994, 0, 8.976001, 0, 2.7203918, 0, -4.3711385e-08, 95.49718, 3.9959822, 27.417751)
