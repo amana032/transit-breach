@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://236573el1itl"]
 
-[ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="2_2dftf"]
 [ext_resource type="AudioStream" uid="uid://d1pjc8yhq3g2q" path="res://assets/sounds/spoopy ambiance.ogg" id="3_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://c3lj2qucy2kmt" path="res://scenes/WorldMap.tscn" id="3_js7pq"]
 [ext_resource type="PackedScene" uid="uid://vqf15t2ndk0d" path="res://scenes/minigames/minigamePipes.tscn" id="4_js7pq"]
@@ -2279,9 +2278,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.25
 
 [node name="leg2_L_target" type="Node3D" parent="giant-spider" unique_id=1251179148]
 transform = Transform3D(1, 0, 2.9802322e-08, -1.8626451e-09, 1, 9.313226e-10, 0, 0, 1.0000002, 4.9901505, -4.1584167, 15.040268)
-
-[node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("2_2dftf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.49053, 2.75351, -54.559082)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1152976101]
 stream = ExtResource("3_bcbcq")
