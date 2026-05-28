@@ -1,6 +1,6 @@
 extends Area3D
 
-@onready var audio: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer3D
 
 @export_multiline var flavor_text := "" # mmmm flavor
 @export var sound_clip: AudioStream # optional sound clip
