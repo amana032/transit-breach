@@ -2,6 +2,15 @@
 
 [ext_resource type="MeshLibrary" uid="uid://ddpyv7oojbi5t" path="res://assets/HallwayPack.meshlib" id="1_ej7nn"]
 [ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="2_fgl0d"]
+[ext_resource type="PackedScene" uid="uid://ckpi7spt0qflb" path="res://scenes/centi.tscn" id="3_8rtnk"]
+
+[sub_resource type="Curve3D" id="Curve3D_pj4xh"]
+bake_interval = 10.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 48.27343, 0, 0, 0, 0, 0, 0, 48.13555, 0, 48.273, 0, 0, 0, 0, 0, 0, 48.136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
 
 [node name="WorldMap" type="Node3D" unique_id=1605443182]
 
@@ -13,3 +22,12 @@ data = {
 
 [node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("2_fgl0d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9879708, 4.1486197, 7.5544624)
+
+[node name="Path3D" type="Path3D" parent="." unique_id=700090148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.07605, 1.1590219, -67.182594)
+curve = SubResource("Curve3D_pj4xh")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=863860190]
+transform = Transform3D(-0.9999995, 0, -8.7422734e-08, 0, 1, 0, 8.7422734e-08, 0, -0.9999995, 0, 0, 24)
+
+[node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D/PathFollow3D" unique_id=1953771536 instance=ExtResource("3_8rtnk")]
