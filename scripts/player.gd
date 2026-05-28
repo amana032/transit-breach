@@ -10,6 +10,7 @@ const ladder_speed = 3.0
 @onready var pant_sound = $AudioPant
 @onready var centi_sound = $AudioCentiScream
 @onready var scream_sound = $AudioMeScream
+@onready var locker_sound = $AudioLocker
 @onready var current_text : Label
 
 var footstep_variants = [
@@ -135,6 +136,7 @@ func hide_text() -> void: # Hides text on the flavor text box
 
 func enter_locker(locker: Node3D) -> void: # Swap to the camera locker, enter hiding state
 	camera.current = false
+	locker_sound.play()
 
 	var locker_cam = locker.find_child("Camera3D", true, false)
 	if locker_cam:
@@ -150,6 +152,7 @@ func enter_locker(locker: Node3D) -> void: # Swap to the camera locker, enter hi
 func exit_locker(): # Swap back to player cam, exit hiding state
 	$Neck/Camera3D.current = true
 	is_hidden = false
+	locker_sound.play()
 	
 	var flashlight = get_tree().get_first_node_in_group("Flashlight")
 	if flashlight:

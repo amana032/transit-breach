@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://c0rf5shft8fob" path="res://assets/sounds/voicelines/sprint.wav" id="7_cw2d6"]
 [ext_resource type="AudioStream" uid="uid://bwml7u7r6ni0m" path="res://assets/sounds/voicelines/holy-reverb-batman.wav" id="8_bruh7"]
 [ext_resource type="AudioStream" uid="uid://uwwx327d0rub" path="res://assets/sounds/monster/monster-scream.wav" id="8_khinc"]
+[ext_resource type="AudioStream" uid="uid://blwl376gcwbrl" path="res://assets/sounds/locker-sound-wav.wav" id="10_6eyey"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2dftf"]
 
@@ -173,3 +174,6 @@ volume_db = 7.51
 [node name="AudioCentiScream" type="AudioStreamPlayer2D" parent="." unique_id=615365473]
 stream = ExtResource("8_khinc")
 volume_db = 8.415
+
+[node name="AudioLocker" type="AudioStreamPlayer2D" parent="." unique_id=1835558111]
+stream = ExtResource("10_6eyey")
