@@ -12,10 +12,10 @@ func set_light_on(value: bool) -> void:
 
 func _process(_delta: float) -> void:
 	var player = get_tree().get_first_node_in_group("Player")
-	if player == null:
+	if player == null or player.minigame_active:
 		return
 	
-	if player.is_hidden: # don't let player turn on flashlight if they're hidden in a locker
+	if player.is_hidden: # don't let player turn on flashlight if they're hidden in a locker or in a minigame 
 		set_light_on(false)
 		return
 	

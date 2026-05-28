@@ -44,4 +44,16 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			rotation = deg_to_rad(float(pipe_rotation) * 90.0)
 			if get_parent().check_solution():
 				print("Puzzle solved!")
+				close_minigame()
+
+func close_minigame() -> void:
+	var minigame = get_node("/root/World/CanvasLayer/MinigamePipes")
+	if minigame:
+		minigame.visible = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+		var player = get_tree().get_first_node_in_group("Player")
+		if player == null:
+			return
+		player.minigame_active = false
 	

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 20.0
 const JUMP_VELOCITY = 4.5
 const ladder_speed = 3.0
 
@@ -19,6 +19,9 @@ var footstep_variants = [
 var on_ladder := false
 var flavor_text_active := false
 var is_hidden := false
+var minigame_active := false
+var pipe_puzzle_solved := [false, false]
+var wires_puzzle_solved := [false, false, false]
 var spawn_position
 
 func _ready() -> void:
@@ -28,6 +31,9 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if mouse motion or escape key is pressed to handle mouse
+	if minigame_active:
+		return # don't let player do anything if minigame time
+
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	

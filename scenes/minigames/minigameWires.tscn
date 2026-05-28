@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bgkasfdvm40ka"]
+
+[ext_resource type="PackedScene" uid="uid://dgynmowj7s5n2" path="res://scenes/minigames/wires.tscn" id="1_ajnse"]
+
+[node name="MinigameWires" type="Control" unique_id=1029880355]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Wires" parent="." unique_id=766046804 instance=ExtResource("1_ajnse")]
+position = Vector2(215.00002, 91)
+scale = Vector2(0.695, 0.695)

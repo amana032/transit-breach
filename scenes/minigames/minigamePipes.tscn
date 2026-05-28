@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://vqf15t2ndk0d"]
+
+[ext_resource type="PackedScene" uid="uid://fy24iddrw3ls" path="res://scenes/minigames/pipes.tscn" id="1_1ptyq"]
+
+[node name="MinigamePipes" type="Control" unique_id=1029880355]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Pipes" parent="." unique_id=214080734 instance=ExtResource("1_1ptyq")]
