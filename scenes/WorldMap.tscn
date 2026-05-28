@@ -13,6 +13,8 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pj4xh"]
+
 [node name="WorldMap" type="Node3D" unique_id=1605443182]
 
 [node name="GridMap" type="GridMap" parent="." unique_id=640583076]
@@ -33,5 +35,14 @@ transform = Transform3D(-0.9999986, 0, -8.7422656e-08, 0, 1, 0, 8.7422656e-08, 0
 script = ExtResource("3_pj4xh")
 speed = 7.0
 
-[node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D/PathFollow3D" unique_id=1953771536 instance=ExtResource("3_8rtnk")]
-transform = Transform3D(-0.9999558, 0, -0.009407075, 0, 1, 0, 0.009407075, 0, -0.9999558, 0, 0, 0)
+[node name="DeathPlane" type="Area3D" parent="Path3D/PathFollow3D" unique_id=333651811]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/DeathPlane" unique_id=2143301753]
+transform = Transform3D(7.999998, 0, -2.842171e-13, 0, 8, 0, 2.842171e-13, 0, 7.999998, 0, 3.7064629, 0)
+shape = SubResource("BoxShape3D_pj4xh")
+
+[node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D/PathFollow3D/DeathPlane" unique_id=1953771536 instance=ExtResource("3_8rtnk")]
+transform = Transform3D(-1.4999332, 0, -0.01411058, 0, 1.5, 0, 0.01411058, 0, -1.4999332, -0.75102425, 0, 0)
+
+[connection signal="body_entered" from="Path3D/PathFollow3D/DeathPlane" to="CharacterBody3D" method="_on_death_plane_body_entered"]

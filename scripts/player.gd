@@ -19,9 +19,11 @@ var footstep_variants = [
 var on_ladder := false
 var flavor_text_active := false
 var is_hidden := false
+var spawn_position
 
 func _ready() -> void:
 	add_to_group("Player")
+	spawn_position = position
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if mouse motion or escape key is pressed to handle mouse
@@ -96,7 +98,6 @@ func hide_text() -> void: # Hides text on the flavor text box
 	%FlavorText.hide()
 	flavor_text_active = false
 
-
 func enter_locker(locker: Node3D) -> void: # Swap to the camera locker, enter hiding state
 	camera.current = false
 
@@ -118,3 +119,7 @@ func exit_locker(): # Swap back to player cam, exit hiding state
 	var flashlight = get_tree().get_first_node_in_group("Flashlight")
 	if flashlight:
 		flashlight.visible = true
+
+func _on_death_plane_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player"):
+		body.global_position = spawn_position
