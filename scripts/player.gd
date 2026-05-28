@@ -121,13 +121,12 @@ func exit_locker(): # Swap back to player cam, exit hiding state
 	if flashlight:
 		flashlight.visible = true
 
-# most jank death animation
-func _on_death_plane_body_entered(body: Node3D) -> void:
-	if body.is_in_group("Player"):
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player") and !is_hidden:
 		$Neck/DeathCamera.show()
-		$Neck/Camera3D.current = false
+		$Neck/Camera3D.hide()
 		$"Neck/DeathCamera/Node3D/CentipedeMonster_Vasdasdasdasd1(new)/AnimationPlayer".play("Armature|Atk2")
 		await get_tree().create_timer(3.0).timeout
 		$Neck/DeathCamera.hide()
-		$Neck/Camera3D.current = true
-		body.global_position = spawn_position
+		$Neck/Camera3D.show()
+		body.position = spawn_position
