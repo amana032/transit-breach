@@ -20,6 +20,8 @@ var on_ladder := false
 var flavor_text_active := false
 var is_hidden := false
 var minigame_active := false
+var pipe_puzzle_solved := [false, false]
+var wires_puzzle_solved := [false, false, false]
 
 func _ready() -> void:
 	add_to_group("Player")
@@ -28,6 +30,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Check if mouse motion or escape key is pressed to handle mouse
 	if minigame_active:
 		return # don't let player do anything if minigame time
+
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	# debug mouse for now, this will make a menu pop up later
 	elif event.is_action_pressed("l_click"):
