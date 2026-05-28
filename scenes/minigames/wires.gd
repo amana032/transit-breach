@@ -1,5 +1,7 @@
 extends Node2D
  
+@onready var sound = $AudioStreamPlayer2D
+
 var wires = {} # Dictionary that connects wire number to line
 var colors = ["red", "blue", "green", "pink"]
 var targets = []
@@ -104,6 +106,7 @@ func _input(event) -> void:
 				current_line.set_point_position(1, end) # set end point of the line
 				var index = wires[current_wire]["index"]
 				connected[index] = true
+				sound.play()
 
 			else:
 				current_line.clear_points() # bad line :( kill it

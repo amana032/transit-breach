@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://krmis1fox8uy" path="res://scenes/minigames/wires.gd" id="1_k6wmh"]
 [ext_resource type="Texture2D" uid="uid://djfc6csyyyoha" path="res://assets/Wire.Assets/Textures/Background.png" id="1_ol570"]
+[ext_resource type="AudioStream" uid="uid://de5ap7arsby0p" path="res://assets/sounds/2socket.wav" id="3_d2a2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ol570"]
 size = Vector2(48, 34)
@@ -114,6 +115,10 @@ shape = SubResource("RectangleShape2D_ol570")
 [node name="Sprite2D" type="Sprite2D" parent="Target4" unique_id=615372356]
 position = Vector2(83.333374, 0)
 scale = Vector2(0.3, 0.3)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=597014143]
+stream = ExtResource("3_d2a2n")
+volume_db = 8.078
 
 [connection signal="input_event" from="WireNode1" to="." method="_on_wire_node_1_input_event"]
 [connection signal="input_event" from="WireNode2" to="." method="_on_wire_node_2_input_event"]

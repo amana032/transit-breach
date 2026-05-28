@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bg3wmu016iqbx"]
+
+[ext_resource type="Texture2D" uid="uid://38a7ntj17w6j" path="res://assets/Centi/CentipedeMonster_Centipede_V1_Diffuse.png" id="1_gno74"]
+
+[resource]
+albedo_texture = ExtResource("1_gno74")
