@@ -7,6 +7,8 @@
 [ext_resource type="Shader" uid="uid://c8o5cl738umsc" path="res://scenes/overlay.gdshader" id="5_qu4a1"]
 [ext_resource type="PackedScene" uid="uid://ckpi7spt0qflb" path="res://scenes/centi.tscn" id="6_70d11"]
 [ext_resource type="AudioStream" uid="uid://c0rf5shft8fob" path="res://assets/sounds/voicelines/sprint.wav" id="7_cw2d6"]
+[ext_resource type="AudioStream" uid="uid://bwml7u7r6ni0m" path="res://assets/sounds/voicelines/holy-reverb-batman.wav" id="8_bruh7"]
+[ext_resource type="AudioStream" uid="uid://uwwx327d0rub" path="res://assets/sounds/monster/monster-scream.wav" id="8_khinc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2dftf"]
 
@@ -163,3 +165,11 @@ text = "Interacted with object."
 
 [node name="AudioPant" type="AudioStreamPlayer2D" parent="." unique_id=854406256]
 stream = ExtResource("7_cw2d6")
+
+[node name="AudioMeScream" type="AudioStreamPlayer2D" parent="." unique_id=172238900]
+stream = ExtResource("8_bruh7")
+volume_db = 7.51
+
+[node name="AudioCentiScream" type="AudioStreamPlayer2D" parent="." unique_id=615365473]
+stream = ExtResource("8_khinc")
+volume_db = 8.415
