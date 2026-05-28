@@ -8,6 +8,8 @@ const ladder_speed = 3.0
 @onready var neck = $Neck
 @onready var footstep_sound = $AudioFootsteps
 @onready var pant_sound = $AudioPant
+@onready var centi_sound = $AudioCentiScream
+@onready var scream_sound = $AudioMeScream
 @onready var current_text : Label
 
 var footstep_variants = [
@@ -155,6 +157,8 @@ func exit_locker(): # Swap back to player cam, exit hiding state
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") and !is_hidden:
+		centi_sound.play()
+		
 		$Neck/DeathCamera.show()
 		$Neck/Camera3D.hide()
 		$"Neck/DeathCamera/Node3D/CentipedeMonster_Vasdasdasdasd1(new)/AnimationPlayer".play("Armature|Atk2")
@@ -162,3 +166,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$Neck/DeathCamera.hide()
 		$Neck/Camera3D.show()
 		body.position = spawn_position
+
+		scream_sound.play()
