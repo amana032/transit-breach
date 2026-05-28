@@ -24,6 +24,7 @@ var spawn_position
 func _ready() -> void:
 	add_to_group("Player")
 	spawn_position = position
+	$Neck/DeathCamera.hide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if mouse motion or escape key is pressed to handle mouse
@@ -120,6 +121,13 @@ func exit_locker(): # Swap back to player cam, exit hiding state
 	if flashlight:
 		flashlight.visible = true
 
+# most jank death animation
 func _on_death_plane_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
+		$Neck/DeathCamera.show()
+		$Neck/Camera3D.current = false
+		$"Neck/DeathCamera/Node3D/CentipedeMonster_Vasdasdasdasd1(new)/AnimationPlayer".play("Armature|Atk2")
+		await get_tree().create_timer(3.0).timeout
+		$Neck/DeathCamera.hide()
+		$Neck/Camera3D.current = true
 		body.global_position = spawn_position
