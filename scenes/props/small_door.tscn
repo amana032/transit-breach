@@ -1,7 +1,8 @@
-[gd_scene format=4 uid="uid://cjpndiiroi8qa"]
+[gd_scene format=4 uid="uid://4mcykyxau7w6"]
 
 [ext_resource type="Script" uid="uid://b2rqli63kpare" path="res://scripts/small_door.gd" id="1_um0dn"]
 [ext_resource type="Texture2D" uid="uid://250yomimty8s" path="res://assets/shipModules/Spaceship_Modules/HallwayPACK_GLB_Enviroment Texture.png" id="2_xe8dd"]
+[ext_resource type="AudioStream" uid="uid://cvspqabqkcdw0" path="res://assets/sounds/doors/smalldoor.mp3" id="3_xe8dd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8igxo"]
 resource_name = "M_Enviroment"
@@ -108,7 +109,7 @@ shadow_mesh = SubResource("ArrayMesh_ocdnp")
 [sub_resource type="BoxShape3D" id="BoxShape3D_7myih"]
 size = Vector3(5.2697906, 6.75, 4.2252655)
 
-[node name="SmallDoor2" type="Area3D" unique_id=376117937]
+[node name="SmallDoor" type="Area3D" unique_id=376117937]
 script = ExtResource("1_um0dn")
 
 [node name="Door_Small_Bottom" type="MeshInstance3D" parent="." unique_id=941167447]
@@ -122,6 +123,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030296326, 3.0982885, -0.2
 shape = SubResource("BoxShape3D_7myih")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=70731224]
+stream = ExtResource("3_xe8dd")
+volume_db = -15.669
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -2,7 +2,8 @@
 
 [ext_resource type="MeshLibrary" uid="uid://ddpyv7oojbi5t" path="res://assets/HallwayPack.meshlib" id="1_ej7nn"]
 [ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="2_fgl0d"]
-[ext_resource type="PackedScene" uid="uid://cjpndiiroi8qa" path="res://scenes/props/small_door.tscn" id="3_8rtnk"]
+[ext_resource type="PackedScene" path="res://scenes/props/small_door.tscn" id="3_8rtnk"]
+[ext_resource type="PackedScene" uid="uid://dhf7xjatoos1k" path="res://scenes/props/big_door.tscn" id="4_pj4xh"]
 
 [node name="WorldMap" type="Node3D" unique_id=1605443182]
 
@@ -17,3 +18,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9879708, 3.235899, 31.1840
 
 [node name="SmallDoor" parent="." unique_id=376117937 instance=ExtResource("3_8rtnk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9954721, 0.99999905, 18.537846)
+
+[node name="BigDoor" parent="." unique_id=200241581 instance=ExtResource("4_pj4xh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8595161, 0.99999934, -3.325213)
