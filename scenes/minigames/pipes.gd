@@ -18,6 +18,8 @@ var pipes_grid = []
 var player = null
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 	player = get_tree().get_first_node_in_group("Player")
 	if player == null:
 		return
@@ -69,6 +71,7 @@ func get_open_ends(type: int, pipe_rotation: int) -> Array: # 0: up, 1: right, 2
 
 
 func check_solution() -> bool:
+	
 	# Flood-fill style implementation
 	var visited = {} # If we've seen it, don't check it again
 	var queue = [Vector2i(0, 0)] # The origin of our flood-fill
@@ -115,7 +118,8 @@ func check_solution() -> bool:
 	var end_tile = pipes_grid[3][3]
 	if end_pos in visited: # if the end tile is connected
 		if 1 in get_open_ends(end_tile.type, end_tile.pipe_rotation): # if end tile is open to right, we win
-			player.pipe_puzzle_solved[0] = true
+			var count = player.pipe_puzzle_solved.count(true)
+			player.pipe_puzzle_solved[count] = true
 			reset()
 			return true
 

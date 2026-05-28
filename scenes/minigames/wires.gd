@@ -14,6 +14,7 @@ var connected := {} # Keep track of connected wires
 var player = null
 
 func _ready() -> void:
+	
 	player = get_tree().get_first_node_in_group("Player")
 	if player == null:
 		return
@@ -61,11 +62,6 @@ func start_drag(wire: Area2D) -> void:
 
 
 func _process(_delta: float) -> void:
-	var count = player.wires_puzzle_solved.count(true)
-
-	if count >= 3: # no more than 3 wire games
-		close_minigame()
-		return
 
 	if dragging and current_line:
 		var mouse_pos = current_line.to_local(get_global_mouse_position())
@@ -76,6 +72,7 @@ func _process(_delta: float) -> void:
 		reset()
 		close_minigame()
 
+
 func close_minigame() -> void:
 	var minigame = get_node("/root/World/CanvasLayer/MinigameWires")
 	if minigame:
@@ -85,7 +82,7 @@ func close_minigame() -> void:
 		if player == null:
 			return
 		player.minigame_active = false
-
+		
 
 func _is_point_inside_area(point: Vector2, area: Area2D) -> bool:
 	var cs = area.get_node_or_null("CollisionShape2D")

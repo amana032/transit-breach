@@ -6,16 +6,37 @@ var top_open := false
 var timer = 0.0 # kind of more like door progress in a way? like animation frames?? idk how to explain it image 0 to 1 is door going from moot to open, so going backwards is like closing it
 var door_coordsL: Vector3 
 var door_coordsR: Vector3 
+var player = null
 
 @onready var doorL = $Door_Big_L
 @onready var doorR = $Door_Big_R
 @onready var door_sound = $AudioStreamPlayer3D
 
+@export var lock_number: int = 0 # 0: no lock, 1: wire lock, 2: pipe lock, 3: wire lock 1 only
+
 func _ready() -> void:
+	player = get_tree().get_first_node_in_group("Player")
+	if player == null:
+		return
+
 	door_coordsL = doorL.position
 	door_coordsR = doorR.position
 
+	if lock_number > 0:
+		locked = true
+
 func _on_body_entered(body: Node3D) -> void:
+	if locked:
+		if lock_number == 1 and player.wires_puzzle_solved.count(true) == 3: 
+			locked = false
+		elif lock_number == 2 and player.pipe_puzzle_solved.count(true) == 2: 
+			locked = false
+		elif lock_number == 3 and player.wires_puzzle_solved[0]:
+			locked = false
+
+	if locked:
+		return
+
 	if body.is_in_group("Player"):
 		if timer == 0:
 			triggered = true

@@ -2281,7 +2281,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9859619, -5.9489536, -14.25
 transform = Transform3D(1, 0, 2.9802322e-08, -1.8626451e-09, 1, 9.313226e-10, 0, 0, 1.0000002, 4.9901505, -4.1584167, 15.040268)
 
 [node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("2_2dftf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.63467, 2.3852954, -54.086708)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.6872, 2.75351, -127.46398)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1152976101]
 stream = ExtResource("3_bcbcq")
@@ -2295,9 +2295,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.32669, 0, -84.12617)
 
 [node name="MinigamePipes" parent="CanvasLayer" unique_id=1029880355 instance=ExtResource("4_js7pq")]
 visible = false
-offset_top = -1.0
-offset_bottom = -1.0
-mouse_filter = 2
 
 [node name="MinigameWires" parent="CanvasLayer" unique_id=208055783 instance=ExtResource("5_eu7l1")]
 visible = false
