@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://birnidj4owemc" path="res://assets/sounds/flash-on.wav" id="4_mdl7e"]
 [ext_resource type="Shader" uid="uid://c8o5cl738umsc" path="res://scenes/overlay.gdshader" id="5_qu4a1"]
 [ext_resource type="PackedScene" uid="uid://ckpi7spt0qflb" path="res://scenes/centi.tscn" id="6_70d11"]
+[ext_resource type="AudioStream" uid="uid://c0rf5shft8fob" path="res://assets/sounds/voicelines/sprint.wav" id="7_cw2d6"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2dftf"]
 
@@ -117,7 +118,7 @@ mesh = SubResource("QuadMesh_cw2d6")
 
 [node name="AudioFootsteps" type="AudioStreamPlayer2D" parent="." unique_id=147841080]
 stream = SubResource("AudioStreamMP3_mdl7e")
-volume_db = -15.0
+volume_db = 2.165
 parameters/looping = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1803414600]
@@ -159,3 +160,6 @@ grow_vertical = 0
 unique_name_in_owner = true
 layout_mode = 2
 text = "Interacted with object."
+
+[node name="AudioPant" type="AudioStreamPlayer2D" parent="." unique_id=854406256]
+stream = ExtResource("7_cw2d6")
