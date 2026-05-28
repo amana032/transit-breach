@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://ckpi7spt0qflb" path="res://scenes/centi.tscn" id="21_gt80j"]
 [ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="22_26yim"]
 [ext_resource type="PackedScene" uid="uid://wu28eeyq4sm3" path="res://scenes/TriggerPlane.tscn" id="24_4mpvm"]
-[ext_resource type="AudioStream" uid="uid://cx8n861cahgd7" path="res://assets/sounds/voicelines/no-power.wav" id="26_88uba"]
 [ext_resource type="AudioStream" uid="uid://b28hymhknr3aj" path="res://assets/sounds/voicelines/lockers-i-can-hide.wav" id="26_ioe0r"]
 [ext_resource type="AudioStream" uid="uid://c40e3k4nks0hf" path="res://assets/sounds/voicelines/two-more-wireboxes.wav" id="27_imyir"]
 [ext_resource type="AudioStream" uid="uid://ciyvopha8o4ff" path="res://assets/sounds/voicelines/low-oxygen.wav" id="28_88uba"]
@@ -40,6 +39,9 @@ _data = {
 point_count = 6
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gt80j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ioe0r"]
+size = Vector3(4.9136963, 1.612793, 5.529297)
 
 [sub_resource type="Curve3D" id="Curve3D_26yim"]
 closed = true
@@ -84,7 +86,7 @@ metadata/_editor_floor_ = Vector3(0, 6, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9954721, 0.99999905, 18.537846)
 
 [node name="BigDoor" parent="." unique_id=200241581 instance=ExtResource("4_pj4xh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8595161, 0.99999934, -3.325213)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8595161, 1.0348535, -3.325213)
 lock_number = 3
 
 [node name="Props" type="Node3D" parent="." unique_id=314973060]
@@ -632,16 +634,20 @@ curve = SubResource("Curve3D_dvmpa")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=827428961]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("3_pj4xh")
-speed = 4.0
+speed = 8.0
 
 [node name="Area3D" type="Area3D" parent="Path3D/PathFollow3D" unique_id=243160450]
 
 [node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D/PathFollow3D/Area3D" unique_id=1953771536 instance=ExtResource("21_gt80j")]
-transform = Transform3D(-1.461708, 0, 0.3367635, 0, 1.5, 0, -0.3367635, 0, -1.461708, -0.3309765, 0, 0)
+transform = Transform3D(-1.9781781, 0, 0.45575327, 0, 2.03, 0, -0.45575327, 0, -1.9781781, -0.3309765, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/Area3D" unique_id=1854428827]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 shape = SubResource("BoxShape3D_gt80j")
+
+[node name="ViewBox" type="CollisionShape3D" parent="Path3D/PathFollow3D/Area3D" unique_id=823075481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08905029, 1.3855124, -5.9662704)
+shape = SubResource("BoxShape3D_ioe0r")
 
 [node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("22_26yim")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73491955, 2.7126586, 29.504925)
@@ -653,12 +659,12 @@ curve = SubResource("Curve3D_26yim")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D2" unique_id=1124563099]
 transform = Transform3D(-4.371137e-08, 0, 0.9999996, 0, 1, 0, -0.9999996, 0, -4.371137e-08, 0, 0, 0)
 script = ExtResource("3_pj4xh")
-speed = 4.0
+speed = 8.0
 
 [node name="Area3D" type="Area3D" parent="Path3D2/PathFollow3D" unique_id=847951047]
 
 [node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D2/PathFollow3D/Area3D" unique_id=1482662560 instance=ExtResource("21_gt80j")]
-transform = Transform3D(-1.461708, 0, 0.3367635, 0, 1.5, 0, -0.3367635, 0, -1.461708, -0.3309765, 0, 0)
+transform = Transform3D(-1.948944, 0, 0.449018, 0, 2, 0, -0.449018, 0, -1.948944, -0.3309765, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D2/PathFollow3D/Area3D" unique_id=1653970990]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
@@ -671,12 +677,12 @@ curve = SubResource("Curve3D_456xa")
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D3" unique_id=2087878341]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("3_pj4xh")
-speed = 4.0
+speed = 8.0
 
 [node name="Area3D" type="Area3D" parent="Path3D3/PathFollow3D" unique_id=2076564409]
 
 [node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D3/PathFollow3D/Area3D" unique_id=1513103412 instance=ExtResource("21_gt80j")]
-transform = Transform3D(-1.461708, 0, 0.3367635, 0, 1.5, 0, -0.3367635, 0, -1.461708, -0.3309765, 0, 0)
+transform = Transform3D(-1.948944, 0, 0.449018, 0, 2, 0, -0.449018, 0, -1.948944, -0.3309765, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D3/PathFollow3D/Area3D" unique_id=746810347]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
@@ -687,11 +693,6 @@ transform = Transform3D(9.047841, 0, 0, 0, 4.761429, 0, 0, 0, 1.2851422, -0.7336
 flavor_text = "I don't think I'm alone...
 "
 sound_clip = SubResource("AudioStreamWAV_tpxs4")
-
-[node name="TriggerPlane2" parent="." unique_id=1085254141 instance=ExtResource("24_4mpvm")]
-transform = Transform3D(6.321794, 0, 0, 0, 9.204381, 0, 0, 0, 1, -1.181111, 4.1158714, -0.29556608)
-flavor_text = "No power? There should be a wirebox somewhere..."
-sound_clip = ExtResource("26_88uba")
 
 [node name="TriggerPlane3" parent="." unique_id=810693976 instance=ExtResource("24_4mpvm")]
 transform = Transform3D(-2.6034112e-07, 0, 0.9999999, 0, 3.917981, 0, -5.955911, 0, -4.3711385e-08, 14.235226, 11.907708, 4.5770884)

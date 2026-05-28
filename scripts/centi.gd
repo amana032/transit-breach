@@ -60,3 +60,5 @@ func _process(delta):
 			target.position.y = y_offset
 
 		target.position.x = x_offset - 2.0
+
+	# if player entered 
