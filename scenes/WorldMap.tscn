@@ -613,6 +613,7 @@ transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 71
 
 [node name="PipeValve2" parent="." unique_id=1535185030 instance=ExtResource("20_gt80j")]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 55.349415, 4.309878, -7.841498)
+
 [node name="Path3D" type="Path3D" parent="." unique_id=1615224921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91503954, 1.1818271, -19.02205)
 curve = SubResource("Curve3D_dvmpa")

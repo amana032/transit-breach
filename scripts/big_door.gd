@@ -15,17 +15,25 @@ var player = null
 @export var lock_number: int = 0 # 0: no lock, 1: wire lock, 2: pipe lock, 3: wire lock 1 only
 
 func _ready() -> void:
-	player = get_tree().get_first_node_in_group("Player")
-	if player == null:
-		return
-
 	door_coordsL = doorL.position
 	door_coordsR = doorR.position
 
 	if lock_number > 0:
 		locked = true
 
+	player = get_tree().get_first_node_in_group("Player")
+	if player == null:
+		return
+
 func _on_body_entered(body: Node3D) -> void:
+
+	if player == null:
+		player = get_tree().get_first_node_in_group("Player")
+	if player == null:
+		return
+		
+	print("Player wires puzzle solved: %s" % player.wires_puzzle_solved.count(true))
+	
 	if locked:
 		if lock_number == 1 and player.wires_puzzle_solved.count(true) == 3: 
 			locked = false
