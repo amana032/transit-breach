@@ -11,14 +11,15 @@
 [ext_resource type="PackedScene" uid="uid://d0hi87x26pg20" path="res://scenes/props/barrer_sm.tscn" id="10_1d6c4"]
 [ext_resource type="PackedScene" uid="uid://bw3jey3slw2x" path="res://scenes/props/tape.tscn" id="11_wik8v"]
 [ext_resource type="PackedScene" uid="uid://dbk3r2u8ihwh4" path="res://scenes/LadderCollider.tscn" id="12_wik8v"]
-[ext_resource type="PackedScene" uid="uid://d0a13rp55e708" path="res://assets/PS1 Alleyway Pack - 1.1/Assets/Props/Props/Wire Box.fbx" id="13_ibban"]
 [ext_resource type="PackedScene" uid="uid://grpjgo11vwak" path="res://scenes/props/bed.tscn" id="14_0o7c7"]
 [ext_resource type="PackedScene" uid="uid://bogfk2pr0qcaf" path="res://scenes/props/stool.tscn" id="15_3l4h0"]
 [ext_resource type="PackedScene" uid="uid://cvv2lav3ok6hj" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Radio_SM.fbx" id="16_dvmpa"]
 [ext_resource type="PackedScene" uid="uid://bqhuo55lem3q8" path="res://scenes/props/pipes/pipeSM.tscn" id="17_gt80j"]
 [ext_resource type="PackedScene" uid="uid://xktsipofwicj" path="res://scenes/props/pipes/pipeT.tscn" id="18_26yim"]
+[ext_resource type="PackedScene" uid="uid://bb0otrrm7fvfd" path="res://scenes/props/wirebox.tscn" id="19_3l4h0"]
 [ext_resource type="PackedScene" uid="uid://cguqhay4d22sr" path="res://scenes/props/pipes/pipeCorner.tscn" id="19_456xa"]
 [ext_resource type="PackedScene" uid="uid://dkkfkt0ewiher" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Cupboard_SM.fbx" id="20_dvmpa"]
+[ext_resource type="PackedScene" uid="uid://q63xq4c44c60" path="res://scenes/props/pipes/pipeValve.tscn" id="20_gt80j"]
 
 [node name="WorldMap" type="Node3D" unique_id=1605443182]
 
@@ -267,12 +268,6 @@ transform = Transform3D(0.93470174, 0, 0.35543323, 0, 1, 0, -0.35543323, 0, 0.93
 [node name="Barrel19" parent="Props" unique_id=1205649956 instance=ExtResource("5_0laof")]
 transform = Transform3D(0.85636616, 0, -0.5163689, 0, 1, 0, 0.5163689, 0, 0.85636616, -1.2975006, 13.023737, -40.372044)
 
-[node name="Wire Box" parent="Props" unique_id=867629142 instance=ExtResource("13_ibban")]
-transform = Transform3D(-1.6479194e-07, -1.6479191e-07, -3.77, -3.77, 2.8462708e-07, 1.6479193e-07, 2.8462708e-07, 3.77, -1.6479193e-07, 8.917414, 12.953863, -6.9013553)
-
-[node name="Wire Box2" parent="Props" unique_id=242552847 instance=ExtResource("13_ibban")]
-transform = Transform3D(-2.8462705e-07, -3.77, 3.2958386e-07, -3.77, 2.8462708e-07, 1.6479193e-07, -1.6479194e-07, -3.2958386e-07, -3.77, 13.037448, 5.151275, -49.684784)
-
 [node name="Box14" parent="Props" unique_id=682429129 instance=ExtResource("6_jsexe")]
 transform = Transform3D(-0.9322742, 0, -3.2526753, 0, 3.9506595, 0, 3.0337954, 0, -0.9995352, 24.1747, 0.9990489, -81.81251)
 
@@ -314,9 +309,6 @@ transform = Transform3D(0.95867586, 0, -0.2845006, 0, 1, 0, 0.2845006, 0, 0.9586
 
 [node name="Barrer_SM8" parent="Props" unique_id=1498717702 instance=ExtResource("10_1d6c4")]
 transform = Transform3D(0.7535634, 0, 0.6573753, 0, 1, 0, -0.6573753, 0, 0.7535634, 18.40076, 1, -81.76261)
-
-[node name="Wire Box3" parent="Props" unique_id=1887658141 instance=ExtResource("13_ibban")]
-transform = Transform3D(-1.6479196e-07, -1.6479193e-07, -3.77, -3.77, 2.8462705e-07, 1.6479193e-07, 2.8462702e-07, 3.77, -1.6479193e-07, 14.587882, 5.151275, -88.97741)
 
 [node name="Bed" parent="Props" unique_id=999860280 instance=ExtResource("14_0o7c7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 62.778145, 1.0113811, -13.7108965)
@@ -572,3 +564,18 @@ transform = Transform3D(-1.9350002, 0, 1.6916309e-07, -3.2054647e-08, 1.8999434,
 
 [node name="BigDoor" parent="Props" unique_id=1406505775 instance=ExtResource("4_pj4xh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58.774223, 13.143001, -43.278717)
+
+[node name="Wirebox" parent="." unique_id=10071394 instance=ExtResource("19_3l4h0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.034305, 12.372002, -6.829101)
+
+[node name="Wirebox2" parent="." unique_id=600819240 instance=ExtResource("19_3l4h0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.759662, 4.4258714, -88.8291)
+
+[node name="Wirebox3" parent="." unique_id=923021411 instance=ExtResource("19_3l4h0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.520564, 4.766538, -49.036736)
+
+[node name="PipeValve" parent="." unique_id=228775893 instance=ExtResource("20_gt80j")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 71.26457, 4.3304243, -66.80052)
+
+[node name="PipeValve2" parent="." unique_id=1535185030 instance=ExtResource("20_gt80j")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 55.349415, 4.309878, -7.841498)

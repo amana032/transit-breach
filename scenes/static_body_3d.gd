@@ -16,3 +16,25 @@ func interact():
 			player.exit_locker()
 		else:
 			player.enter_locker(locker)
+
+	var wires = get_parent().get_parent()
+	if wires and wires.is_in_group("wires"):
+		# wire viewport thing
+		var minigame = get_node("/root/World/CanvasLayer/MinigameWires")
+		if minigame:
+			minigame.visible = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			player.minigame_active = true
+			print("start wires minigame")
+			return
+
+	var pipes = get_parent()
+	if pipes and pipes.is_in_group("pipes"):
+		# pipe viewport thing
+		var minigame = get_node("/root/World/CanvasLayer/MinigamePipes")
+		if minigame:
+			minigame.visible = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			player.minigame_active = true
+			print("start pipes minigame")
+			return
