@@ -1,12 +1,13 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+var SPEED = 4.0
 const JUMP_VELOCITY = 4.5
 const ladder_speed = 3.0
 
 @onready var camera = $Neck/Camera3D
 @onready var neck = $Neck
 @onready var footstep_sound = $AudioFootsteps
+@onready var pant_sound = $AudioPant
 @onready var current_text : Label
 
 var footstep_variants = [
@@ -23,11 +24,14 @@ var minigame_active := false
 var pipe_puzzle_solved := [false, false]
 var wires_puzzle_solved := [false, false, false]
 var spawn_position
+var sprint_timer := 0.0
+var sprinting_allowed := true
 
 func _ready() -> void:
 	add_to_group("Player")
 	spawn_position = position
 	$Neck/DeathCamera.hide()
+	pant_sound.volume_db = 10
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if mouse motion or escape key is pressed to handle mouse
@@ -66,11 +70,31 @@ func _physics_process(delta: float) -> void:
 
 	# Don't let the player move if they're hidden (in a locker)
 	if !is_hidden:
-		# Add the gravity.
+		# Add the gravity
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		
-		# Handle jump.
+		# Handle sprinting
+		if Input.is_action_pressed("Sprint") and is_on_floor() and sprint_timer > 0.0 and sprinting_allowed:
+			SPEED = 8.0
+			sprint_timer -= delta
+			footstep_sound.pitch_scale = 1.3
+
+		else:
+			SPEED = 4.0
+			sprint_timer += delta
+			footstep_sound.pitch_scale = 1.0
+
+		sprint_timer = clamp(sprint_timer, 0.0, 3.0)
+
+		if sprint_timer <= 0.0:
+			sprinting_allowed = false
+			pant_sound.play()
+
+		if sprint_timer >= 3.0:
+			sprinting_allowed = true	
+
+		# Handle jump
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 
@@ -89,6 +113,8 @@ func _physics_process(delta: float) -> void:
 			if not footstep_sound.playing:
 				footstep_sound.stream = footstep_variants[randi() % footstep_variants.size()]
 				footstep_sound.play()
+
+		
 				
 		if on_ladder:
 			if Input.is_action_pressed("forward"):
