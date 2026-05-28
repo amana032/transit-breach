@@ -43,6 +43,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9954721, 0.99999905, 18.53
 
 [node name="BigDoor" parent="." unique_id=200241581 instance=ExtResource("4_pj4xh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8595161, 0.99999934, -3.325213)
+lock_number = 3
 
 [node name="Props" type="Node3D" parent="." unique_id=314973060]
 
@@ -125,7 +126,8 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 62.9
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.018925, 1, -63.938366)
 
 [node name="BigDoor2" parent="Props" unique_id=1003369851 instance=ExtResource("4_pj4xh")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.353794, 1.0000004, -42.872463)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.353794, 0.95211744, -42.872463)
+lock_number = 1
 
 [node name="SmallDoor4" parent="Props" unique_id=2082840291 instance=ExtResource("3_8rtnk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.660539, 0.99999905, -42.958954)
@@ -135,6 +137,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.94886, 0.9999995, -71.8572
 
 [node name="BigDoor3" parent="Props" unique_id=1341382572 instance=ExtResource("4_pj4xh")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 107.083565, 1.0000008, -42.87994)
+lock_number = 2
 
 [node name="LadderCollider" parent="Props" unique_id=659552584 instance=ExtResource("12_wik8v")]
 transform = Transform3D(-1.599343e-07, 0, 1.0000001, 0, 11.713605, 0, -3.6588705, 0, -4.3711392e-08, 18.84406, 7.807558, 5.030791)
