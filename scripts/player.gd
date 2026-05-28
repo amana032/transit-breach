@@ -22,9 +22,12 @@ var is_hidden := false
 var minigame_active := false
 var pipe_puzzle_solved := [false, false]
 var wires_puzzle_solved := [false, false, false]
+var spawn_position
 
 func _ready() -> void:
 	add_to_group("Player")
+	spawn_position = position
+	$Neck/DeathCamera.hide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if mouse motion or escape key is pressed to handle mouse
@@ -102,7 +105,6 @@ func hide_text() -> void: # Hides text on the flavor text box
 	%FlavorText.hide()
 	flavor_text_active = false
 
-
 func enter_locker(locker: Node3D) -> void: # Swap to the camera locker, enter hiding state
 	camera.current = false
 
@@ -124,3 +126,13 @@ func exit_locker(): # Swap back to player cam, exit hiding state
 	var flashlight = get_tree().get_first_node_in_group("Flashlight")
 	if flashlight:
 		flashlight.visible = true
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player") and !is_hidden:
+		$Neck/DeathCamera.show()
+		$Neck/Camera3D.hide()
+		$"Neck/DeathCamera/Node3D/CentipedeMonster_Vasdasdasdasd1(new)/AnimationPlayer".play("Armature|Atk2")
+		await get_tree().create_timer(3.0).timeout
+		$Neck/DeathCamera.hide()
+		$Neck/Camera3D.show()
+		body.position = spawn_position
