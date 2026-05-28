@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cp83xwevmor1l"]
 
+[ext_resource type="PackedScene" uid="uid://c1iw66syeo4n0" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/UntitledDoor_Grill.fbx" id="2_6gp0b"]
 [ext_resource type="PackedScene" uid="uid://dkkfkt0ewiher" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Cupboard_SM.fbx" id="2_468gu"]
 [ext_resource type="Script" uid="uid://jvm8370mryny" path="res://scenes/static_body_3d.gd" id="3_6gp0b"]
-[ext_resource type="PackedScene" uid="uid://b58txxy5gei8n" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/CupboardDoor_SM_grill.fbx" id="3_468gu"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c5228"]
 points = PackedVector3Array(0.4119992, 0.36645466, 2.3811188, -0.41199926, 0.36645466, 2.3811188, 0.4119992, -0.36645466, 2.3811188, 0.4119992, 0.36645466, 0, -0.41199926, -0.36645466, 2.3811188, -0.41199926, 0.36645466, 0, 0.4119992, -0.36645466, 0, -0.41199926, -0.36645466, 0)
@@ -20,17 +20,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17139041, 1.1920929e-07, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cupboard_SM/InsideCupbiard/StaticBody3D" unique_id=752924271]
 shape = SubResource("ConvexPolygonShape3D_c5228")
 
-[node name="CupboardDoor_SM_grill" parent="." unique_id=1739729848 instance=ExtResource("3_468gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1847142, 1.2126724, -0.43349767)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="CupboardDoor_SM_grill/Door" parent_id_path=PackedInt32Array(1739729848, 969763327) index="0" unique_id=927838272]
-script = ExtResource("3_6gp0b")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CupboardDoor_SM_grill/Door/StaticBody3D" unique_id=684322026]
-shape = SubResource("ConvexPolygonShape3D_pyspm")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1115643381]
 transform = Transform3D(0.0008028075, 0, -0.9999997, 0, 1, 0, 0.9999997, 0, 0.0008028075, -0.037219644, 1.9921987, -0.097911835)
 
+[node name="UntitledDoor_Grill" parent="." unique_id=86714314 instance=ExtResource("2_6gp0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.185, 1.213, -0.06649205)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="UntitledDoor_Grill/Door" parent_id_path=PackedInt32Array(86714314, 399261999) index="0" unique_id=927838272]
+transform = Transform3D(2.5399985, 0, 0, 0, 2.5399983, 3.0279142e-07, 0, -3.0279142e-07, 2.5399983, 0.020760983, 0.0073669553, -0.00035345554)
+script = ExtResource("3_6gp0b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UntitledDoor_Grill/Door/StaticBody3D" unique_id=684322026]
+shape = SubResource("ConvexPolygonShape3D_pyspm")
+
 [editable path="Cupboard_SM"]
-[editable path="CupboardDoor_SM_grill"]
+[editable path="UntitledDoor_Grill"]
