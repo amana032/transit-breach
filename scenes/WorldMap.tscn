@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://c3lj2qucy2kmt"]
+[gd_scene format=3 uid="uid://brdjiyxncacr"]
 
 [ext_resource type="MeshLibrary" uid="uid://ddpyv7oojbi5t" path="res://assets/HallwayPack.meshlib" id="1_ej7nn"]
 [ext_resource type="PackedScene" uid="uid://4mcykyxau7w6" path="res://scenes/props/small_door.tscn" id="3_8rtnk"]
+[ext_resource type="Script" uid="uid://dt0dc5t2gupc8" path="res://scenes/path_follow_3d.gd" id="3_pj4xh"]
 [ext_resource type="PackedScene" uid="uid://dhf7xjatoos1k" path="res://scenes/props/big_door.tscn" id="4_pj4xh"]
 [ext_resource type="PackedScene" uid="uid://jd3670y411ha" path="res://scenes/props/barrel.tscn" id="5_0laof"]
 [ext_resource type="PackedScene" uid="uid://bsivjst66ckym" path="res://scenes/props/box.tscn" id="6_jsexe"]
@@ -20,6 +21,36 @@
 [ext_resource type="PackedScene" uid="uid://cguqhay4d22sr" path="res://scenes/props/pipes/pipeCorner.tscn" id="19_456xa"]
 [ext_resource type="PackedScene" uid="uid://dkkfkt0ewiher" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Cupboard_SM.fbx" id="20_dvmpa"]
 [ext_resource type="PackedScene" uid="uid://q63xq4c44c60" path="res://scenes/props/pipes/pipeValve.tscn" id="20_gt80j"]
+[ext_resource type="PackedScene" uid="uid://ckpi7spt0qflb" path="res://scenes/centi.tscn" id="21_gt80j"]
+[ext_resource type="PackedScene" uid="uid://3t05t2dar7lp" path="res://scenes/Player.tscn" id="22_26yim"]
+
+[sub_resource type="Curve3D" id="Curve3D_dvmpa"]
+closed = true
+bake_interval = 5.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, -48, 0, 0, 0, 0, 0, 0, -24, 0, -48, 0, 0, 0, 0, 0, 0, -24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gt80j"]
+
+[sub_resource type="Curve3D" id="Curve3D_26yim"]
+closed = true
+bake_interval = 5.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20.2, 0, 0, 0, 0, 0, 0, 0, 0, -20.2, 0, 16, 0, 0, 0, 0, 0, 0, 10.725, 0, 16, 0, 0, 0, 0, 0, 0, -20.2, 0, 16, 0, 0, 0, 0, 0, 0, -20.2, 0, -16.02, 0, 0, 0, 0, 0, 0, 7.065, 0, -16.02, 0, 0, 0, 0, 0, 0, -20.2, 0, -16.02, 0, 0, 0, 0, 0, 0, -20.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_456xa"]
+bake_interval = 5.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -24, 0, 0, 0, 0, 0, 0, 0, 0, -24, 0, 16, 0, 0, 0, 0, 0, 0, -48, 0, 16, 0, 0, 0, 0, 0, 0, -48, 0, 24, 0, 0, 0, 0, 0, 0, -104, 0, 24, 0, 0, 0, 0, 0, 0, -104, 0, -24, 0, 0, 0, 0, 0, 0, -48, 0, -24, 0, 0, 0, 0, 0, 0, -48, 0, -16, 0, 0, 0, 0, 0, 0, -24, 0, -16, 0, 0, 0, 0, 0, 0, -24, 0, 0, 0, 0, 0, 0, 0, 0, -36, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
 
 [node name="WorldMap" type="Node3D" unique_id=1605443182]
 
@@ -582,3 +613,63 @@ transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 71
 
 [node name="PipeValve2" parent="." unique_id=1535185030 instance=ExtResource("20_gt80j")]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 55.349415, 4.309878, -7.841498)
+[node name="Path3D" type="Path3D" parent="." unique_id=1615224921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91503954, 1.1818271, -19.02205)
+curve = SubResource("Curve3D_dvmpa")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=827428961]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("3_pj4xh")
+speed = 4.0
+
+[node name="Area3D" type="Area3D" parent="Path3D/PathFollow3D" unique_id=243160450]
+
+[node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D/PathFollow3D/Area3D" unique_id=1953771536 instance=ExtResource("21_gt80j")]
+transform = Transform3D(-1.461708, 0, 0.3367635, 0, 1.5, 0, -0.3367635, 0, -1.461708, -0.3309765, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D/PathFollow3D/Area3D" unique_id=1854428827]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+shape = SubResource("BoxShape3D_gt80j")
+
+[node name="CharacterBody3D" parent="." unique_id=1323126919 instance=ExtResource("22_26yim")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73491955, 2.7126586, 29.504925)
+
+[node name="Path3D2" type="Path3D" parent="." unique_id=66314540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.028362, 1.9012591, -43.00793)
+curve = SubResource("Curve3D_26yim")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2" unique_id=1124563099]
+transform = Transform3D(-4.371137e-08, 0, 0.9999996, 0, 1, 0, -0.9999996, 0, -4.371137e-08, 0, 0, 0)
+script = ExtResource("3_pj4xh")
+speed = 4.0
+
+[node name="Area3D" type="Area3D" parent="Path3D2/PathFollow3D" unique_id=847951047]
+
+[node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D2/PathFollow3D/Area3D" unique_id=1482662560 instance=ExtResource("21_gt80j")]
+transform = Transform3D(-1.461708, 0, 0.3367635, 0, 1.5, 0, -0.3367635, 0, -1.461708, -0.3309765, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D2/PathFollow3D/Area3D" unique_id=1653970990]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+shape = SubResource("BoxShape3D_gt80j")
+
+[node name="Path3D3" type="Path3D" parent="." unique_id=207366937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.031555, 13, -43.018394)
+curve = SubResource("Curve3D_456xa")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D3" unique_id=2087878341]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("3_pj4xh")
+speed = 4.0
+
+[node name="Area3D" type="Area3D" parent="Path3D3/PathFollow3D" unique_id=2076564409]
+
+[node name="CentipedeMonster_Vasdasdasdasd1(new)" parent="Path3D3/PathFollow3D/Area3D" unique_id=1513103412 instance=ExtResource("21_gt80j")]
+transform = Transform3D(-1.461708, 0, 0.3367635, 0, 1.5, 0, -0.3367635, 0, -1.461708, -0.3309765, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Path3D3/PathFollow3D/Area3D" unique_id=746810347]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+shape = SubResource("BoxShape3D_gt80j")
+
+[connection signal="body_entered" from="Path3D/PathFollow3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Path3D2/PathFollow3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Path3D3/PathFollow3D/Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
