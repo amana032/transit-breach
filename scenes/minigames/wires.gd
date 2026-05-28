@@ -1,6 +1,6 @@
 extends Node2D
  
-var wires = {} # Dictionary that wire number to line
+var wires = {} # Dictionary that connects wire number to line
 var colors = ["red", "blue", "green", "pink"]
 var targets = []
 var sprites = []
@@ -11,8 +11,13 @@ var current_target: Area2D = null
 
 var dragging := false
 var connected := {} # Keep track of connected wires
+var player = null
 
 func _ready() -> void:
+	player = get_tree().get_first_node_in_group("Player")
+	if player == null:
+		return
+
 	# Set up wires and targets for each pair, randomizing which target is associated to which wire
 	for i in range(1, 5):
 		var target = get_node("Target%d" % i)
@@ -25,7 +30,6 @@ func _ready() -> void:
 		var sprite = target.get_node("Sprite2D")
 		var texture = load("res://assets/Wire.Assets/Textures/%s.png" % colors[i - 1])
 		sprite.texture = texture
-
 
 		var wire = get_node("WireNode%d" % i)
 		var line = wire.get_node("Line2D")
@@ -57,12 +61,30 @@ func start_drag(wire: Area2D) -> void:
 
 
 func _process(_delta: float) -> void:
+	var count = player.wires_puzzle_solved.count(true)
+
+	if count >= 3: # no more than 3 wire games
+		close_minigame()
+		return
+
 	if dragging and current_line:
 		var mouse_pos = current_line.to_local(get_global_mouse_position())
 		current_line.set_point_position(1, mouse_pos) # update end point of line to match mouse
 
 	if check_solution():
 		print("Puzzle solved!")
+		reset()
+		close_minigame()
+
+func close_minigame() -> void:
+	var minigame = get_node("/root/World/CanvasLayer/MinigameWires")
+	if minigame:
+		minigame.visible = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+		if player == null:
+			return
+		player.minigame_active = false
 
 
 func _is_point_inside_area(point: Vector2, area: Area2D) -> bool:
@@ -116,4 +138,35 @@ func check_solution() -> bool:
 		if not connected[i]: # check that all wires are connected
 			return false
 
+	var count = player.wires_puzzle_solved.count(true) # mark the next false index as true
+	player.wires_puzzle_solved[count] = true
 	return true
+
+func reset() -> void:
+	targets.clear()
+	connected.clear()
+	wires.clear()
+
+	# Set up wires and targets for each pair, randomizing which target is associated to which wire
+	for i in range(1, 5):
+		var target = get_node("Target%d" % i)
+		targets.append(target)
+		
+	targets.shuffle()
+
+	for i in range(1, 5): 
+		var target = targets[i - 1]
+		var sprite = target.get_node("Sprite2D")
+		var texture = load("res://assets/Wire.Assets/Textures/%s.png" % colors[i - 1])
+		sprite.texture = texture
+
+		var wire = get_node("WireNode%d" % i)
+		var line = wire.get_node("Line2D")
+		line.clear_points() # emtpy wire on start
+
+		wires[wire] = {
+			"index": i,
+			"line": line
+		}
+
+		connected[i] = false
