@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bw3jey3slw2x"]
+
+[ext_resource type="PackedScene" uid="uid://cq6ta76v6qyri" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/TapeBlackAndYellow_SM.fbx" id="1_dsfbi"]
+
+[node name="TapeBlackAndYellow_SM" unique_id=12984752 instance=ExtResource("1_dsfbi")]
+
+[node name="Box008" parent="." index="0" unique_id=913819339]
+transform = Transform3D(-1.0075475e-07, 1.0145415e-07, -2.305, 2.305, -1.01454134e-07, -1.00754754e-07, -1.0075476e-07, -2.321, -1.00754754e-07, 0, 0.10250878, 0)

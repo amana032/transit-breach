@@ -18,7 +18,6 @@ func _ready() -> void:
 		var target = get_node("Target%d" % i)
 		targets.append(target)
 		
-
 	targets.shuffle()
 
 	for i in range(1, 5): 

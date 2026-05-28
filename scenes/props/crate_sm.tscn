@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vohe3fac0plh"]
+
+[ext_resource type="PackedScene" uid="uid://d2ggldrd4gymq" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Crate_SM.fbx" id="1_7nngf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ml3od"]
+points = PackedVector3Array(-0.39999998, -0.39999998, 5.551115e-17, 0.39999998, 0.39999998, 0.79999995, 0.39999998, -0.39999998, 0.79999995, 0.39999998, 0.39999998, 5.551115e-17, -0.39999998, 0.39999998, 0.79999995, -0.39999998, 0.39999998, 5.551115e-17, -0.39999998, -0.39999998, 0.79999995, 0.39999998, -0.39999998, 5.551115e-17)
+
+[node name="Crate_SM" unique_id=1753340222 instance=ExtResource("1_7nngf")]
+transform = Transform3D(3.935, 0, 0, 0, 3.935, 0, 0, 0, 3.935, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1987771881]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2034894201]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ml3od")

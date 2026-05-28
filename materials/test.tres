@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cap0keuetci7i"]
+
+[ext_resource type="Texture2D" uid="uid://b85uvtbd3woo8" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/PS1TextureAtlas.png" id="1_1ft0u"]
+
+[resource]
+albedo_texture = ExtResource("1_1ft0u")
