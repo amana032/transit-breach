@@ -2,6 +2,9 @@
 
 extends Node3D
 
+@onready var audio = $AudioStreamPlayer3D
+@onready var player = get_tree().get_first_node_in_group("Player")
+
 var xmotion = 1 # gonna be honest. not sure what this does?? increasing it makes bigger radius. might just kill it 
 var segment_distance = 0.5 # distance between targets
 var phase = 0.0 # "phase" of cycle 

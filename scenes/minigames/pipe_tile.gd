@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var sprite = get_node("Area2D/Sprite2D")
+@onready var sound = $AudioStreamPlayer2D
+
 var pipe_rotation:= 0 # 0: up, 1: right, 2: down, 3: left
 var type:= 0 # 0: straight, 1: corner, 2: t-junction, 3: cross
 var connected := false
@@ -42,6 +44,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			pipe_rotation = (pipe_rotation + 1) % 4
 			rotation = deg_to_rad(float(pipe_rotation) * 90.0)
+			sound.play()
 			if get_parent().check_solution():
 				print("Puzzle solved!")
 				close_minigame()
