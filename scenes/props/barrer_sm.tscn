@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d0hi87x26pg20"]
+
+[ext_resource type="PackedScene" uid="uid://c7ute5a6ebm0u" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Barrer_SM.fbx" id="1_ccmsg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ccmsg"]
+points = PackedVector3Array(-0.27529776, -0.01589775, -0.99865615, 0.042635996, 3.7677732, 1.1950688, 0.042635996, 4.3082976, 1.1628562, 0.26522666, 0.3341521, -0.99865615, 0.042635996, 4.3082976, -1.1895976, 0.26522666, 0.20674574, 1.0358732, -0.27529776, 0.048017025, 1.0358732, -0.019399999, 4.1028295, -1.076288, -0.019399999, 4.1028295, 1.0526078, 0.25311682, 0.08098105, -0.953786, -0.27529776, 0.27066064, -0.9669105, 0.26522666, 0.42938936, 0.9723817, -0.27529776, -0.01589775, 1.0358732, -0.27529776, 0.27066064, 0.9723817, 0.24895161, 0.11430268, 0.97365814, -0.020908428, 3.7356043, -1.1895976, 0.26522666, 0.42938936, -0.9669105, -0.020908428, 3.6721127, 1.1950688, 0.042635996, 3.7356043, -1.1895976, -0.020908428, 3.7677732, 1.1950688, 0.042635996, 3.6721127, 1.1950688, -0.27529776, 0.17500007, -0.99865615, -0.27529776, 0.20674574, 1.003894, 0.26522666, 0.3658979, 1.003894)
+
+[node name="Barrer_SM" unique_id=1340883022 instance=ExtResource("1_ccmsg")]
+
+[node name="Box006" parent="." index="0" unique_id=242085272]
+transform = Transform3D(2.285, 0, 0, 0, 0.521, -6.714069e-08, 0, 2.2773634e-08, 1.536, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Box006" index="0" unique_id=1499104418]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box006/StaticBody3D" index="0" unique_id=1201702187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ccmsg")
