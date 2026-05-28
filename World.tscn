@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://236573el1itl"]
 
 [ext_resource type="AudioStream" uid="uid://d1pjc8yhq3g2q" path="res://assets/sounds/spoopy ambiance.ogg" id="3_bcbcq"]
-[ext_resource type="PackedScene" uid="uid://brdjiyxncacr" path="res://scenes/WorldMap.tscn" id="3_js7pq"]
+[ext_resource type="PackedScene" uid="uid://c3lj2qucy2kmt" path="res://scenes/WorldMap.tscn" id="3_js7pq"]
+[ext_resource type="PackedScene" uid="uid://vqf15t2ndk0d" path="res://scenes/minigames/minigamePipes.tscn" id="4_js7pq"]
+[ext_resource type="PackedScene" uid="uid://bgkasfdvm40ka" path="res://scenes/minigames/minigameWires.tscn" id="5_eu7l1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bcbcq"]
 sky_top_color = Color(0.12116062, 0.09183601, 0.10420226, 1)
@@ -39,3 +41,11 @@ parameters/looping = true
 
 [node name="WorldMap" parent="." unique_id=1605443182 instance=ExtResource("3_js7pq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.32669, 0, -84.12617)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1283968747]
+
+[node name="MinigamePipes" parent="CanvasLayer" unique_id=1029880355 instance=ExtResource("4_js7pq")]
+visible = false
+
+[node name="MinigameWires" parent="CanvasLayer" unique_id=208055783 instance=ExtResource("5_eu7l1")]
+visible = false
