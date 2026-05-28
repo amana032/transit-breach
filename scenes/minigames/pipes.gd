@@ -7,16 +7,35 @@ var level_1 = [
 	[1, 0, 0, 0],
 ]
 
+var level_2 = [
+	[1, 0, 2, 1],
+	[2, 1, 1, 0],
+	[1, 2, 0, 0],
+	[2, 0, 0, 2],
+]
+
 var pipes_grid = []
+var player = null
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+	player = get_tree().get_first_node_in_group("Player")
+	if player == null:
+		return
+
 	for y in range(4):
 		var row = []
 		for x in range(4):
 			var tile = preload("res://scenes/minigames/pipe_tile.tscn").instantiate()
 			add_child(tile)
 			tile.position = Vector2(x * 100 + 475, y * 100 + 170)
-			tile.setup(level_1[y][x])
+
+			if player.pipe_puzzle_solved[0]: # if we've solved the puzzle before, set up the pipes in their solved state
+				tile.setup(level_2[y][x])
+			else:
+				tile.setup(level_1[y][x])
+
 			row.append(tile)
 		pipes_grid.append(row)
 
@@ -52,6 +71,7 @@ func get_open_ends(type: int, pipe_rotation: int) -> Array: # 0: up, 1: right, 2
 
 
 func check_solution() -> bool:
+	
 	# Flood-fill style implementation
 	var visited = {} # If we've seen it, don't check it again
 	var queue = [Vector2i(0, 0)] # The origin of our flood-fill
@@ -98,6 +118,32 @@ func check_solution() -> bool:
 	var end_tile = pipes_grid[3][3]
 	if end_pos in visited: # if the end tile is connected
 		if 1 in get_open_ends(end_tile.type, end_tile.pipe_rotation): # if end tile is open to right, we win
-				return true
+			var count = player.pipe_puzzle_solved.count(true)
+			player.pipe_puzzle_solved[count] = true
+			reset()
+			return true
 
 	return false
+
+func reset():
+	for row in pipes_grid:
+		for tile in row:
+			tile.queue_free()
+	pipes_grid.clear()
+
+	for y in range(4):
+		var row = []
+		for x in range(4):
+			var tile = preload("res://scenes/minigames/pipe_tile.tscn").instantiate()
+			add_child(tile)
+			tile.position = Vector2(x * 100 + 475, y * 100 + 170)
+
+			if player.pipe_puzzle_solved[0]: # if we've solved the puzzle before, set up the pipes in their solved state
+				tile.setup(level_2[y][x])
+			else:
+				tile.setup(level_1[y][x])
+
+			row.append(tile)
+		pipes_grid.append(row)
+
+	check_solution()
