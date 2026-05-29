@@ -1,23 +1,23 @@
 [gd_scene format=4 uid="uid://brdjiyxncacr"]
 
 [ext_resource type="MeshLibrary" uid="uid://ddpyv7oojbi5t" path="res://assets/HallwayPack.meshlib" id="1_ej7nn"]
-[ext_resource type="PackedScene" uid="uid://4mcykyxau7w6" path="res://scenes/props/small_door.tscn" id="3_8rtnk"]
-[ext_resource type="Script" uid="uid://dt0dc5t2gupc8" path="res://scenes/path_follow_3d.gd" id="3_pj4xh"]
-[ext_resource type="PackedScene" uid="uid://dhf7xjatoos1k" path="res://scenes/props/big_door.tscn" id="4_pj4xh"]
-[ext_resource type="PackedScene" uid="uid://jd3670y411ha" path="res://scenes/props/barrel.tscn" id="5_0laof"]
-[ext_resource type="PackedScene" uid="uid://bsivjst66ckym" path="res://scenes/props/box.tscn" id="6_jsexe"]
+[ext_resource type="PackedScene" path="res://scenes/props/small_door.tscn" id="3_8rtnk"]
+[ext_resource type="Script" path="res://scenes/path_follow_3d.gd" id="3_pj4xh"]
+[ext_resource type="PackedScene" path="res://scenes/props/big_door.tscn" id="4_pj4xh"]
+[ext_resource type="PackedScene" path="res://scenes/props/barrel.tscn" id="5_0laof"]
+[ext_resource type="PackedScene" path="res://scenes/props/box.tscn" id="6_jsexe"]
 [ext_resource type="PackedScene" uid="uid://c7j6yf3ddil5x" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Bucket_SM.fbx" id="7_qqown"]
-[ext_resource type="PackedScene" uid="uid://vohe3fac0plh" path="res://scenes/props/crate_sm.tscn" id="8_e1qoo"]
+[ext_resource type="PackedScene" path="res://scenes/props/crate_sm.tscn" id="8_e1qoo"]
 [ext_resource type="PackedScene" uid="uid://cp83xwevmor1l" path="res://scenes/props/locker.tscn" id="9_1d6c4"]
-[ext_resource type="PackedScene" uid="uid://d0hi87x26pg20" path="res://scenes/props/barrer_sm.tscn" id="10_1d6c4"]
-[ext_resource type="PackedScene" uid="uid://bw3jey3slw2x" path="res://scenes/props/tape.tscn" id="11_wik8v"]
+[ext_resource type="PackedScene" path="res://scenes/props/barrer_sm.tscn" id="10_1d6c4"]
+[ext_resource type="PackedScene" path="res://scenes/props/tape.tscn" id="11_wik8v"]
 [ext_resource type="PackedScene" uid="uid://dbk3r2u8ihwh4" path="res://scenes/LadderCollider.tscn" id="12_wik8v"]
-[ext_resource type="PackedScene" uid="uid://grpjgo11vwak" path="res://scenes/props/bed.tscn" id="14_0o7c7"]
-[ext_resource type="PackedScene" uid="uid://bogfk2pr0qcaf" path="res://scenes/props/stool.tscn" id="15_3l4h0"]
+[ext_resource type="PackedScene" path="res://scenes/props/bed.tscn" id="14_0o7c7"]
+[ext_resource type="PackedScene" path="res://scenes/props/stool.tscn" id="15_3l4h0"]
 [ext_resource type="PackedScene" uid="uid://cvv2lav3ok6hj" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Radio_SM.fbx" id="16_dvmpa"]
 [ext_resource type="PackedScene" uid="uid://bqhuo55lem3q8" path="res://scenes/props/pipes/pipeSM.tscn" id="17_gt80j"]
 [ext_resource type="PackedScene" uid="uid://xktsipofwicj" path="res://scenes/props/pipes/pipeT.tscn" id="18_26yim"]
-[ext_resource type="PackedScene" uid="uid://bb0otrrm7fvfd" path="res://scenes/props/wirebox.tscn" id="19_3l4h0"]
+[ext_resource type="PackedScene" path="res://scenes/props/wirebox.tscn" id="19_3l4h0"]
 [ext_resource type="PackedScene" uid="uid://cguqhay4d22sr" path="res://scenes/props/pipes/pipeCorner.tscn" id="19_456xa"]
 [ext_resource type="PackedScene" uid="uid://dkkfkt0ewiher" path="res://assets/PS1 Abandoned Interiors/PS1 Derelict Pack/Assets/Props/Cupboard_SM.fbx" id="20_dvmpa"]
 [ext_resource type="PackedScene" uid="uid://q63xq4c44c60" path="res://scenes/props/pipes/pipeValve.tscn" id="20_gt80j"]
@@ -487,7 +487,7 @@ transform = Transform3D(0.91243464, 0, 0.40922245, 0, 1, 0, -0.40922245, 0, 0.91
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.673355, 13, -43.252857)
 
 [node name="Barrel16" parent="Props" unique_id=132326981 instance=ExtResource("5_0laof")]
-transform = Transform3D(0.905813, -0.42367777, 1.8519543e-08, 0, -4.371139e-08, -1, 0.42367777, 0.905813, -3.9594344e-08, 81.6966, 13.729877, -42.257286)
+transform = Transform3D(0.905813, -0.42367777, 1.8519543e-08, 0, -4.371139e-08, -1, 0.42367777, 0.905813, -3.9594344e-08, 81.6966, 20.578657, -42.257286)
 
 [node name="Barrel17" parent="Props" unique_id=735297382 instance=ExtResource("5_0laof")]
 transform = Transform3D(0.5726181, -0.8198222, 3.583557e-08, 0, -4.371139e-08, -1, 0.8198222, 0.5726181, -2.5029934e-08, 61.685783, 13.729877, -29.486307)
