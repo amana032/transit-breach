@@ -138,7 +138,7 @@ func enter_locker(locker: Node3D) -> void: # Swap to the camera locker, enter hi
 	camera.current = false
 	locker_sound.play()
 
-	var locker_cam = locker.find_child("Camera3D", true, false)
+	var locker_cam = locker.find_child("Camera3D", true, false) # switch to the locker camera
 	if locker_cam:
 		locker_cam.current = true
 		is_hidden = true
@@ -162,12 +162,17 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") and !is_hidden:
 		centi_sound.play()
 		
+		# Unhide death camera and hide game camera
 		$Neck/DeathCamera.show()
 		$Neck/Camera3D.hide()
+
+		# Play death animation for 3 seconds
 		$"Neck/DeathCamera/Node3D/CentipedeMonster_Vasdasdasdasd1(new)/AnimationPlayer".play("Armature|Atk2")
 		await get_tree().create_timer(1.0).timeout
 		scream_sound.play()
 		await get_tree().create_timer(2.0).timeout
+
+		# Hide death camera, unhide game camera and respawn at initial spawnpoint
 		$Neck/DeathCamera.hide()
 		$Neck/Camera3D.show()
 		body.position = spawn_position

@@ -24,7 +24,7 @@ func _ready():
 	if player == null:
 		return
 
-	for y in range(4):
+	for y in range(4): # set up the grid of pipes
 		var row = []
 		for x in range(4):
 			var tile = preload("res://scenes/minigames/pipe_tile.tscn").instantiate()
@@ -71,7 +71,6 @@ func get_open_ends(type: int, pipe_rotation: int) -> Array: # 0: up, 1: right, 2
 
 
 func check_solution() -> bool:
-	
 	# Flood-fill style implementation
 	var visited = {} # If we've seen it, don't check it again
 	var queue = [Vector2i(0, 0)] # The origin of our flood-fill
@@ -80,20 +79,20 @@ func check_solution() -> bool:
 	var opposite = [2, 3, 0, 1] # the other end of the pipes
 
 	while queue.size() > 0: # traverse flood-fill style
-		var pos = queue.pop_front()
-		if pos in visited: # Skip anything we've already seen
+		var curr_pipe = queue.pop_front()
+		if curr_pipe in visited: # Skip anything we've already seen
 			continue
 
-		var tile = pipes_grid[pos.y][pos.x]
+		var tile = pipes_grid[curr_pipe.y][curr_pipe.x]
 		var ends = get_open_ends(tile.type, tile.pipe_rotation)
 
-		if pos == Vector2i(0, 0) and not (3 in ends): # don't even bother continuing if our source is not connected
+		if curr_pipe == Vector2i(0, 0) and not (3 in ends): # don't even bother continuing if our source is not connected
 			break
 
-		visited[pos] = true
+		visited[curr_pipe] = true
 
-		for neigbor in ends:
-			var neighbor_pos = pos + offsets[neigbor]
+		for neighbor in ends:
+			var neighbor_pos = curr_pipe + offsets[neighbor]
 			
 			if visited.has(neighbor_pos): # skip if visited 
 				continue
@@ -101,11 +100,10 @@ func check_solution() -> bool:
 			if neighbor_pos.x < 0 or neighbor_pos.x >= 4 or neighbor_pos.y < 0 or neighbor_pos.y >= 4: # skip if outside bounds
 				continue
 
-			# add the neighbor to the queue
+			# checking to see if new neighbors connect to the current pipe
 			var new_neighbor = pipes_grid[neighbor_pos.y][neighbor_pos.x]
 			var n_ends = get_open_ends(new_neighbor.type, new_neighbor.pipe_rotation)
-
-			if opposite[neigbor] in n_ends: # does the neighbor connect back to the pipe (eg, a -- and | dont connect)
+			if opposite[neighbor] in n_ends: # does the neighbor connect back to the pipe (eg, a -- and | dont connect)
 				queue.append(neighbor_pos)
 
 	# for every pipe, update the connection

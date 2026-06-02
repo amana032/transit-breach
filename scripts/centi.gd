@@ -5,7 +5,6 @@ extends Node3D
 @onready var audio = $AudioStreamPlayer3D
 @onready var player = get_tree().get_first_node_in_group("Player")
 
-var xmotion = 1 # gonna be honest. not sure what this does?? increasing it makes bigger radius. might just kill it 
 var segment_distance = 0.5 # distance between targets
 var phase = 0.0 # "phase" of cycle 
 var speed = 200 # gotta go fast
@@ -29,6 +28,7 @@ func _ready() -> void:
 func _process(delta):
 	phase += speed * delta
 	
+	# for left legs
 	for i in range(targets_l.size()):
 		var target = targets_l[i]
 
@@ -36,15 +36,16 @@ func _process(delta):
 		var ph = fmod(phase + i * 45.0, 360.0) # offset every target by 45 degrees of each other, increasing this number changes wave patternn
 		
 		if ph < 180.0: # move target in position of arc
-			target.position.z = (base_z + 0.5 * xmotion * cos(deg_to_rad(ph)) + z_offset)
-			target.position.y = (0.5 * xmotion * sin(deg_to_rad(ph)) + y_offset)
+			target.position.z = (base_z + 0.5 *  cos(deg_to_rad(ph)) + z_offset)
+			target.position.y = (0.5 *  sin(deg_to_rad(ph)) + y_offset)
 			
 		else: # move target across the ground (the walking contact point)
-			target.position.z = (base_z + xmotion * ((ph - 180.0) / 180.0 - 0.5) + z_offset)
+			target.position.z = (base_z + (ph - 180.0) / 180.0) + z_offset
 			target.position.y = y_offset
 
 		target.position.x = x_offset
 		
+	# for right legs
 	for i in range(targets_r.size()):
 		var target = targets_r[i]
 
@@ -52,13 +53,11 @@ func _process(delta):
 		var ph = fmod(phase + i * 45.0, 360.0) # offset every target by 45 degrees of each other, increasing this number changes wave patternn
 		
 		if ph < 180.0: # move target in position of arc
-			target.position.z = (base_z + 0.5 * xmotion * cos(deg_to_rad(ph)) + z_offset)
-			target.position.y = (0.5 * xmotion * sin(deg_to_rad(ph)) + y_offset)
+			target.position.z = (base_z + 0.5 *  cos(deg_to_rad(ph)) + z_offset)
+			target.position.y = (0.5 *  sin(deg_to_rad(ph)) + y_offset)
 			
 		else: # move target across the ground (the walking contact point)
-			target.position.z = (base_z + xmotion * ((ph - 180.0) / 180.0 - 0.5) + z_offset)
+			target.position.z = (base_z + (ph - 180.0) / 180.0) + z_offset
 			target.position.y = y_offset
 
 		target.position.x = x_offset - 2.0
-
-	# if player entered 

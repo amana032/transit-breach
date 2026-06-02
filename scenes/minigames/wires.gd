@@ -87,12 +87,12 @@ func close_minigame() -> void:
 		
 
 func _is_point_inside_area(point: Vector2, area: Area2D) -> bool:
-	var cs = area.get_node_or_null("CollisionShape2D")
-	if cs == null:
+	var col_shape = area.get_node_or_null("CollisionShape2D")
+	if col_shape == null:
 		return false
 
 	# check if within rectangle
-	var shape = cs.shape
+	var shape = col_shape.shape
 	var local = area.to_local(point)
 	return abs(local.x) <= shape.size.x * 0.5 and abs(local.y) <= shape.size.y * 0.5 # check if within bounds of rect
 

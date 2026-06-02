@@ -17,9 +17,9 @@ func interact():
 		else:
 			player.enter_locker(locker)
 
-	var wires = get_parent().get_parent()
+	# If we interact with wires, open the minigame
+	var wires = get_parent().get_parent() # 
 	if wires and wires.is_in_group("wires"):
-		# wire viewport thing
 		var minigame = get_node("/root/World/CanvasLayer/MinigameWires")
 		if minigame:
 			minigame.visible = true
@@ -28,9 +28,9 @@ func interact():
 			print("start wires minigame")
 			return
 
+	# If we interact with pipes, open the minigame
 	var pipes = get_parent()
 	if pipes and pipes.is_in_group("pipes"):
-		# pipe viewport thing
 		var minigame = get_node("/root/World/CanvasLayer/MinigamePipes")
 		if minigame:
 			minigame.visible = true

@@ -34,7 +34,7 @@ func _on_body_entered(body: Node3D) -> void:
 		
 	print("Player wires puzzle solved: %s" % player.wires_puzzle_solved.count(true))
 	
-	if locked:
+	if locked: # check if we can unlock the door based on the lock type and what puzzles are solved
 		if lock_number == 1 and player.wires_puzzle_solved.count(true) == 3: 
 			locked = false
 		elif lock_number == 2 and player.pipe_puzzle_solved.count(true) == 2: 
