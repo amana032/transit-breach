@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ckpi7spt0qflb"]
 
 [ext_resource type="PackedScene" uid="uid://dcr2rwo1dq6om" path="res://assets/Centi/CentipedeMonster.glb" id="1_js6rm"]
-[ext_resource type="Script" uid="uid://dxsql6submf2e" path="res://scripts/centi.gd" id="2_a56c6"]
+[ext_resource type="Script" path="res://scripts/centi.gd" id="2_a56c6"]
 [ext_resource type="AudioStream" uid="uid://boxrm6g85or00" path="res://assets/sounds/monster/monster-walk.wav" id="3_a56c6"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_gixl7"]
@@ -18,7 +18,7 @@ stream = ExtResource("3_a56c6")
 volume_db = -15.534
 autoplay = true
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1955931678) index="0" unique_id=21414274]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(513281880) index="0" unique_id=2029024194]
 transform = Transform3D(0.97175956, 0, 0.23597294, 0, 1, 0, -0.23597294, 0, 0.97175956, -32.889297, 0, -2.7246046)
 bones/2/rotation = Quaternion(0.7071068, 2.3409764e-05, -2.3426634e-05, 0.7071068)
 bones/3/position = Vector3(-7.523391e-15, 4.1732134e-14, -2.334385e-10)
@@ -483,10 +483,9 @@ settings/21/joints/2/rotation_axis = 3
 settings/21/joints/2/limitation = null
 
 [node name="Camera3D" type="Camera3D" parent="." index="3" unique_id=87950926]
-transform = Transform3D(-0.82101923, -0.33184028, 0.46455312, -3.312542e-08, 0.8137198, 0.5812574, -0.5709006, 0.4772235, -0.6680797, 0.9346334, 2.16122, -4.0203166)
+transform = Transform3D(0.02001036, -0.42177597, 0.9064793, 0.022827648, 0.9066171, 0.42133617, -0.9995392, 0.012261698, 0.027769884, 3.1464136, 2.16122, -0.048380695)
 
 [node name="Targets" type="Node3D" parent="." index="4" unique_id=478440798]
-visible = false
 
 [node name="l01target" type="Node3D" parent="Targets" index="0" unique_id=1334487296]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041280746, -0.033146262, 1.9130344)
